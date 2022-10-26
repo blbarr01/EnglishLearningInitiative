@@ -26,7 +26,7 @@ function getInfo(){
             return
         }
         }
-        console.log("Incorrect username or passowrd !")
+        console.log("Incorrect username or passowrd! please try again !")
     }
        
 
