@@ -1,4 +1,0 @@
-here is some test text 
-
-
-this is just to practice git commands and using vi 
