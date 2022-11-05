@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GameComponent } from './features/game/game.component';
+import { HomeComponent } from './features/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "",
+    component: HomeComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "game",
+    component: GameComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "**",
+    redirectTo: "home",
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
