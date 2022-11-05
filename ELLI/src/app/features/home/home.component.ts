@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,6 +18,10 @@ export class HomeComponent implements OnInit {
   
   showLearn(){
     this.router.navigateByUrl("/learn");
+  }
+
+  showTest(){
+    this.router.navigateByUrl("/test");
   }
 
   ngOnInit(): void {
