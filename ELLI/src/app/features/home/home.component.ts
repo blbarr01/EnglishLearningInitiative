@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
   showGame(){
     this.router.navigateByUrl("/game");
   }
+  
+  showLearn(){
+    this.router.navigateByUrl("/learn");
+  }
 
   ngOnInit(): void {
   }
