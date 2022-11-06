@@ -1,7 +1,13 @@
 .header {
-    padding: 30px;
+    padding: 1em;
     text-align: center;
-    background: #2642e4;
+    background: rgb(180, 33, 33);
     color: white;
-    font-size: 30px;
+    font-size: 5rem;
+    display: flex;
+  }
+
+  #banner-img{
+    height: fit-content;
+    width: fit-content;
   }
