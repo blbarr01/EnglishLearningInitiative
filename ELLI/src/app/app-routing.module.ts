@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './features/game/game.component';
 import { HomeComponent } from './features/home/home.component';
+import { LearnComponent } from './features/learn/learn.component';
+import { TestComponent } from './features/test/test.component';
 
 const routes: Routes = [
   {
@@ -12,6 +14,16 @@ const routes: Routes = [
   {
     path: "game",
     component: GameComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "learn",
+    component: LearnComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "test",
+    component: TestComponent,
     pathMatch: "full",
   },
   {
