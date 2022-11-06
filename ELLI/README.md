@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Best Practices
+    use hyphon case for classes and id 
+        ex.) id = 'banner-img'
+    prefix classes and id's with the name of the component it's related to
+        ex.) 'banner-img', 'banner-title', 'flashcard-img', 'flashcard-main-txt'
+    styling rule of thumbs  
+        use rems for font styling 
+        use ems for margins and paddings 
+        use % for adjusting width
