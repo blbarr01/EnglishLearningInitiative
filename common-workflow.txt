@@ -4,4 +4,4 @@ A standard git workflow is as follows
 -create a new branch when begining work on a new feature
 -write code and make changes 
 -push branch to the github repository
--submit a pull request on github (this is a request to merge the branches)
+-submit a pull request on github (this is a request to merge the branches; this is not the same as using pull to update local files) 
