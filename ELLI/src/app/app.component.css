@@ -1,0 +1,19 @@
+.header {
+    padding: 0;
+    background: rgb(180, 33, 33);
+    display: flex;
+  }
+
+  #banner-img{
+    height: min-content;
+    width: min-content;
+    margin-left: 0%;
+    /* border: 2px solid magenta; */
+  }
+
+  #banner-title{
+    border-bottom: 3px solid #000;
+    text-align: center;
+    font-size: 7rem;
+    color: white;
+  }
