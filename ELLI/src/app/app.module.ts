@@ -8,17 +8,9 @@ import { HomeComponent } from './features/home/home.component';
 import { LearnComponent } from './features/learn/learn.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GameComponent,
-    HomeComponent,
-    LearnComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
