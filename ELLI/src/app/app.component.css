@@ -1,6 +1,8 @@
+
+
 #main-site-banner {
     padding: 0;
-    background: rgb(180, 33, 33);
+    background: var(--matador-red);
     display: flex;
   }
 
@@ -12,14 +14,8 @@
   }
 
   #banner-title{
- /* 
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto; 
-  */
-  margin: auto;
-    /* padding-top: 2em; */
-    font-size: 4.5rem;
-    /* text-align: center; */
-    border: 2px solid magenta;
+    margin: auto;
+    font-size: 5rem;
+    font-family: 'Poppins';
+    /* border: 2px solid magenta; */
   }

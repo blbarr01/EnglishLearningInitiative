@@ -13,6 +13,11 @@
 
 
 .home-btn{
-    border: 2px solid red;
+    /* border: 2px solid magenta; */
+    border-radius: .33rem;
     padding: 3em;    
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--matador-red);
+    font-family: 'Poppins';
 }
