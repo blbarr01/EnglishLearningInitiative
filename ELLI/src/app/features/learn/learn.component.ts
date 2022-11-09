@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+interface words = {
+  name: string
+  
+}
 
 @Component({
   selector: 'app-learn',
@@ -9,9 +13,21 @@ import { Router } from '@angular/router';
 export class LearnComponent implements OnInit {
   constructor(private router: Router) {}
 
-  name: String = 'Rohan';
+  terms = [
+    {
+      word: 'Apple',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDaaKrZaoxww5T_YGHlPuW_vwqGAociPcqBQ&usqp=CAU',
+    },
+  ];
 
-  card: string = 'Flashcard';
+  flipped = false;
+  imgSrc =
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkL8GlKZ775j3f0VVgS1rU8L2LoX5UEM6fKv_eGLzeza27WYH';
+
+  toggle() {
+    this.flipped = !this.flipped;
+  }
 
   showHome() {
     this.router.navigateByUrl('');
