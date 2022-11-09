@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-interface words = {
-  name: string
-  
+interface Words {
+  word: string;
+  image: string;
 }
 
 @Component({
@@ -12,8 +12,7 @@ interface words = {
 })
 export class LearnComponent implements OnInit {
   constructor(private router: Router) {}
-
-  terms = [
+  terms: Words[] = [
     {
       word: 'Apple',
       image:
