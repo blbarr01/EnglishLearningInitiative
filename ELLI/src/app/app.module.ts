@@ -7,9 +7,10 @@ import { GameComponent } from './features/game/game.component';
 import { HomeComponent } from './features/home/home.component';
 import { LearnComponent } from './features/learn/learn.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent],
+  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
