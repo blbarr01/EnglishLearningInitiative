@@ -25,9 +25,6 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
-  
   isCorrect: boolean=false;
   isInCorrect:boolean=false;
 
@@ -70,7 +67,7 @@ export class TestComponent implements OnInit {
 
   CurrentCategory = this.quizzes.filter((Category,a)=>
   {
-return Category.quizNumber===1;
+return Category.quizNumber===1;//hard coded but will make quiz choice dynamic 
   });
   answerSelected=false;
    currentQuiz =0;

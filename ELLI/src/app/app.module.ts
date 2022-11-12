@@ -7,9 +7,11 @@ import { GameComponent } from './features/game/game.component';
 import { HomeComponent } from './features/home/home.component';
 import { LearnComponent } from './features/learn/learn.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestBed } from '@angular/core/testing';
+import { TestComponent } from './features/test/test.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent],
+  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent,TestComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
