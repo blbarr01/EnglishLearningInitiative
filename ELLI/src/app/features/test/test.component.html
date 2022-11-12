@@ -1,3 +1,28 @@
 <button (click)="showHome()">Back to Home</button>
-<p class="title"> Test </p>
+<div class=category>
+  <div class="col-sm-8 offset-2">
+          <h2>{{CurrentCategory[currentQuiz].question}}</h2>  
+         
+      <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
+          
+              <input type="checkbox" class="big" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
+              {{quiz.option}}
+              
+          </div>
+  </div>
+  </div>
+  
+  
+  <form >
+  a: <input type="number" id="a">
+  <button >Search</button>
+  </form>
+  
+  <h2 *ngIf="isCorrect">Correct! </h2>
+  <h2 *ngIf="isInCorrect">Incorrect </h2>
 
+
+
+
+    
+      
