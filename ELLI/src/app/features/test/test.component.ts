@@ -9,6 +9,12 @@ interface Quiz{
   answer:  {option:string, correct: boolean} [];
 }
 
+
+interface Buttons{
+  ButtonNumber:any;
+}
+
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -27,9 +33,10 @@ export class TestComponent implements OnInit {
 
   isCorrect: boolean=false;
   isInCorrect:boolean=false;
-
+  CurrentCategory:any;
   questionCorrect:number=0;
-
+  answerSelected=false;
+  currentQuiz =0;
 
   quizzes: Quiz[] = [
     {
@@ -63,36 +70,14 @@ export class TestComponent implements OnInit {
         },
   
   ]
-
-  n:number=1;
-  CurrentCategory:any;
-  
-  
-updateQuiz(){
+    
+updateQuiz(i:number){
    this.CurrentCategory = this.quizzes.filter((Category)=>
   {
-return Category.quizNumber===1;//hard coded but will make quiz choice dynamic 
+return Category.quizNumber===i;//hard coded but will make quiz choice dynamic 
   });
-
-this.n++;
-console.log(this.n);
 }
 
-updateQuiz2(){
-  this.CurrentCategory = this.quizzes.filter((Category)=>
- {
-return Category.quizNumber===2;//hard coded but will make quiz choice dynamic 
- });
-
-this.n++;
-console.log(this.n);
-}
-
-
-
-
-  answerSelected=false;
-  currentQuiz =0;
   answerStatus(option:boolean)
   {
     setTimeout(() => {
@@ -113,9 +98,6 @@ console.log(this.n);
     }
 
 
-    OnMouseMove()
-    {
-
-    }
+    
   }
 
