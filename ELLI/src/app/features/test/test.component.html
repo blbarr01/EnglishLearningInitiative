@@ -1,22 +1,22 @@
 <button (click)="showHome()">Back to Home</button>
 
 <div class=category>
-  <div class="col-sm-8 offset-2">
     <h2>{{CurrentCategory[currentQuiz].question}}</h2>  
       <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer"> 
-        <input type="checkbox" class="big" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
+        <input type="radio" class="big" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
+       <div class="quiz-options">
         <p>{{quiz.option}} </p>
-      </div>
-  </div>
+      </div>  
+    </div>
 </div>
-  <form >
-  a: <input type="number" id="a">
-  <button >Search</button>
-  </form>
-  
-  <h2 *ngIf="isCorrect">Correct! </h2>
-  <h2 *ngIf="isInCorrect">Incorrect </h2>
+ 
 
+
+<button  (click)=" updateQuiz()">click me</button>
+<button  (click)=" updateQuiz2()">click me</button>
+
+  <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
+  <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
 
 
 

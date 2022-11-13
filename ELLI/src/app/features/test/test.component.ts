@@ -64,13 +64,35 @@ export class TestComponent implements OnInit {
   
   ]
 
-
-  CurrentCategory = this.quizzes.filter((Category,a)=>
+  n:number=1;
+  CurrentCategory:any;
+  
+  
+updateQuiz(){
+   this.CurrentCategory = this.quizzes.filter((Category)=>
   {
 return Category.quizNumber===1;//hard coded but will make quiz choice dynamic 
   });
+
+this.n++;
+console.log(this.n);
+}
+
+updateQuiz2(){
+  this.CurrentCategory = this.quizzes.filter((Category)=>
+ {
+return Category.quizNumber===2;//hard coded but will make quiz choice dynamic 
+ });
+
+this.n++;
+console.log(this.n);
+}
+
+
+
+
   answerSelected=false;
-   currentQuiz =0;
+  currentQuiz =0;
   answerStatus(option:boolean)
   {
     setTimeout(() => {
@@ -88,6 +110,12 @@ return Category.quizNumber===1;//hard coded but will make quiz choice dynamic
     }
     else
     this.isInCorrect=true;
+    }
+
+
+    OnMouseMove()
+    {
+
     }
   }
 
