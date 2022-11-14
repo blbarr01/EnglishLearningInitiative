@@ -5,3 +5,22 @@ A standard git workflow is as follows
 -write code and make changes 
 -push branch to the github repository
 -submit a pull request on github (this is a request to merge the branches; this is not the same as using pull to update local files) 
+
+
+workflow from jared:
+Here is the full work flow
+git pull
+git checkout -b  (branch name)
+Do the work you want to do when done 
+    git add . (edited)
+    git commit -m "(your commit message here)"
+    git fetch all
+    git rebase origin-main
+fix merge conflicts if they exist; once you fix merge conflicts 
+    git rebase --continue
+    git push
+
+If you can't fix merge conflicts or are unsure 
+
+git rebase --abort
+and wait till we can meet to discuss
