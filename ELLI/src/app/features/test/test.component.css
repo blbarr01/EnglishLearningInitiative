@@ -29,8 +29,7 @@
   }
   label
   {
-  
-    display: inline-flex;
+ display: inline-flex;
     align-items: left
     
   }
@@ -39,7 +38,7 @@
   {
 
     cursor: pointer;
-    box-sizing: border-box;
+   
     text-align: left;
    
     
@@ -47,6 +46,7 @@
 
   p
   {
+    display: inline-flex;
     margin-left: 20px;
     margin-top: 10px;
     font-size: 30px;

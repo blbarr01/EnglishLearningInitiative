@@ -5,8 +5,9 @@
       <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer"> 
         <label for="radio" class="radio">
         <input type="radio" class="big" id ="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
-        <p>{{quiz.option}} </p>
+       
       </label>
+      <p>{{quiz.option}} </p>
     </div>
 </div>
  
