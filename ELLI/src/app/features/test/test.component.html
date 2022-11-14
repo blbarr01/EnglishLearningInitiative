@@ -3,14 +3,15 @@
 <div class=category>
     <h2>{{CurrentCategory[currentQuiz].question}}</h2>  
       <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer"> 
-        <input type="radio" class="big" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
-       <div class="quiz-options">
+        <label for="radio" class="radio">
+        <input type="radio" class="big" id ="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
         <p>{{quiz.option}} </p>
-      </div>  
+      </label>
     </div>
 </div>
  
-
+ <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
+  <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
 
 <button  (click)=" updateQuiz(1)">Test 1</button>
 <button  (click)=" updateQuiz(2)">Test 2</button>
@@ -18,8 +19,7 @@
 <button  (click)=" updateQuiz(4)">Test 4</button>
 <button  (click)=" updateQuiz(5)">Test 5</button>
 <button  (click)=" updateQuiz(6)">Test 6</button>
-  <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
-  <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
+ 
 
 
 

@@ -19,24 +19,36 @@
   .categories
   {
    
+   
     border: 2px solid black;
-    text-align: center;
+    
+    margin: 20px 0 0;/*  margin  do I want it?*/
     padding: 10px;
 
   
   }
+  label
+  {
+  
+    display: inline-flex;
+    align-items: left
+    
+  }
+
   .big
   {
+
     cursor: pointer;
     box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    margin: 20px 0 0;
+    text-align: left;
+   
+    
   }
 
   p
   {
+    margin-left: 20px;
+    margin-top: 10px;
     font-size: 30px;
   }
   .green-color-correct
