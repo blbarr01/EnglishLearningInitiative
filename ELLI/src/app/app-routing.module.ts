@@ -4,6 +4,7 @@ import { GameComponent } from './features/game/game.component';
 import { HomeComponent } from './features/home/home.component';
 import { LearnComponent } from './features/learn/learn.component';
 import { TestComponent } from './features/test/test.component';
+import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: "test",
     component: TestComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "speech",
+    component: TalkToTextComponent,
     pathMatch: "full",
   },
   {

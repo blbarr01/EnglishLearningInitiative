@@ -8,6 +8,8 @@ body{
 
 :root{
     --matador-red:rgb(180, 33, 33); 
+    --matador-white: #FFF;
+    --matador-black: #000; 
 }
 
 /* 
