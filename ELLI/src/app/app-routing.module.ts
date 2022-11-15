@@ -6,6 +6,7 @@ import { LearnComponent } from './features/learn/learn.component';
 import { TestComponent } from './features/test/test.component';
 import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
 import { LoginComponent } from './features/login/login.component';
+import { SignupComponent } from './features/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "signup",
+    component: SignupComponent,
     pathMatch: "full",
   },
   {
