@@ -10,9 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestBed } from '@angular/core/testing';
 import { TestComponent } from './features/test/test.component';
 import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
+import { LoginComponent } from './features/login/login.component';
+import { SignupComponent } from './features/signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent],
+  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
