@@ -36,7 +36,7 @@ export class TestComponent implements OnInit {
   CurrentCategory:any;
   questionCorrect:number=0;
   answerSelected=false;
-currentQuiz =0;
+  currentQuiz =0;
 
   quizzes: Quiz[] = [
     {
