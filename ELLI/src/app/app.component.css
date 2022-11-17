@@ -4,7 +4,9 @@
     padding: 0;
     background: var(--matador-red);
     display: flex;
+    border-bottom: 2px solid black ;
   }
+
 
   #banner-img{
     height: 200px;
