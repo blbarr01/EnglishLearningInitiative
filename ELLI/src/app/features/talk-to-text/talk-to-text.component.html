@@ -1,2 +1,19 @@
+
+
+
 <h2>practice your speaking!</h2>
-<button (click)="showHome()">go home</button>
+<section class="container pt-5 bg-light">
+  
+    <h2 class="mt-4 text-dark">Transcript</h2>
+    <div class="p-3" style="border: 1px solid rgb(182, 8, 8); height: 300px; border-radius: 10px;">
+      <span id="final" class="text-light"></span>
+      <span id="interim" class="text-secondary"></span>
+    </div>
+    
+    <div class="mt-4">
+      <button class="btn btn-success" id="start">Start</button>
+      <button class="btn btn-danger" id="stop">Stop</button>
+      <p id="status" class="lead mt-3 text-dark" style="display: none"> Listenting ...</p>
+    </div>
+  </section>
+  
