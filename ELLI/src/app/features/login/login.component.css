@@ -1,9 +1,17 @@
 
 
-.sign-in-container{
+.login-container{
     /* border: 2px solid green; */
     background-color: var(--matador-red);
     padding-bottom: 3em;
+}
+
+.login-link{
+    text-align: center;
+    text-decoration: underline;
+}
+.login-link:hover{
+    cursor: pointer;
 }
 .container {
     background-color: #fff;
@@ -17,7 +25,7 @@
 
 
 #main-form{
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 label {
     display: block;
@@ -56,24 +64,12 @@ input.valid {
     text-align: center;
 }
 
-h1 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 4.25rem;
-    margin-bottom: 5px;
-}
 
-#subtitle {
-    color: #fff;
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 3em;
-    font-size: 1.25rem;
-}
+
 
 h2 {
     font-size: 2.25rem;
-    color: #2c3e50;
+    color: var(--matador-black);
     font-family: "Poppins";
 }
 
