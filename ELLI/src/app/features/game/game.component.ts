@@ -8,14 +8,19 @@ import { Router } from '@angular/router';
 })
 export class GameComponent implements OnInit {
 
-  constructor(private router: Router) { 
-  }
-
+  constructor(private router: Router) {}
+ 
   showHome(){
     this.router.navigateByUrl("");
   }
 
-  ngOnInit(): void {
+  
+  
+  ngOnInit(): void {}
+
+  counter: number = 60;
+
+  runCounter(){
   }
 
 }
