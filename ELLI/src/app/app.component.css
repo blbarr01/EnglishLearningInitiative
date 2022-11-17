@@ -18,16 +18,21 @@
 
   #banner-login{
     position: fixed;
-    height: 25px;
-    width: 50px;
+    height: 1.5625em;
     right: 6%;
     top: 2%;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: bold;
     /* border: 2px solid magenta; */
+  }
+
+  #banner-login:hover, 
+  #banner-title:hover,
+  #banner-img:hover{
+    cursor: pointer;
   }
 
   #banner-title{
