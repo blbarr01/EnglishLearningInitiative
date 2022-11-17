@@ -13,5 +13,11 @@ export class AppComponent {
   showLogin(){
     this.router.navigateByUrl("/login");
   }
+<<<<<<< HEAD
+=======
+  showHome(){
+    this.router.navigateByUrl("");
+  }
+>>>>>>> 354e2b38e895474f6dd7a9f08b8d3f9d5d8e39bc
 }
 
