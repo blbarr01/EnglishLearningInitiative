@@ -10,22 +10,25 @@
 
 
   #banner-img{
-    height: 55px;
+    position: fixed;
+    height: 50px;
     width: 50px;
-    margin-left: 0%;
+    top: 1%;
+    left: 1%;
     /* border: 2px solid magenta; */
   }
 
   #banner-login{
     position: fixed;
     height: 1.5625em;
-    right: 6%;
-    top: 2%;
+    right: 2%;
+    top: 3%;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     font-size: 1.25rem;
     font-weight: bold;
+    color: whitesmoke;
     /* border: 2px solid magenta; */
   }
 
@@ -39,5 +42,7 @@
     margin: auto;
     font-size: 4rem;
     font-family: 'Poppins';
+    color: whitesmoke;
+    text-align: center;
     /* border: 2px solid magenta; */
   }
