@@ -1,0 +1,54 @@
+Wed Oct 26 09:41:53 PDT 2022
+ae1d31f - blbarr01, 2 days ago : Merge pull request #11 from blbarr01/talk-to-text
+a440dec - Brian, 2 days ago : wrote another script to practice git commands & workflow
+931a300 - Brian, 2 days ago : pruned the extra index.html
+e67157b - blbarr01, 2 days ago : Merge pull request #8 from blbarr01/common-workflow
+6f868b7 - nidhipatel2001, 2 days ago : Delete nidhi.js
+31ced8b - nidhipatel2001, 2 days ago : Merge pull request #7 from blbarr01/nidhi-branch
+378634d - nidhipatel2001, 2 days ago : Create nidhi.js
+e31c00e - blbarr01, 2 days ago : Merge pull request #6 from blbarr01/test
+d65e9f0 - Brian Barr, 2 days ago : removing some clutter
+dff2c4b - rohan1126, 2 days ago : Merge pull request #5 from blbarr01/Flashcard
+d9267b4 - rohan1126, 2 days ago : Create text.txt
+9c99513 - rohan1126, 2 days ago : Merge pull request #4 from blbarr01/Flashcard
+3c34807 - rohan1126, 2 days ago : Create index.html
+2aafeab - Brian Barr, 2 days ago : pushing project scaffold
+37faf3b - Brian, 2 days ago : basic workflow procedure outline
+456a1c6 - blbarr01, 2 days ago : Merge pull request #1 from blbarr01/branch-practice
+009d2e9 - Brian, 2 days ago : added new js script on a new branch
+9fb8ad5 - Brian, 5 days ago : deleted personal file
+d1c5281 - Brian, 7 days ago : added a new personal file
+2d7948e - Brian, 7 days ago : adding new test file
+5d2a244 - Brian, 7 days ago : commit from home desktop
+6688184 - Brian Barr, 7 days ago : 1st commit
+b09a4fc - Jared Sobol, 7 days ago : updated list
+37e00ec - nidhipatel2001, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+a3c6078 - prabhjee singh, 7 days ago : Update member_list.text
+db464af - nidhipatel2001, 7 days ago : Update member_list.text
+e3c74ac - amarinder1029, 7 days ago : Update member_list.text
+93291cb - amarinder1029, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+f38ac41 - prabhjee singh, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+aa60f27 - prabhjee singh, 7 days ago : added my name and test
+c5e9a9f - amarinder1029, 7 days ago : Update member_list.text
+00660b9 - rohan1126, 7 days ago : Delete index.txt
+2924360 - rohan1126, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+d0ba580 - rohan1126, 7 days ago : Create index.txt
+56ee476 - prabhjee singh, 7 days ago : Update member_list.text
+cdb065c - nidhipatel2001, 7 days ago : Update member_list.text
+4a591aa - rohan1126, 7 days ago : Update member_list.text
+fc13730 - Jared Sobol, 7 days ago : Member list file
+d9fd5f2 - Jared Sobol, 7 days ago : member list
+b429f47 - Jared Sobol, 7 days ago : Member List
+05896b4 - Jared Sobol, 7 days ago : Delete jared.txt
+ca79c18 - nidhipatel2001, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+e527964 - nidhipatel2001, 7 days ago : Delete nidhi.txt
+9f3853a - amarinder1029, 7 days ago : Delete Amarinder.txt
+45a8ce3 - rohan1126, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+3acc556 - rohan1126, 7 days ago : Delete rohan.txt
+e41cf89 - amarinder1029, 7 days ago : Update Amarinder.txt
+23526fa - nidhipatel2001, 7 days ago : Merge branch 'main' of https://github.com/blbarr01/EnglishLearningInitiative
+e0bfbcb - nidhipatel2001, 7 days ago : Create nidhi.txt
+3b0b516 - amarinder1029, 7 days ago : Create Amarinder.txt
+aea47df - rohan1126, 7 days ago : Create rohan.txt
+0edff28 - Jared Sobol, 7 days ago : My test file
+6dfb212 - blbarr01, 5 weeks ago : Initial commit

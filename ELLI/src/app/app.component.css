@@ -1,0 +1,28 @@
+
+
+#main-site-banner {
+    padding: 0;
+    background: var(--matador-red);
+    display: flex;
+  }
+
+  #banner-img{
+    height: 200px;
+    width: 200px;
+    margin-left: 0%;
+    /* border: 2px solid magenta; */
+  }
+
+  #banner-login{
+    height: 25px;
+    width: 50px;
+    margin-right: 0%;
+    /* border: 2px solid magenta; */
+  }
+
+  #banner-title{
+    margin: auto;
+    font-size: 5rem;
+    font-family: 'Poppins';
+    /* border: 2px solid magenta; */
+  }

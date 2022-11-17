@@ -1,0 +1,17 @@
+
+<h2 class="title">Learn</h2>
+
+<button class="button"><----</button>
+<div class="flashcard">
+  <div class="text">
+    <div class="flip-card-front" *ngFor="let term of terms">
+      <img [src]="term.image" />
+    </div>
+    <div class="flip-card-back" *ngFor="let word of terms">
+      <p>
+        {{ word.word }}
+      </p>
+    </div>
+  </div>
+</div>
+<button class="button">---></button>
