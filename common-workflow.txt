@@ -24,3 +24,18 @@ If you can't fix merge conflicts or are unsure
 
 git rebase --abort
 and wait till we can meet to discuss
+
+########################
+
+integrating jira into git workflow: 
+Find the key for the Jira issue you want to link to, 
+for example “JRA-123”.
+
+Checkout a new branch in your repository,
+using the issue key in the branch name. 
+For example, git checkout -b JRA-123-<branch-name>.
+
+When committing changes to your branch, 
+use the issue key in your commit message. 
+For example, 
+git commit -m "ELLI-<number> #time <time d h m> <summary of commit>". 
