@@ -28,9 +28,6 @@ export class LearnComponent implements OnInit {
     this.flipped = !this.flipped;
   }
 
-  showHome() {
-    this.router.navigateByUrl('');
-  }
 
   ngOnInit(): void {}
 }

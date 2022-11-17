@@ -25,9 +25,7 @@ export class TestComponent implements OnInit {
   constructor(private router: Router) { 
   }
 
-  showHome(){
-    this.router.navigateByUrl("");
-  }
+
   ngOnInit(): void {
   }
 

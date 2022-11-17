@@ -14,8 +14,6 @@ export class GameComponent implements OnInit {
     this.router.navigateByUrl("");
   }
 
-  
-  
   ngOnInit(): void {}
 
   counter: number = 60;
