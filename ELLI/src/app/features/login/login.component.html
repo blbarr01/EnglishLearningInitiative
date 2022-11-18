@@ -1,2 +1,42 @@
-<button (click)="showHome()"> Go Home</button>
+<div class="card">
+  <h4 class="card-header"></h4>
+  <div class="card-body">
+    <form [form Group]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="Username"> Username </label>
+        <input
+          type="text"
+          fromControlName="username"
+          class="form-control"
+          [ngClass]="{ 'is-valid': submitted && f.username.errors }"
+        />
+        <div *ngif="submitted && f.username.erros" class="invalid-feedback">
+          <div *ngif="f.username.erros.required">Username is a must!</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="passowrd">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.passowrd.errors }"
+        />
+        <div *ngif="submitted && f.passowrd.errors" class="Feedback-Not Valid">
+          <div *ngif="f.password.errors.required">Enter Password</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+          <i *ngif="loading" class="sniper-border spinner-border-sm mr-1"></i>
+          Login
+        </button>
+        <a routerLink=",,/register" class="btn btn-link"
+          ><u> Signup Today</u></a
+        >
+      </div>
+    </form>
+  </div>
+</div>
+<button (click)="showHome()">Go Home</button>
 <button (click)="showSignup()">Signup</button>
