@@ -7,6 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+submitted: any;
+f: any;
+loading: any;
+onSubmit() {
+throw new Error('Method not implemented.');
+}
+form: any;
 
   constructor(private router: Router) { 
   }
