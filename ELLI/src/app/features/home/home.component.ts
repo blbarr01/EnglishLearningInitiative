@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl("/test");
   }
 
+  showTalkToText(){
+    this.router.navigateByUrl("/speech");
+  }
+
   ngOnInit(): void {
   }
 

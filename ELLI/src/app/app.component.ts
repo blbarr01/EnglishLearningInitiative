@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ELLI';
-  /**
-   * Dependcie inject here
-   */
+  constructor(private router: Router) {}
+
+  showLogin(){
+    this.router.navigateByUrl("/login");
+  }
+  showSignup(){
+    this.router.navigateByUrl("/signup");
+  }
+  showHome(){
+    this.router.navigateByUrl("");
+  }
 }
 

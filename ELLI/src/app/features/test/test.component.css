@@ -3,3 +3,71 @@
     text-align: center;
     font-size: 30px;
   }
+  .category
+  {
+     
+    padding: 30px;
+  }
+  h2
+  {
+    background-color: var(--matador-red);
+    border: 5px solid black;
+    color: white ;
+      text-align: center;
+      font: size 140px;;
+  }
+  .categories
+  {
+   
+   
+    border: 2px solid black;
+    
+    margin: 20px 0 0;/*  margin  do I want it?*/
+    padding: 10px;
+
+  
+  }
+  label
+  {
+  
+    display: inline-flex;
+    align-items: left
+    
+  }
+
+  .big
+  {
+
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+   
+    
+  }
+
+  p
+  {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .green-color-correct
+  {
+    background: green;
+  }
+  .red-color-wrong
+  {
+    background: red;
+  }
+  button {
+    background-color: var(--matador-red);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
