@@ -18,12 +18,13 @@
   }
   .categories
   {
-   
+    border-radius: 1rem;
    
     border: 2px solid black;
     
     margin: 20px 0 0;/*  margin  do I want it?*/
     padding: 10px;
+   /* display: inline-flex;   once images are imported, use this*/
 
   
   }
@@ -45,6 +46,7 @@
     margin-left: 20px;
     margin-top: 10px;
     font-size: 30px;
+   
   }
   .green-color-correct
   {
