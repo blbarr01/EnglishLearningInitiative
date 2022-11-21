@@ -1,28 +1,30 @@
-<label class="Buttons">
-  <button  (click)=" updateQuiz(1)">Test 1</button>
-  <button  (click)=" updateQuiz(2)">Test 2</button>
-  <button  (click)=" updateQuiz(3)">Test 3</button>
-  <button  (click)=" updateQuiz(4)">Test 4</button>
-  <button  (click)=" updateQuiz(5)">Test 5</button>
-  <button  (click)=" updateQuiz(6)">Test 6</button>
-  </label>
+
+
+
+<div id="dropdown-menu">
+  <ul class="styleOfList">
+    <li class="styleOfListTitle"><a class="styleOfListaTitle"> pick a test</a>
+      <ul class="dropdown">
+        <p *ngFor="let allbuttons of buttons ; let indexOfelement=index;">
+          <li> <a (click)=" updateQuiz(allbuttons.button) ">Needs to be fixed </a></li>
+        </p>
+      </ul>
+    </li>
+  </ul>
+</div>
+
 
 <div class=category>
-    <h2>{{CurrentCategory[currentQuiz].question}}</h2>  
-      <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer"> 
-        <label for="radio" class="radio">
-        <input type="radio" class="big" id ="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected/> 
-       
-      </label>
-      <p>{{quiz.option}} </p>
-    </div>
-    
+  <h2>{{CurrentCategory[currentQuiz].question}}</h2>
+  <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
+    <label for="radio" class="radio">
+      <input type="radio" class="big" id="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected />
+
+    </label>
+    <p>{{quiz.option}} </p>
+  </div>
+
 </div>
- 
+
 <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
 <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
-
-<button>Lets get Started!</button>// when button clicked show all tests, choose from test 
-
-    
-      
