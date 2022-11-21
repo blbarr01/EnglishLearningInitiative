@@ -10,9 +10,7 @@ interface Quiz{
 }
 
 
-interface arrr{
-  button:number;
-}
+
 
 
 @Component({
@@ -24,7 +22,7 @@ export class TestComponent implements OnInit {
 
   constructor(private router: Router) { 
   }
-   buttons: arrr[] = [{button:1},{button:2},{button:3},{button:4},{button:5},{button:6}];
+
 
   ngOnInit(): void {
   }
