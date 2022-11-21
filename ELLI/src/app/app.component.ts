@@ -13,6 +13,9 @@ export class AppComponent {
   showLogin(){
     this.router.navigateByUrl("/login");
   }
+  showSignup(){
+    this.router.navigateByUrl("/signup");
+  }
   showHome(){
     this.router.navigateByUrl("");
   }

@@ -12,9 +12,11 @@ import { TestComponent } from './features/test/test.component';
 import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
 import { LoginComponent } from './features/login/login.component';
 import { SignupComponent } from './features/signup/signup.component';
+import { CategorySelectorComponent } from './shared/components/category-selector/category-selector.component';
+import { FlashcardComponent } from './shared/components/flashcard/flashcard.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent],
+  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent, CategorySelectorComponent, FlashcardComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

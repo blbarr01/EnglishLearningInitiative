@@ -4,27 +4,45 @@
     padding: 0;
     background: var(--matador-red);
     display: flex;
-    border-bottom: 2px solid black ;
+    border-bottom: 2px solid black;
+    height: 70px;
   }
 
 
   #banner-img{
-    height: 200px;
-    width: 200px;
-    margin-left: 0%;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 1%;
+    left: 1%;
     /* border: 2px solid magenta; */
   }
 
   #banner-login{
-    height: 25px;
-    width: 50px;
-    margin-right: 0%;
+    position: fixed;
+    height: 1.5625em;
+    right: 2%;
+    top: 3%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: whitesmoke;
     /* border: 2px solid magenta; */
+  }
+
+  #banner-login:hover, 
+  #banner-title:hover,
+  #banner-img:hover{
+    cursor: pointer;
   }
 
   #banner-title{
     margin: auto;
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: 'Poppins';
+    color: whitesmoke;
+    text-align: center;
     /* border: 2px solid magenta; */
   }
