@@ -7,18 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-
+  counter: number = 60;
   constructor(private router: Router) {}
  
   showHome(){
     this.router.navigateByUrl("");
   }
 
-  ngOnInit(): void {}
-
-  counter: number = 60;
-
-  runCounter(){
+  hardMode(): void{
+    this.counter = 20;
+  }
+  
+  mediumMode(): void{
+    this.counter = 40;
   }
 
+  EasyMode(): void{
+    this.counter = 60;
+  }
+  
+  ngOnInit(): void {}
 }

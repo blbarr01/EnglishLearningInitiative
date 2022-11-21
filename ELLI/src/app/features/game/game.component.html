@@ -1,5 +1,43 @@
-<div class="circle small">
-    <h1>{{counter}}</h1>
+<div class="mainDiv">
+  <div class="gamediv">
+    <h1>Choose your game mode</h1>
+    <div>
+      <button
+        class="gamebtn"
+        style="background-color: #42f860"
+        (click)="EasyMode()"
+      >
+        Easy
+      </button>
+    </div>
+    <div>
+      <button
+        class="gamebtn"
+        style="background-color: #f7f324"
+        (click)="mediumMode()"
+      >
+        Medium
+      </button>
+    </div>
+    <div>
+      <button
+        class="gamebtn"
+        style="background-color: #f32f2f"
+        (click)="hardMode()"
+      >
+        Hard
+      </button>
+    </div>
+  </div>
+  <div class="circle small">
+    <h1>{{ counter }}</h1>
+  </div>
+  <div>
+      <img src="/assets/home-128.png" alt="">
+      <input type="text">
+      <button>Enter Answer</button>
+      <button>Skip Question</button>
+      <button>Start Game</button>
+      <button>Reset Game</button>
+  </div>
 </div>
-
-
