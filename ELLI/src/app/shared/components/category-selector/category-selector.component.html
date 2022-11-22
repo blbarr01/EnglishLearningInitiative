@@ -1,1 +1,11 @@
-<p>category-selector works!</p>
+<div id="dropdown-menu">
+    <ul class="styleOfList">
+      <li class="styleOfListTitle"><a class="styleOfListaTitle"> Pick A Category</a>
+        <ul class="dropdown">
+          <p *ngFor="let category of categories">
+            <li> <a (click)=" updateQuiz(category) ">{{category}} </a></li>
+          </p>
+        </ul>
+      </li>
+    </ul>
+</div>
