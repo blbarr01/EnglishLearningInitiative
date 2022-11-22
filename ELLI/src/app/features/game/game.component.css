@@ -1,28 +1,39 @@
-.circle.small {
-    position: absolute;
-    left: 45%;
-	border: 8px solid #42f860;
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	z-index: 86;
+.maindiv {
+    display: flex;
 }
 
-.circle.filled {
-	background-color: #666666;
-}
 
-.circle h1 {
-    position: absolute;
-    left: 10%;
-    bottom: 0.3%;
-    font-family:  Times, serif;
+
+.timer {
+
+}
+.timerTxt {
     font-weight: 800;
-    font-size: 80px;
+    font-size: 90px;
     color: #42f860;
+    vertical-align: middle;
+    font-family:  Times, serif;
     text-decoration: none;
-    display: block;
-    letter-spacing: -0.02em;
     line-height: 1;
-    margin-top: 32px;
+}
+
+.gamediv{
+    align-items: flex-start;
+
+    /* position: absolute;
+    left: 3%;
+    top: 15%; */
+    /* width: 300px; */
+    height: 300px; 
+}
+
+.gamebtn {
+    text-align: center;
+    width: 17%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
 }
