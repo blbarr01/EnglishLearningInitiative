@@ -1,4 +1,4 @@
-.title {
+  .title {
     padding: 30px;
     text-align: center;
     font-size: 30px;
@@ -6,50 +6,48 @@
   .category
   {
      
-    padding: 30px;
+    padding: 200px;
   }
+
   h2
   {
     background-color: var(--matador-red);
-    border: 5px solid black;
+   
     color: white ;
       text-align: center;
       font: size 140px;;
   }
   .categories
   {
-   
+    border-radius: 1rem;
    
     border: 2px solid black;
     
     margin: 20px 0 0;/*  margin  do I want it?*/
     padding: 10px;
+   /* display: inline-flex;   once images are imported, use this*/
 
   
   }
   label
   {
-  
     display: inline-flex;
-    align-items: left
+
     
   }
 
   .big
   {
-
     cursor: pointer;
-    box-sizing: border-box;
-    text-align: left;
-   
-    
   }
 
   p
   {
+    display: inline-flex;
     margin-left: 20px;
     margin-top: 10px;
     font-size: 30px;
+   
   }
   .green-color-correct
   {
@@ -70,4 +68,68 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+
+
+ul.styleOfList
+{
+  
+  padding: 0%;
+  list-style: none;
+  background-color: var(--matador-red);
+  display: inline-block;
+  text-align: left;
+
+ 
+  
+
+}
+#dropdown-menu
+{
+  text-align: left;
+ 
+
+}
+ul li
+{
+
+  position: relative;
+  cursor: pointer;
+  
+ 
+}
+
+.styleOfListaTitle
+{
+  color: white;
+  padding: 20px 25px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  
+  
+}
+ul.dropdown li {
+  display: inline-flex;
+  color: white;
+  
+}
+  
+  ul.dropdown {
+  width: 100%;
+  background: darkred;
+  position: absolute;
+  display: none;
+  
+  
+  
+  }
+  ul li a:hover {
+    background-color: var(--matador-red);
+    
+  
+  }
+  
+  ul li:hover ul.dropdown {
+  display: block;
   }

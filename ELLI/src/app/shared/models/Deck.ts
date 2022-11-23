@@ -1,9 +1,12 @@
-/***
- * 
- */
 
+export interface Card{
+    keyWord: string;
+    category: string;
+    img: string;
+    audio?: string;
+}
 
-interface Deck{
+export interface Deck{
     deckTitle: string;
     cards: Card[]; 
 }
