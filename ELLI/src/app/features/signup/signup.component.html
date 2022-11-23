@@ -1,19 +1,27 @@
-<section class="login-container">
-    <div class="container">
-        <h2 class="center">Signup</h2>
-        <p class="login-link" (click)="showLogin()">Login</p>
-        <form action="Get" id="main-form">
-            <div class="form-element">
-                <label for="UserName">Email</label>
-                <input type="text" autocomplete="name" name="uname" id="UserName" placeholder="Email">
-            </div>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </div>
-        </form>
-        <div class="btn-container">
-            <button type="button" id="submit-btn">Submit</button>
-        </div>
+<!--icon sheet link  using "Fa Fa" from iconscout-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!--code below for log in component-->
+<div class="box">
+  <div class="Signup-form">
+    <h2>Registration From</h2>
+    <div class="inputBox">
+      <input type="email" required="required">
+      <span>Email Id</span>
+      <i></i>
+      <div class="inputBox">
+        <input type="passowrd" required="required">
+        <span>Password</span>
+        <i></i>
     </div>
-</section>
+    <div class="links">
+      <a href="#">Forgot Password?</a>
+      <a href="#">Signup</a>
+    </div>
+    <input (click)="showLogin()" type="submit" value="LogIn">
+  </div>
+</div>
+
+
+    <!--The link to connect an html and css file--> 
+    <link rel="stylesheet" href="signup.component.css">
+
