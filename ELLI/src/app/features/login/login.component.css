@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
 *{
   margin: 0;
+  width: 95%;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
@@ -20,10 +21,10 @@
   left: 35%;
   margin-top:5%;
   align-content: center;
-  width: 450px;
+  width: 400px;
   height: 500px;                   /*This is the log in form background and measuremnts*/
   background-color: black;
-  border-radius: 10px;
+  border-radius: 10px ;
   overflow: hidden;
 }
 .box::before{
