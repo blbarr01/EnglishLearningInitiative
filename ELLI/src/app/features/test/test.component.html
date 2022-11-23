@@ -1,15 +1,16 @@
-<app-category-selector></app-category-selector>
-<div class=category>
-  <h2>{{CurrentCategory[currentQuiz].question}}</h2>
-  <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
-    <label for="radio" class="radio">
-      <input type="radio" class="big" id="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected />
 
-    </label>
-    <p>{{quiz.option}} </p>
+  <app-category-selector></app-category-selector>
+  <div class=category>
+    <h2>{{CurrentCategory[currentQuiz].question}}</h2>
+    <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
+      <label for="radio" class="radio">
+        <input type="radio" class="big" id="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected />
+  
+      </label>
+      <p>{{quiz.option}} </p>
+    </div>
+  
   </div>
-
-</div>
-
-<h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
-<h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
+  
+  <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
+  <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
