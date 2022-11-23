@@ -10,8 +10,8 @@ interface Quiz{
 }
 
 
-interface Buttons{
-  ButtonNumber:any;
+interface arrr{
+  button:number;
 }
 
 
@@ -24,7 +24,7 @@ export class TestComponent implements OnInit {
 
   constructor(private router: Router) { 
   }
-
+   buttons: arrr[] = [{button:1},{button:2},{button:3},{button:4},{button:5},{button:6}];
 
   ngOnInit(): void {
   }
@@ -42,9 +42,10 @@ export class TestComponent implements OnInit {
           quizNumber:1,
           question: "which one of these is apple",
           answer :[
-           { option:'spple',correct: false},
-           { option:'appppplee',correct: false},
-           { option:'apple',correct: true}
+           { option:'spple',correct: false},//pull a random image not equal to correct image from array of images(option.[index] if equal call function againif not set and counter++)
+           //run as long as coutner is less than 4=> so we can populate the answer chocies 
+           { option:'appppplee',correct: false},//pull a random image not equal to correct image
+           { option:'apple',correct: true}// correct image
           ]
         },
         {
