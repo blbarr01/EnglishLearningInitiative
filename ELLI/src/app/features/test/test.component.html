@@ -1,15 +1,5 @@
-<div id="dropdown-menu">
-  <ul class="styleOfList">
-    <li class="styleOfListTitle"><a class="styleOfListaTitle"> pick a test</a>
-      <ul class="dropdown">
-        <p *ngFor="let allbuttons of buttons ; let indexOfelement=index;">
-          <li> <a (click)=" updateQuiz(allbuttons.button) ">Needs to be fixed </a></li>
-        </p>
-      </ul>
-    </li>
-  </ul>
-</div>
 
+  <app-category-selector></app-category-selector>
   <div class=category>
     <h2>{{CurrentCategory[currentQuiz].question}}</h2>
     <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
