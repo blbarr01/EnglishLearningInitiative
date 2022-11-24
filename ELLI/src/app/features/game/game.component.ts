@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Deck } from 'src/app/shared/models';
-import { DecksService } from 'src/app/shared/services/decks.service';
 
 @Component({
   selector: 'app-game',
@@ -9,20 +7,18 @@ import { DecksService } from 'src/app/shared/services/decks.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  gameDeck: any;
-  constructor(private router: Router, private decksService: DecksService) {}
+
+  constructor(private router: Router) {}
  
   showHome(){
     this.router.navigateByUrl("");
   }
 
-  ngOnInit(): void {
-    this.gameDeck = this.decksService.deck;
-  }
+  ngOnInit(): void {}
 
   counter: number = 60;
 
   runCounter(){
   }
-  
+
 }

@@ -5,14 +5,14 @@
     background: var(--matador-red);
     display: flex;
     border-bottom: 2px solid black;
-    height:  4.375em;
+    height: 70px;
   }
 
 
   #banner-img{
     position: fixed;
-    height: 3.125em;
-    width: 3.125em;
+    height: 50px;
+    width: 50px;
     top: 1%;
     left: 1%;
     /* border: 2px solid magenta; */

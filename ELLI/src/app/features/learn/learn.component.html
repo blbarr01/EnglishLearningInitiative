@@ -1,17 +1,17 @@
+
 <h2 class="title">Learn</h2>
-<app-category-selector></app-category-selector>
-<button class="button-back" (click)="clickBack()"><----</button>
+
+<button class="button"><----</button>
 <div class="flashcard">
   <div class="text">
-    <div class="flip-card-front">
-      <img class="img" src="{{ terms[questionCorrect].image }}" />
+    <div class="flip-card-front" *ngFor="let term of terms">
+      <img [src]="term.image" />
     </div>
-    <div class="flip-card-back">
+    <div class="flip-card-back" *ngFor="let word of terms">
       <p>
-        {{ terms[questionCorrect].word }}
+        {{ word.word }}
       </p>
     </div>
   </div>
-  <p class="curr-card">{{ currCard }} / {{ terms.length }}</p>
 </div>
-<button class="button-next" (click)="click()">---></button>
+<button class="button">---></button>

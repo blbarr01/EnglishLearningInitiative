@@ -51,24 +51,8 @@ p {
   border-radius: 25px;
 }
 
-.button-next {
+.button {
   size: 1000px;
   color: black;
   background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 65%;
-}
-
-.button-back {
-  size: 1000px;
-  color: black;
-  background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 35%;
-}
-.img {
-  height: 300px;
-  width: 300px;
 }
