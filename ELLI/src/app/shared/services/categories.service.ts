@@ -9,6 +9,6 @@ export class CategoriesService {
   constructor() { }
 
   getCategories(): string[]{
-    return ['Medical', 'DMV', 'SuperMarket'];
+    return ['Fruits','Sports'];
   }
 }

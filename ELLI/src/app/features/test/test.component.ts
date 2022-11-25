@@ -21,12 +21,13 @@ interface arrr{
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
+ 
   constructor(private router: Router) { 
   }
    buttons: arrr[] = [{button:1},{button:2},{button:3},{button:4},{button:5},{button:6}];
 
   ngOnInit(): void {
+    this.CurrentCategory = this.quizzes;
   }
 
   isCorrect: boolean=false;
@@ -34,11 +35,10 @@ export class TestComponent implements OnInit {
   CurrentCategory:any;
   questionCorrect:number=0;
   answerSelected=false;
-  currentQuiz =0;
+  currentQuiz = 0;
 
   quizzes: Quiz[] = [
     {
-     
           quizNumber:1,
           question: "which one of these is apple",
           answer :[
