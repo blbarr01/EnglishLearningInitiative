@@ -1,9 +1,25 @@
 <div>
   <div class="object-left-top">
-  <app-category-selector></app-category-selector>
+    <app-category-selector></app-category-selector>
+  </div>
+  <div class="object-left-top ml-40">
+    <p class= "mr-0 pr-0">Choose A Game Mode</p>
+    <div>
+      <button (click)="hardMode()" class="bg-[#FF3131] w-1/6">Hard</button>
+    </div>
+    <div>
+      <button (click)="mediumMode()" class= "bg-[#FFF01F] w-1/6">Medium</button>
+    </div>
+    <div>
+      <button (click)="easyMode()" class="bg-[#42f860] w-1/6">Easy</button>
+    </div>
   </div>
   <div class="object-top my-3 text-center">
-    <p class="text-9xl text-[#42f860] object-top font-bold font-sans">{{ counter }}</p>
-    <p>{{gameDeck.cards[0].keyWord}}</p>
+    <p class="text-9xl text-[#42f860] object-top font-bold font-sans">
+      {{ counter }}
+    </p>
+    <p>{{ gameDeck.cards[0].keyWord }}</p>
   </div>
+  <button (click)="startGame()">Start Game</button>
+  <button (click)="resetGame()">Reset Game</button>
 </div>

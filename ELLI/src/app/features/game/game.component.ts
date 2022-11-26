@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 import { Deck } from 'src/app/shared/models';
 import { DecksService } from 'src/app/shared/services/decks.service';
 
@@ -11,6 +11,8 @@ import { DecksService } from 'src/app/shared/services/decks.service';
 })
 
 export class GameComponent implements OnInit, OnDestroy {
+  gameRunning: boolean = false;
+  gameMode: number = 1;
   gameDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
 
@@ -30,10 +32,43 @@ export class GameComponent implements OnInit, OnDestroy {
     this.deckSub?.unsubscribe();
   }
 
-  counter: number = 60;
+  counter: number = 40;
 
 
-  runCounter(){
+  startGame(){
+    this.gameRunning = true;
+    
+      const clock$ = interval(1000)
+      clock$.subscribe((t)=> {
+        while(this.gameRunning){
+          this.counter -= 1;
+        }
+      })
   }
-  
+
+  resetGame(){
+    this.gameRunning = false;
+    if(this.gameMode === 3){
+      this.hardMode();
+    } else if (this.gameMode === 2) {
+      this.mediumMode();
+    } else {
+      this.easyMode();
+    }
+  }
+
+  hardMode(){
+    this.counter = 20;
+    this.gameMode = 3;
+  }
+
+  mediumMode(){
+    this.counter = 30;
+    this.gameMode = 2;
+  }
+
+  easyMode(){
+    this.counter = 40;
+    this.gameMode = 1;
+  } 
 }
