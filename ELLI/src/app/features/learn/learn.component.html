@@ -4,14 +4,15 @@
 <div class="flashcard">
   <div class="text">
     <div class="flip-card-front">
-      <img class="img" src="{{ terms[questionCorrect].image }}" />
+      <img class="img" src="{{ cardDeck.cards[i].image }}" />
     </div>
     <div class="flip-card-back">
       <p>
-        {{ terms[questionCorrect].word }}
+        <!-- {{ terms[questionCorrect].keyWord }} -->
+        {{ cardDeck.cards[i].keyWord }}
       </p>
     </div>
   </div>
-  <p class="curr-card">{{ currCard }} / {{ terms.length }}</p>
+  <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
 </div>
 <button class="button-next" (click)="click()">---></button>
