@@ -14,6 +14,8 @@ p {
   margin: 25px;
   width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: none;
 }
 .text {
   position: relative;
@@ -55,20 +57,30 @@ p {
   size: 1000px;
   color: black;
   background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 65%;
+  position: relative;
+  cursor: pointer;
+  top: 20px;
+  left: 1100px;
 }
 
 .button-back {
   size: 1000px;
   color: black;
   background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 35%;
+  position: relative;
+  top: 450px;
+  left: 300px;
+  cursor: pointer;
 }
 .img {
   height: 300px;
   width: 300px;
+}
+
+.curr-card {
+  position: relative;
+  display: flex;
+  color: red;
+  align-items: center;
+  margin: auto;
 }
