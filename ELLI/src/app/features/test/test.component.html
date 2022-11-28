@@ -1,16 +1,26 @@
 
-  <app-category-selector></app-category-selector>
+  <app-category-selector (click)="pop()"></app-category-selector>
   <div class=category>
-    <h2>{{CurrentCategory[currentQuiz].question}}</h2>
-    <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
+    <h2>{{gameDeck.cards[i].keyWord}}</h2>
+    
+    <div  class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
+      
       <label for="radio" class="radio">
         <input type="radio" class="big" id="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected />
   
       </label>
       <p>{{quiz.option}} </p>
+
+    
     </div>
   
   </div>
   
   <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
   <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
+
+
+
+  <input name="chooseOne" type="radio" value="gameDeck.cards[i].keyWord" checked="checked" (change)="answerStatus(gameDeck.cards[i].keyWord)" [disabled]=answerSelected>{{gameDeck.cards[i].keyWord}}
+  <input name="chooseOne"type="radio" value="gameDeck.cards[i].keyWord" checked="checked" (change)="answerStatus(false)" [disabled]=answerSelected>{{gameDeck.cards[2].keyWord}}
+  <input name="chooseOne"type="radio" value="gameDeck.cards[i].keyWord" checked="checked" (change)="answerStatus(false)" [disabled]=answerSelected>{{gameDeck.cards[3].keyWord}}

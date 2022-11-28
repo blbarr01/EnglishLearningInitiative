@@ -1,19 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { appendFile } from 'fs/promises';
+import { DecksService } from 'src/app/shared/services/decks.service';
 
- 
-interface Quiz{
-  quizNumber:number;
-  question: string;
-  answer:  {option:string, correct: boolean} [];
-}
-
-
-interface arrr{
-  button:number;
-}
-
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -21,15 +11,43 @@ interface arrr{
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
- 
-  constructor(private router: Router) { 
+  gameDeck: any;
+  deckSub: Subscription = Subscription.EMPTY;
+  constructor(private router: Router, private decksService: DecksService) { 
   }
-   buttons: arrr[] = [{button:1},{button:2},{button:3},{button:4},{button:5},{button:6}];
+
+
+
+  getOptions()
+  {
+    let randomElement = Math.floor(Math.random()*4);
+     this.options =this.gameDeck.cards[randomElement].image;
+      if(this.gameDeck.cards[this.i].image !==  this.options)
+      console.log( this.options);
+      else
+      this.getOptions();
+  }
+
+
+
+
+pop()
+{
+  this.getOptions();
+ 
+}
+    currentAnswer:any;
+     options:any=0;
+     options2:any;
 
   ngOnInit(): void {
     this.CurrentCategory = this.quizzes;
+    this.deckSub = this.decksService.deck$.subscribe((d) => {
+      this.gameDeck = d;
+      
+    }) 
   }
-
+  i:number=0;
   isCorrect: boolean=false;
   isInCorrect:boolean=false;
   CurrentCategory:any;
@@ -37,10 +55,8 @@ export class TestComponent implements OnInit {
   answerSelected=false;
   currentQuiz = 0;
 
-  quizzes: Quiz[] = [
+  quizzes:any = [
     {
-          quizNumber:1,
-          question: "which one of these is apple",
           answer :[
            { option:'spple',correct: false},//pull a random image not equal to correct image from array of images(option.[index] if equal call function againif not set and counter++)
            //run as long as coutner is less than 4=> so we can populate the answer chocies 
@@ -49,8 +65,7 @@ export class TestComponent implements OnInit {
           ]
         },
         {
-          quizNumber:2,
-          question: "which one of these is grape",
+         
           answer :[
             { option:'grape',correct: true},
             { option:'graaaep',correct: false},
@@ -59,8 +74,6 @@ export class TestComponent implements OnInit {
         },
   
         {
-          quizNumber:1,
-          question: "which one of these is a ball",
           answer :[
             { option:'ball',correct: true},
             { option:'bounce',correct: false},
@@ -69,14 +82,6 @@ export class TestComponent implements OnInit {
         },
   
   ]
-    
-updateQuiz(i:number){
-   this.CurrentCategory = this.quizzes.filter((Category)=>
-  {
-return Category.quizNumber===i;//hard coded but will make quiz choice dynamic 
-  });
-}
-
   answerStatus(option:boolean)
   {
     setTimeout(() => {
@@ -84,6 +89,7 @@ return Category.quizNumber===i;//hard coded but will make quiz choice dynamic
       this.answerSelected=false;
       this.isCorrect =false;
       this.isInCorrect=false;
+      this.i++;
     }, 2000);
     this.answerSelected=true;
 
