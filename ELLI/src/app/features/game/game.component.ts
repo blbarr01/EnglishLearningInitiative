@@ -11,10 +11,11 @@ import { DecksService } from 'src/app/shared/services/decks.service';
 })
 
 export class GameComponent implements OnInit, OnDestroy {
-  gameRunning: boolean = false;
+  index: number = 0;
   gameMode: number = 1;
   gameDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
+  clockSub: Subscription = Subscription.EMPTY;
 
   constructor(private router: Router, private decksService: DecksService) {}
  
@@ -30,24 +31,26 @@ export class GameComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.deckSub?.unsubscribe();
+    this.clockSub?.unsubscribe();
   }
 
   counter: number = 40;
 
 
-  startGame(){
-    this.gameRunning = true;
-    
+  startGame(){    
       const clock$ = interval(1000)
-      clock$.subscribe((t)=> {
-        while(this.gameRunning){
+      this.clockSub = clock$.subscribe((t)=> {
           this.counter -= 1;
-        }
+          if(this.counter <= 0){
+            console.log("Game Over");
+            this.resetGame();
+          }
       })
   }
 
   resetGame(){
-    this.gameRunning = false;
+    this.index = 0;
+    this.clockSub?.unsubscribe();
     if(this.gameMode === 3){
       this.hardMode();
     } else if (this.gameMode === 2) {
@@ -55,6 +58,15 @@ export class GameComponent implements OnInit, OnDestroy {
     } else {
       this.easyMode();
     }
+  }
+
+  skipCard(){
+    this.counter -= 4;
+    this.index++;
+  }
+
+  submitAnswer(){
+
   }
 
   hardMode(){

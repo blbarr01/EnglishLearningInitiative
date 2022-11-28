@@ -76,6 +76,6 @@ export class DecksService {
   filterByCategory(category: string): void{
     // console.log(category);
     let deck = this.decks.filter((d) => d.deckTitle === category)[0];
-    // this.deckSubject.next(deck);
+    this.deckSubject.next(deck);
   }
 }
