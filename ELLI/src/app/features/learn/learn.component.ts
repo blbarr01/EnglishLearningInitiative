@@ -64,4 +64,7 @@ export class LearnComponent implements OnInit {
       // this.click();
     });
   }
+  ngOnDestroy(): void {
+    this.deckSub?.unsubscribe();
+  }
 }
