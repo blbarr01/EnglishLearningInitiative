@@ -19,12 +19,6 @@ interface Buttons {
 })
 export class LearnComponent implements OnInit {
   constructor(private router: Router, private decksService: DecksService) {}
-  isCorrect: boolean = false;
-  isInCorrect: boolean = false;
-  CurrentCategory: any;
-  questionCorrect: number = 0;
-  answerSelected = false;
-  currentQuiz = 0;
   currCard = 1;
   cardDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
@@ -34,25 +28,25 @@ export class LearnComponent implements OnInit {
 
   terms: Words[] = [];
 
-  updateQuiz(i: number) {
-    this.CurrentCategory = this.terms.filter((Word) => {
-      return Word.qnum === i; //hard coded but will make quiz choice dynamic
-    });
-  }
   click() {
-    this.currentQuiz++;
-    this.questionCorrect++;
-    this.bottomNum++;
-    // console.log(this.terms[this.i].keyWord);
-    this.currCard++;
-    this.i++;
+    if (this.i > this.cardDeck.cards.length - 2) {
+    } else {
+      this.bottomNum++;
+      // console.log(this.terms[this.i].keyWord);
+      this.currCard++;
+      this.i++;
+    }
   }
   clickBack() {
-    this.currentQuiz--;
-    this.questionCorrect--;
-    this.bottomNum--;
-    this.currCard--;
-    this.i--;
+    if (this.i < 1) {
+    } else {
+      this.bottomNum--;
+      this.currCard--;
+      this.i--;
+    }
+  }
+  playAudio(url: string) {
+    new Audio(url).play();
   }
   currDeck: number = 0;
 
@@ -63,5 +57,8 @@ export class LearnComponent implements OnInit {
       console.log(d.cards[this.i]);
       // this.click();
     });
+  }
+  ngOnDestroy(): void {
+    this.deckSub?.unsubscribe();
   }
 }
