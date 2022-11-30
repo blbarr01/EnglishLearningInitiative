@@ -16,7 +16,18 @@ import { CategorySelectorComponent } from './shared/components/category-selector
 import { FlashcardComponent } from './shared/components/flashcard/flashcard.component';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent, CategorySelectorComponent, FlashcardComponent],
+  declarations: [
+    AppComponent,
+    GameComponent,
+    HomeComponent,
+    LearnComponent,
+    TalkToTextComponent,
+    TestComponent,
+    LoginComponent,
+    SignupComponent,
+    CategorySelectorComponent,
+    FlashcardComponent
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
