@@ -33,4 +33,10 @@ export class UsersService {
   getUsers(): User[]{
     return this.users;
   }
+
+  loginUser(req: User ):Boolean {
+    
+    return true; 
+  }
+
 }
