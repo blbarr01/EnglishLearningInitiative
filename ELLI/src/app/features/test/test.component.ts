@@ -28,9 +28,6 @@ export class TestComponent implements OnInit {
       this.getOptions();
   }
 
-
-
-
 pop()
 {
   this.getOptions();
@@ -41,7 +38,7 @@ pop()
      options2:any;
 
   ngOnInit(): void {
-    this.CurrentCategory = this.quizzes;
+   
     this.deckSub = this.decksService.deck$.subscribe((d) => {
       this.gameDeck = d;
       
@@ -55,34 +52,7 @@ pop()
   answerSelected=false;
   currentQuiz = 0;
 
-  quizzes:any = [
-    {
-          answer :[
-           { option:'spple',correct: false},//pull a random image not equal to correct image from array of images(option.[index] if equal call function againif not set and counter++)
-           //run as long as coutner is less than 4=> so we can populate the answer chocies 
-           { option:'appppplee',correct: false},//pull a random image not equal to correct image
-           { option:'apple',correct: true}// correct image
-          ]
-        },
-        {
-         
-          answer :[
-            { option:'grape',correct: true},
-            { option:'graaaep',correct: false},
-            { option:'srape',correct: false}
-          ]
-        },
-  
-        {
-          answer :[
-            { option:'ball',correct: true},
-            { option:'bounce',correct: false},
-            { option:'red',correct: false}
-          ]
-        },
-  
-  ]
-  answerStatus(option:boolean)
+  answerStatus(option:any)
   {
     setTimeout(() => {
       this.currentQuiz++;
@@ -90,16 +60,18 @@ pop()
       this.isCorrect =false;
       this.isInCorrect=false;
       this.i++;
+      this.getOptions()
     }, 2000);
     this.answerSelected=true;
 
-    if(option===true)
+    if(option===this.gameDeck.cards[this.i].keyWord)
     {
       this.isCorrect=true;
       this.questionCorrect++;
     }
     else
     this.isInCorrect=true;
+    
     }
   }
 
