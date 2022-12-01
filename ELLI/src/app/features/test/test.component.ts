@@ -28,9 +28,6 @@ export class TestComponent implements OnInit {
       this.getOptions();
   }
 
-
-
-
 pop()
 {
   this.getOptions();
@@ -90,7 +87,8 @@ pop()
       this.isCorrect =false;
       this.isInCorrect=false;
       this.i++;
-      this.getOptions()
+      this.getOptions();
+      
     }, 2000);
     this.answerSelected=true;
 
@@ -98,10 +96,10 @@ pop()
     {
       this.isCorrect=true;
       this.questionCorrect++;
+      
     }
     else
     this.isInCorrect=true;
-    
     }
   }
 

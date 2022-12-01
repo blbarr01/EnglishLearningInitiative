@@ -3,14 +3,16 @@
   <div class=category>
     <h2>{{gameDeck.cards[i].keyWord}}</h2>
     
-    <div class="answerChoices">
+    <div  class="answerChoices">
     <li  (click)="answerStatus(gameDeck.cards[i].keyWord)">
         <img class="img" src="{{ gameDeck.cards[i].image }}" />
     </li>
 
-    <li disabled=answerSelected (click)="answerStatus(this.options)" >
+    <li  (click)="answerStatus(this.options)" >
         <img class="img" src="{{ this.options  }}" />
     </li>
+
+
   </div>
   <h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
   <h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
