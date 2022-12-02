@@ -1,9 +1,31 @@
-<div>
-  <div class="object-left-top">
-  <app-category-selector></app-category-selector>
+<div class="grid grid-cols-[23%_52%_25%] gap-3">
+  <div class="w-1/2">
+    <app-category-selector></app-category-selector>
+    <div class="text-center">
+      <p>Choose A Game Mode</p>
+      <div>
+        <button (click)="hardMode()" class="bg-[#FF3131] w-1/2">Hard</button>
+      </div>
+      <div>
+        <button (click)="mediumMode()" class= "bg-[#FFF01F] w-1/2">Medium</button>
+      </div>
+      <div>
+        <button (click)="easyMode()" class="bg-[#42f860] w-1/2">Easy</button>
+      </div>
+    </div>
   </div>
-  <div class="object-top my-3 text-center">
-    <p class="text-9xl text-[#42f860] object-top font-bold font-sans">{{ counter }}</p>
-    <p>{{gameDeck.cards[0].keyWord}}</p>
+  <div class="text-center"><br>
+    <p class="text-9xl text-[#42f860] font-bold font-sans my-40">
+      {{ counter }}
+    </p><br>
+    <img class="img m-auto block my-8 w-3/4 h-1/2" src="{{ gameDeck.cards[index].image }}" />
+    <input type="text" id="inputValue" value="Write the Answer">
+    <button (click)="submitAnswer()">Submit Answer</button><br><br>
+    <button (click)="skipCard()">Skip Card</button>
+    <button (click)="startGame()" class="mx-20">Start Game</button>
+    <button (click)="resetGame()">Reset Game</button>
+  </div>
+  <div>
+    <p>The Rules Of The Game</p><br>
   </div>
 </div>
