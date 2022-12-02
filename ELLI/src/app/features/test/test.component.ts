@@ -17,11 +17,11 @@ export class TestComponent implements OnInit {
   }
 
 
-
+  randomElement:number=0;;
   getOptions()
   {
-    let randomElement = Math.floor(Math.random()*4);
-     this.options =this.gameDeck.cards[randomElement].image;
+     this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
+     this.options =this.gameDeck.cards[this.randomElement].image;
       if(this.gameDeck.cards[this.i].image !==  this.options)
       console.log( this.options);
       else
@@ -49,7 +49,7 @@ pop()
   isInCorrect:boolean=false;
   CurrentCategory:any;
   questionCorrect:number=0;
-  answerSelected=false;
+  answerSelected=true;
   currentQuiz = 0;
 
   quizzes:any = [
@@ -79,27 +79,30 @@ pop()
         },
   
   ]
+  tempanswer:any;
   answerStatus(option:any)
   {
     setTimeout(() => {
       this.currentQuiz++;
-      this.answerSelected=false;
+      this.answerSelected=true;
       this.isCorrect =false;
       this.isInCorrect=false;
       this.i++;
       this.getOptions();
       
     }, 2000);
-    this.answerSelected=true;
+    this.answerSelected=false;
 
     if(option===this.gameDeck.cards[this.i].keyWord)
     {
       this.isCorrect=true;
-      this.questionCorrect++;
-      
+      this.questionCorrect++;  
     }
     else
+    {
+      this.isCorrect=true;
     this.isInCorrect=true;
+    this.tempanswer=option;
     }
   }
-
+}
