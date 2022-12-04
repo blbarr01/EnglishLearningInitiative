@@ -13,98 +13,94 @@ import { Subscription } from 'rxjs';
 export class TestComponent implements OnInit {
   gameDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
-  isanswerSelected=false;
-  isCategorySelector=true;
-  isQuestionShowing=false;
-
-
   constructor(private router: Router, private decksService: DecksService) { 
   }
 
 
-  randomElement:number=0;;
-  getOption1()
+
+  getOptions()
   {
-     this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
-     this.options =this.gameDeck.cards[this.randomElement].image;
-      if(this.gameDeck.cards[this.j].image !== this.options)
+    let randomElement = Math.floor(Math.random()*4);
+     this.options =this.gameDeck.cards[randomElement].image;
+      if(this.gameDeck.cards[this.i].image !==  this.options)
       console.log( this.options);
       else
-      {
-      this.getOption1();
-      }
-      this.getOption2();
-  } 
+      this.getOptions();
+  }
 
-  getOption2()
-  {
-     this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
-     this.options2 =this.gameDeck.cards[this.randomElement].image;
-      if(this.gameDeck.cards[this.j].image !==  this.options && this.gameDeck.cards[this.j].image !==  this.options2 &&this.options2!=this.options )
-      {
-        console.log( this.options2);
-      }
-      else
-      this.getOption2();
-  } 
-  
+
+
+
 pop()
 {
-  this.getOption1();
-  this.isanswerSelected=true;
-  this.isCategorySelector=false;
-  this.isQuestionShowing=true;
+  this.getOptions();
  
 }
-randomElement2:any;
+    currentAnswer:any;
      options:any=0;
      options2:any;
 
   ngOnInit(): void {
-  
+    this.CurrentCategory = this.quizzes;
     this.deckSub = this.decksService.deck$.subscribe((d) => {
       this.gameDeck = d;
       
     }) 
   }
   i:number=0;
-  j:number=0;
   isCorrect: boolean=false;
   isInCorrect:boolean=false;
+  CurrentCategory:any;
+  questionCorrect:number=0;
+  answerSelected=false;
+  currentQuiz = 0;
 
- 
+  quizzes:any = [
+    {
+          answer :[
+           { option:'spple',correct: false},//pull a random image not equal to correct image from array of images(option.[index] if equal call function againif not set and counter++)
+           //run as long as coutner is less than 4=> so we can populate the answer chocies 
+           { option:'appppplee',correct: false},//pull a random image not equal to correct image
+           { option:'apple',correct: true}// correct image
+          ]
+        },
+        {
+         
+          answer :[
+            { option:'grape',correct: true},
+            { option:'graaaep',correct: false},
+            { option:'srape',correct: false}
+          ]
+        },
   
+        {
+          answer :[
+            { option:'ball',correct: true},
+            { option:'bounce',correct: false},
+            { option:'red',correct: false}
+          ]
+        },
   
-  tempanswer:any;
-  
-  answerStatus(option:any)
+  ]
+  answerStatus(option:boolean)
   {
     setTimeout(() => {
-   
-      this.isanswerSelected=true;
+      this.currentQuiz++;
+      this.answerSelected=false;
       this.isCorrect =false;
       this.isInCorrect=false;
-      this.i++; 
-    
+      this.i++;
     }, 2000);
-    setTimeout(() => {
-    this.j++;
-      this.getOption1();
-    }, 200);
-    
-    this.getOption1();
-    this.isanswerSelected=false;
+    this.answerSelected=true;
 
-    if(option===this.gameDeck.cards[this.i].keyWord)
-    {
-      this.isCorrect=true; 
-    }
-    else
+    if(option===true)
     {
       this.isCorrect=true;
+      this.questionCorrect++;
+    }
+    else
     this.isInCorrect=true;
-    this.tempanswer=option;
-    
     }
   }
-}
+
+
