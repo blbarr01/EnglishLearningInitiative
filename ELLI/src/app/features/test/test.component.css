@@ -1,8 +1,3 @@
-  .title {
-    padding: 30px;
-    text-align: center;
-    font-size: 30px;
-  }
   .category
   {
      
@@ -13,15 +8,24 @@
   {
     background-color: var(--matador-red);
    
-    color: white ;
+    color: white;
       text-align: center;
-      font: size 140px;;
+      
+      font-size: 40px;
+  }
+
+  li h2{
+    border-radius: 1rem;
+   
+    justify-content: space-evenly;
+   display: inline-flex;
+   
   }
   .categories
   {
     border-radius: 1rem;
    
-    border: 2px solid black;
+  
     
     margin: 20px 0 0;/*  margin  do I want it?*/
     padding: 10px;
@@ -29,34 +33,16 @@
 
   
   }
-  label
-  {
-    display: inline-flex;
-
-    
-  }
-
 .answerChoices
 {
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
+ justify-content: space-evenly;
+ display: flex;
 
+  text-align: center;
+  list-style: none;
+  margin-right: 10%;
+  margin-left: 10%;
 }
-li
-{
- 
-  border-radius: 1rem;
-  list-style: none
-}
-  p
-  {
-    display: inline-flex;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 30px;
-   
-  }
   .green-color-correct
   {
     background: green;
@@ -65,6 +51,8 @@ li
   {
     background: red;
   }
+
+/* If button needed
   button {
     background-color: var(--matador-red);
     border: none;
@@ -77,3 +65,4 @@ li
     margin: 4px 2px;
     cursor: pointer;
   }
+*/
