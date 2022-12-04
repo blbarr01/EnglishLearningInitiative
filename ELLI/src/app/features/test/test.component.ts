@@ -23,7 +23,7 @@ export class TestComponent implements OnInit {
 
 
   randomElement:number=0;;
-  getOptions()
+  getOption1()
   {
      this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
      this.options =this.gameDeck.cards[this.randomElement].image;
@@ -31,12 +31,12 @@ export class TestComponent implements OnInit {
       console.log( this.options);
       else
       {
-      this.getOptions();
+      this.getOption1();
       }
-      this.getOptions2();
+      this.getOption2();
   } 
 
-  getOptions2()
+  getOption2()
   {
      this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
      this.options2 =this.gameDeck.cards[this.randomElement].image;
@@ -45,12 +45,12 @@ export class TestComponent implements OnInit {
         console.log( this.options2);
       }
       else
-      this.getOptions2();
+      this.getOption2();
   } 
   
 pop()
 {
-  this.getOptions();
+  this.getOption1();
   this.isanswerSelected=true;
   this.isCategorySelector=false;
   this.isQuestionShowing=true;
@@ -89,10 +89,10 @@ randomElement2:any;
     }, 2000);
     setTimeout(() => {
     this.j++;
-      this.getOptions();
+      this.getOption1();
     }, 200);
     
-    this.getOptions();
+    this.getOption1();
     this.isanswerSelected=false;
 
     if(option===this.gameDeck.cards[this.i].keyWord)
