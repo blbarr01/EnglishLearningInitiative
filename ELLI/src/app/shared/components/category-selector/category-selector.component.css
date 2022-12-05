@@ -21,7 +21,7 @@ ul.styleOfList
 ul li
 {
 
-  position: relative;
+  /* position: relative; */
   cursor: pointer;
   
  
