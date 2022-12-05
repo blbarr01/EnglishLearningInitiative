@@ -1,31 +1,81 @@
 <div class="grid grid-cols-[23%_52%_25%] gap-3">
-  <div class="w-1/2">
-    <app-category-selector></app-category-selector>
-    <div class="text-center">
-      <p>Choose A Game Mode</p>
+  <div class="">
+    <div class="w-1/2">
+      <app-category-selector></app-category-selector>
+    </div>
+    <div class="text-center w-5/12">
+      <p class="bg-[#B42121] text-white h-1/4"> Choose A Game Mode</p>
       <div>
-        <button (click)="hardMode()" class="bg-[#FF3131] w-1/2">Hard</button>
+        <button (click)="hardMode()" class="bg-[#FF3131] w-2/3">Hard</button>
       </div>
       <div>
-        <button (click)="mediumMode()" class= "bg-[#FFF01F] w-1/2">Medium</button>
+        <button (click)="mediumMode()" class="bg-[#FFF01F] w-2/3">
+          Medium
+        </button>
       </div>
       <div>
-        <button (click)="easyMode()" class="bg-[#42f860] w-1/2">Easy</button>
+        <button (click)="easyMode()" class="bg-[#42f860] w-2/3">Easy</button>
       </div>
     </div>
   </div>
-  <div class="text-center"><br>
+  <div class="text-center">
+    <br />
     <p class="text-9xl text-[#42f860] font-bold font-sans my-40">
-      {{ counter }}
-    </p><br>
-    <img class="img m-auto block my-8 w-3/4 h-1/2" src="{{ gameDeck.cards[index].image }}" />
-    <input type="text" id="inputValue" value="Write the Answer">
-    <button (click)="submitAnswer()">Submit Answer</button><br><br>
-    <button (click)="skipCard()">Skip Card</button>
-    <button (click)="startGame()" class="mx-20">Start Game</button>
-    <button (click)="resetGame()">Reset Game</button>
+      {{ displayOutput }}
+    </p>
+    <br />
+    <img
+      class="img m-auto block my-8 w-3/4 h-1/2"
+      src="{{ gameDeck.cards[index].image }}"
+    /><br />
+    <input
+      [(ngModel)]="answer"  
+      id="inputValue"
+      class="border-solid border-black text-center"
+      placeholder="Write the Answer"
+    />
+    <button
+      (click)="submitAnswer()"
+      class="bg-[#B42121] text-white w-1/4 ml-10 rounded-lg"
+    >
+      Submit Answer</button
+    ><br /><br />
+    <button
+      (click)="skipCard()"
+      class="bg-[#B42121] text-white w-1/4 rounded-lg"
+    >
+      Skip Card
+    </button>
+    <button
+      (click)="startGame()"
+      class="mx-20 bg-[#B42121] text-white w-1/4 rounded-lg"
+    >
+      Start Game
+    </button>
+    <button
+      (click)="resetGame()"
+      class="bg-[#B42121] text-white w-1/4 rounded-lg"
+    >
+      Reset Game
+    </button>
   </div>
   <div>
-    <p>The Rules Of The Game</p><br>
+    <div class="mr-10">
+      <p class="font-bold text-center mt-4">The Rules Of The Game</p>
+      <br />
+      <p class="text-center mr-2">
+        Write the name of all the pictures in the category before the time runs
+        out.
+      </p>
+      <br />
+      <p class="text-center">
+        Every card you skip you lose 5 seconds from the clock.
+      </p>
+      <br />
+      <p class="text-center">
+        Every card you skip you gain 2 seconds from the clock.
+      </p>
+      <br />
+    </div>
   </div>
 </div>
