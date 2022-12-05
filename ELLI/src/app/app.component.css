@@ -10,7 +10,7 @@
 
 
   #banner-img{
-    position: fixed;
+    position: absolute;
     height: 3.125em;
     width: 3.125em;
     top: 1%;
@@ -19,7 +19,7 @@
   }
 
   #banner-login{
-    position: fixed;
+    position: absolute;
     height: 1.5625em;
     right: 2%;
     top: 3%;
