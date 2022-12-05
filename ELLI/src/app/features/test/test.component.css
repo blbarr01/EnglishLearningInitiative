@@ -1,8 +1,3 @@
-  .title {
-    padding: 30px;
-    text-align: center;
-    font-size: 30px;
-  }
   .category
   {
      
@@ -13,15 +8,24 @@
   {
     background-color: var(--matador-red);
    
-    color: white ;
+    color: white;
       text-align: center;
-      font: size 140px;;
+      
+      font-size: 30px;
+  }
+
+  li h2{
+    border-radius: 1rem;
+   
+    justify-content: space-evenly;
+   display: inline-flex;
+   
   }
   .categories
   {
     border-radius: 1rem;
    
-    border: 2px solid black;
+  
     
     margin: 20px 0 0;/*  margin  do I want it?*/
     padding: 10px;
@@ -29,26 +33,16 @@
 
   
   }
-  label
-  {
-    display: inline-flex;
+.answerChoices
+{
+ justify-content: space-evenly;
+ display: flex;
 
-    
-  }
-
-  .big
-  {
-    cursor: pointer;
-  }
-
-  p
-  {
-    display: inline-flex;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 30px;
-   
-  }
+  text-align: center;
+  list-style: none;
+  margin-right: 10%;
+  margin-left: 10%;
+}
   .green-color-correct
   {
     background: green;
@@ -57,6 +51,8 @@
   {
     background: red;
   }
+
+/* If button needed
   button {
     background-color: var(--matador-red);
     border: none;
@@ -69,67 +65,4 @@
     margin: 4px 2px;
     cursor: pointer;
   }
-
-
-ul.styleOfList
-{
-  
-  padding: 0%;
-  list-style: none;
-  background-color: var(--matador-red);
-  display: inline-block;
-  text-align: left;
-
- 
-  
-
-}
-#dropdown-menu
-{
-  text-align: left;
- 
-
-}
-ul li
-{
-
-  position: relative;
-  cursor: pointer;
-  
- 
-}
-
-.styleOfListaTitle
-{
-  color: white;
-  padding: 20px 25px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  
-  
-}
-ul.dropdown li {
-  display: inline-flex;
-  color: white;
-  
-}
-  
-  ul.dropdown {
-  width: 100%;
-  background: darkred;
-  position: absolute;
-  display: none;
-  
-  
-  
-  }
-  ul li a:hover {
-    background-color: var(--matador-red);
-    
-  
-  }
-  
-  ul li:hover ul.dropdown {
-  display: block;
-  }
+*/
