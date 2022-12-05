@@ -90,6 +90,8 @@
   width: 100%;
   padding: 10px 10px 17px;
   background: transparent;
+  border:solid;
+  border-color:  black;
   outline:none;
   color: black;
   font-size: 2em;
@@ -149,7 +151,7 @@ input[type="Submit"]
   border: solid;
   outline: none;
   background:var(--matador-red) ;
-  padding: 10px 10px 5px;
+  padding: 10px 10px 10px;
   width: 100px;
   margin-top: 10px;
   border-radius: 10px;
@@ -164,6 +166,8 @@ input[type="Submit"]:active
 button span::after {
   content: '\00bb';
   position: absolute;
+  border: solid;
+  border-color:  black;
   opacity: 0;
   top:0;
   transition: 0.5s;
@@ -175,7 +179,7 @@ button:hover span:after { opacity: 1; right:0}
 
 input[type="Signup"]
 {
-  border: solid;
+  
   outline-style: outset;
   background:var(--matador-red) ;
   padding: 10px 10px 10px;
