@@ -17,6 +17,7 @@ export class TestComponent implements OnInit {
   isCategorySelector=true;
   isQuestionShowing=false;
 
+  allAnswers: string[]=[];
 
   constructor(private router: Router, private decksService: DecksService) { 
   }
@@ -25,27 +26,46 @@ export class TestComponent implements OnInit {
   randomElement:number=0;;
   getOption1()
   {
+   
      this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
      this.options =this.gameDeck.cards[this.randomElement].image;
       if(this.gameDeck.cards[this.j].image !== this.options)
-      console.log( this.options);
+      {
+      this.allAnswers.push(this.gameDeck.cards[this.j].image);
+      this.allAnswers.push(this.options);
+      }
       else
       {
       this.getOption1();
       }
+      
       this.getOption2();
   } 
 
   getOption2()
   {
-     this.randomElement = Math.floor(Math.random()*(this.gameDeck.cards.length));
-     this.options2 =this.gameDeck.cards[this.randomElement].image;
-      if(this.gameDeck.cards[this.j].image !==  this.options && this.gameDeck.cards[this.j].image !==  this.options2 &&this.options2!=this.options )
+     this.randomElement2 = Math.floor(Math.random()*(this.gameDeck.cards.length));
+     this.options2 =this.gameDeck.cards[this.randomElement2].image;
+      if(this.gameDeck.cards[this.j].image !==  this.options && this.gameDeck.cards[this.j].image !==  this.options2 && this.options2!=this.options )
       {
-        console.log( this.options2);
+        this.allAnswers.push(this.options2);
       }
       else
+      {
       this.getOption2();
+      }
+
+      if (this.allAnswers.length != 3) 
+        {
+          this.allAnswers.length = 0;
+          this.getOption1();
+        }
+       else
+       console.log(this.allAnswers);
+     
+     
+      
+      
   } 
   
 pop()
@@ -56,7 +76,8 @@ pop()
   this.isQuestionShowing=true;
  
 }
-randomElement2:any;
+
+randomElement2:any=0;;
      options:any=0;
      options2:any;
 
@@ -74,7 +95,6 @@ randomElement2:any;
 
  
   
-  
   tempanswer:any;
   
   answerStatus(option:any)
@@ -90,21 +110,24 @@ randomElement2:any;
     setTimeout(() => {
     this.j++;
       this.getOption1();
-    }, 200);
+    }, 500);
     
-    this.getOption1();
+   
     this.isanswerSelected=false;
 
     if(option===this.gameDeck.cards[this.i].keyWord)
     {
+      
       this.isCorrect=true; 
+     
     }
     else
     {
-      this.isCorrect=true;
+    this.isCorrect=true;
     this.isInCorrect=true;
     this.tempanswer=option;
     
     }
+   
   }
 }
