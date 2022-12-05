@@ -1,8 +1,7 @@
 
 export interface Card{
     keyWord: string;
-    category: string;
-    img: string;
+    image: string;
     audio?: string;
 }
 

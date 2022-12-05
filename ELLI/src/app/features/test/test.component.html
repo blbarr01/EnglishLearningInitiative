@@ -1,15 +1,25 @@
-<app-category-selector></app-category-selector>
+<app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
 <div class=category>
-  <h2>{{CurrentCategory[currentQuiz].question}}</h2>
-  <div class="categories" *ngFor="let quiz of CurrentCategory[currentQuiz].answer">
-    <label for="radio" class="radio">
-      <input type="radio" class="big" id="radio" (change)="answerStatus(quiz.correct)" [disabled]=answerSelected />
+  <h2 *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</h2>
 
-    </label>
-    <p>{{quiz.option}} </p>
+  <div *ngIf="isanswerSelected" class="answerChoices">
+    <li (click)="answerStatus(gameDeck.cards[i].keyWord)">
+      <img class="img" src="{{ gameDeck.cards[i].image }}" />
+    </li>
+    <li (click)="answerStatus(this.options)">
+      <img class="img" src="{{ this.options }}" />
+    </li>
+    <li (click)="answerStatus(this.options2)">
+      <img class="img" src="{{ this.options2 }}" />
+    </li>
   </div>
 
-</div>
 
-<h2 class="green-color-correct" *ngIf="isCorrect">Correct! </h2>
-<h2 class="red-color-wrong" *ngIf="isInCorrect">Incorrect </h2>
+
+  <div class="answerChoices">
+    <li>
+      <h2 class="green-color-correct" *ngIf="isCorrect"> <br> <img class="img" src="{{ gameDeck.cards[i].image }}" />
+      </h2>
+      <h2 class="red-color-wrong" *ngIf="isInCorrect"> <br><img src="{{tempanswer}}"></h2>
+    </li>
+  </div>

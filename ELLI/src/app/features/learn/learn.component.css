@@ -14,6 +14,10 @@ p {
   margin: 25px;
   width: 800px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
 }
 .text {
   position: relative;
@@ -22,6 +26,14 @@ p {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+.word {
+  font-size: 100px;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
+  padding: 100px 0;
+  text-transform: capitalize;
 }
 
 .flashcard:hover .text {
@@ -41,6 +53,7 @@ p {
   background-color: var(--matador-red);
   color: white;
   border-radius: 25px;
+  text-align: center;
 }
 
 /* Style the back side */
@@ -50,25 +63,76 @@ p {
   transform: rotateY(180deg);
   border-radius: 25px;
 }
+.button-next,
+.button-back {
+  position: relative;
+  background-color: #4caf50;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+}
 
+.button-next:hover,
+.button-back:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+.button-next:active,
+.button-back:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button-audio {
+  size: 50px;
+  top: 30px;
+  left: 900px;
+  cursor: pointer;
+}
 .button-next {
   size: 1000px;
   color: black;
   background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 65%;
+  position: relative;
+  cursor: pointer;
+  top: 1px;
+  left: 900px;
 }
 
 .button-back {
   size: 1000px;
   color: black;
   background-color: red;
-  position: absolute;
-  top: 75%;
-  left: 35%;
+  position: relative;
+  top: 461px;
+  left: 355px;
+  cursor: pointer;
 }
 .img {
   height: 300px;
   width: 300px;
+  margin: auto;
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.curr-card {
+  position: relative;
+  left: -400px;
+  top: 400px;
+
+  /* display: flex;
+  color: blue;
+  align-items: center;
+  margin: auto; */
 }

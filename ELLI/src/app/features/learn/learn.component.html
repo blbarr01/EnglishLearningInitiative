@@ -1,17 +1,18 @@
-<h2 class="title">Learn</h2>
 <app-category-selector></app-category-selector>
 <button class="button-back" (click)="clickBack()"><----</button>
 <div class="flashcard">
   <div class="text">
     <div class="flip-card-front">
-      <img class="img" src="{{ terms[questionCorrect].image }}" />
+      <img class="img" src="{{ cardDeck.cards[i].image }}" />
     </div>
     <div class="flip-card-back">
-      <p>
-        {{ terms[questionCorrect].word }}
+      <p class="word">
+        <!-- {{ terms[questionCorrect].keyWord }} -->
+        {{ cardDeck.cards[i].keyWord }}
       </p>
+      <button class="button-audio">🔊</button>
     </div>
   </div>
-  <p class="curr-card">{{ currCard }} / {{ terms.length }}</p>
+  <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
 </div>
 <button class="button-next" (click)="click()">---></button>

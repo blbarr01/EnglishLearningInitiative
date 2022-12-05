@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { Deck } from '../models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CategoriesService {
+  constructor() {}
 
-  constructor() { }
-
-  getCategories(): string[]{
-    return ['Medical', 'DMV', 'SuperMarket'];
+  getCategories(): string[] {
+    return ['Fruits', 'Medical'];
   }
 }
