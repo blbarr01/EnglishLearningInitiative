@@ -96,7 +96,7 @@ randomElement2:any=0;;
  
   
   tempanswer:any;
-  
+  tempCorrectanswer:any;
   answerStatus(option:any)
   {
     setTimeout(() => {
@@ -117,9 +117,8 @@ randomElement2:any=0;;
 
     if(option===this.gameDeck.cards[this.i].keyWord)
     {
-      
       this.isCorrect=true; 
-     
+      this.tempCorrectanswer=this.gameDeck.cards[this.i].image;
     }
     else
     {
