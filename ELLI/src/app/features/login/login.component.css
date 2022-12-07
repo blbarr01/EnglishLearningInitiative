@@ -1,8 +1,7 @@
 
 
 .login-container{
-    /* border: 2px solid green; */
-    background-color: var(--matador-red);
+    /* background-color: var(--matador-red);s */
     padding-bottom: 3em;
     padding-top: 2em;
 }
@@ -16,12 +15,13 @@
 }
 .container {
     background-color: #fff;
-    margin: auto 39%;
+    border: 3px solid var(--matador-black);
+    margin: 10% 39%;
     height: fit-content;
     width: fit-content;
     padding: 4em;
     border-radius: .66rem;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 

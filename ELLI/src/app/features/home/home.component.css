@@ -1,11 +1,11 @@
 #home-component{
-    margin-top: 2em;
-    border: 2px solid green;
+    margin-top: 10%;
+    /* border: 2px solid green; */
 }
 
 #button-container{
     padding: 2em;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 3em;
     display: flex;
     justify-content: space-evenly;
