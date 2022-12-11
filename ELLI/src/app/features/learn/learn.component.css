@@ -16,7 +16,7 @@ p {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-
+  border: 2px solid magenta;
   text-align: center;
 }
 .text {
@@ -29,7 +29,7 @@ p {
 }
 .word {
   font-size: 100px;
-  color: red;
+  color: white;
   text-align: center;
   vertical-align: middle;
   padding: 100px 0;

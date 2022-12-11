@@ -1,5 +1,4 @@
 <app-category-selector></app-category-selector>
-<button class="button-back" (click)="clickBack()"><----</button>
 <div class="flashcard">
   <div class="text">
     <div class="flip-card-front">
@@ -13,6 +12,9 @@
       <button class="button-audio">🔊</button>
     </div>
   </div>
-  <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
 </div>
-<button class="button-next" (click)="click()">---></button>
+<div class="button-container ">
+  <button class="button-back" (click)="clickBack()"><----</button>
+  <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
+  <button class="button-next" (click)="click()">---></button>
+</div>
