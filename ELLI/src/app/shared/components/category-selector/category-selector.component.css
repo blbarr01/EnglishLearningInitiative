@@ -1,6 +1,5 @@
 ul.styleOfList
-{
-  
+{  
   padding: 0%;
   list-style: none;
   background-color: var(--matador-red);
@@ -14,7 +13,7 @@ ul.styleOfList
 #dropdown-menu
 {
   text-align: left;
-  position: absolute;
+  /* position: absolute; */
   padding: 0px;
 
 
@@ -22,7 +21,7 @@ ul.styleOfList
 ul li
 {
 
-  position: relative;
+  /* position: relative; */
   cursor: pointer;
   
  
@@ -34,9 +33,7 @@ ul li
   padding: 20px 25px;
   display: block;
   text-align: center;
-  text-decoration: none;
-  
-  
+  text-decoration: none; 
 }
 ul.dropdown li {
   display: inline-flex;
@@ -47,7 +44,7 @@ ul.dropdown li {
   ul.dropdown {
   width: 100%;
   background: darkred;
-  position: absolute;
+  /* position: absolute; */
   display: none;
   
   

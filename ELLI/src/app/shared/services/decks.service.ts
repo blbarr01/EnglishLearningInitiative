@@ -136,8 +136,8 @@ export class DecksService {
 
   constructor() {}
 
-  filterByCategory(category: string): void {
-    console.log(category);
+  filterByCategory(category: string): void{
+    // console.log(category);
     let deck = this.decks.filter((d) => d.deckTitle === category)[0];
     this.deckSubject.next(deck);
   }
