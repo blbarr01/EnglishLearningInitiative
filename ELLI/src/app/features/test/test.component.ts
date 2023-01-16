@@ -61,9 +61,7 @@ export class TestComponent implements OnInit {
           this.getOption1();
         }
        else
-       console.log(this.allAnswers);
-     
-     
+       this.allAnswers.sort((a,b) => 0.5-Math.random());
       
       
   } 
@@ -115,7 +113,7 @@ randomElement2:any=0;;
    
     this.isanswerSelected=false;
 
-    if(option===this.gameDeck.cards[this.i].keyWord)
+    if(option===this.gameDeck.cards[this.i].image)
     {
       this.isCorrect=true; 
       this.tempCorrectanswer=this.gameDeck.cards[this.i].image;

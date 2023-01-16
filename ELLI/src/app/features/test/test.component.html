@@ -5,13 +5,13 @@
 
 
   <div *ngIf="isanswerSelected" class="answerChoices">
-    <li (click)="answerStatus(gameDeck.cards[i].keyWord)">
+    <li (click)="answerStatus(this.allAnswers[0])">
       <img class="img" src="{{ this.allAnswers[0] }}" />
     </li>
-    <li (click)="answerStatus(this.options)">
+    <li (click)="answerStatus(this.allAnswers[1])">
       <img class="img" src="{{ this.allAnswers[1] }}" />
     </li>
-    <li (click)="answerStatus(this.options2)">
+    <li (click)="answerStatus(this.allAnswers[2])">
       <img class="img" src="{{ this.allAnswers[2] }}" />
     </li>
   </div>
