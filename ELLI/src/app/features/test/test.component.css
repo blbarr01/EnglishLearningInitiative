@@ -1,68 +1,33 @@
-  .category
-  {
-     
+  .category {
     padding: 200px;
   }
 
-  h2
-  {
+  h2 {
     background-color: var(--matador-red);
-   
     color: white;
-      text-align: center;
-      
-      font-size: 30px;
+    text-align: center;
+    font-size: 30px;
   }
 
-  li h2{
+  li h2 {
     border-radius: 1rem;
-   
     justify-content: space-evenly;
-   display: inline-flex;
-   
+    display: inline-flex;
   }
-  .categories
-  {
-    border-radius: 1rem;
-   
-  
-    
-    margin: 20px 0 0;/*  margin  do I want it?*/
-    padding: 10px;
-   /* display: inline-flex;   once images are imported, use this*/
 
-  
+  .answerChoices {
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    margin-right: 10%;
+    margin-left: 10%;
   }
-.answerChoices
-{
- justify-content: space-evenly;
- display: flex;
 
-  text-align: center;
-  list-style: none;
-  margin-right: 10%;
-  margin-left: 10%;
-}
-  .green-color-correct
-  {
+  .green-color-correct {
     background: green;
   }
-  .red-color-wrong
-  {
+
+  .red-color-wrong {
     background: red;
   }
- 
-/* If button needed
-  button {
-    background-color: var(--matador-red);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-*/
