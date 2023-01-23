@@ -11,12 +11,12 @@ p {
   perspective: 1000px;
   font-family: arial;
   font-size: 24px;
-  margin: 25px;
   width: 800px;
   margin: 0 auto;
+  margin-top: 3em;
   display: flex;
   justify-content: center;
-
+  /* border: 2px solid magenta; */
   text-align: center;
 }
 .text {
@@ -29,7 +29,7 @@ p {
 }
 .word {
   font-size: 100px;
-  color: red;
+  color: white;
   text-align: center;
   vertical-align: middle;
   padding: 100px 0;
@@ -63,26 +63,18 @@ p {
   transform: rotateY(180deg);
   border-radius: 25px;
 }
+
 .button-next,
 .button-back {
-  position: relative;
-  background-color: #4caf50;
-  border: none;
-  font-size: 28px;
-  color: #ffffff;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 12px;
+  background-color: var(--matador-red);
+  padding: 1em 3em;
+  /* border: 2px solid black; */
+  font-size: 4rem;
 }
 
 .button-next:hover,
 .button-back:hover {
-  background-color: #4caf50; /* Green */
+  background-color: rgb(44, 44, 246); 
   color: white;
 }
 .button-next:active,
@@ -97,25 +89,9 @@ p {
   left: 900px;
   cursor: pointer;
 }
-.button-next {
-  size: 1000px;
-  color: black;
-  background-color: red;
-  position: relative;
-  cursor: pointer;
-  top: 1px;
-  left: 900px;
-}
 
-.button-back {
-  size: 1000px;
-  color: black;
-  background-color: red;
-  position: relative;
-  top: 461px;
-  left: 355px;
-  cursor: pointer;
-}
+
+
 .img {
   height: 300px;
   width: 300px;
@@ -126,13 +102,15 @@ p {
   padding: 20px;
 }
 
-.curr-card {
-  position: relative;
-  left: -400px;
-  top: 400px;
 
-  /* display: flex;
-  color: blue;
-  align-items: center;
-  margin: auto; */
+.button-container{
+  margin-top: 5em;
+  padding: 2em 0;
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-around;
+}
+.curr-card {
+  margin-top: .5em;
+  font-size: 3rem;
 }

@@ -19,6 +19,7 @@ interface Buttons {
 })
 export class LearnComponent implements OnInit {
   constructor(private router: Router, private decksService: DecksService) {}
+  //currCard is for the diplay 
   currCard = 1;
   cardDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
@@ -29,8 +30,10 @@ export class LearnComponent implements OnInit {
   terms: Words[] = [];
 
   click() {
+    // need to ask rohan about this condition 
     if (this.i > this.cardDeck.cards.length - 2) {
     } else {
+      console.log(this.cardDeck.cards.length);
       this.bottomNum++;
       // console.log(this.terms[this.i].keyWord);
       this.currCard++;
