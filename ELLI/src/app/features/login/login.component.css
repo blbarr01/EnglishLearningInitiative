@@ -69,12 +69,12 @@
   border-radius: 10px;         /*typing space,for background color */
   background: #fff;      
   z-index: 10;
-  padding: 40px 50px 85px ;
+  padding: 40px 50px 90px ;
   display: flex;
   flex-direction: column;
 }
 .login-form h2{
-  font-size: 290%;
+  font-size: 300%;
   color: black;
   font-weight: 500;         /*form heading*/
   text-align: center;
@@ -151,12 +151,13 @@ input[type="Submit"]
   border: solid;
   outline: none;
   background:var(--matador-red) ;
-  padding: 10px 10px 10px;
+  padding: 10px 10px ;
   width: 100px;
   margin-top: 10px;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  ;
 }
 input[type="Submit"]:active
 {
@@ -187,7 +188,6 @@ input[type="Signup"]
   margin-top: 10px;
   border-radius: 10px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointerk
   
 }
- 
