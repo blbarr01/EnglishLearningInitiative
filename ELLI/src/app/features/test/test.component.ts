@@ -19,10 +19,10 @@ export class TestComponent implements OnInit {
   isCorrect: boolean = false;
   isInCorrect: boolean = false;
   randomElement: number = 0;
-  allAnswers: string[] = [];
-  correctCounter: any = 0;
-  incorrectCounter: any = 0;
   randomElement2: number = 0;
+  allAnswers: string[] = [];
+  correctCounter: number = 0;
+  incorrectCounter: number = 0;
   options: any = 0;
   options2: any;
   i: number = 0;
