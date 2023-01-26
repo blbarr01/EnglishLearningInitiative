@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { appendFile } from 'fs/promises';
 import { DecksService } from 'src/app/shared/services/decks.service';
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css'],
 })
-export class TestComponent implements OnInit {
+export class TestComponent implements OnInit, OnDestroy  {
   gameDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
   isanswerSelected:boolean = false;
@@ -34,6 +34,9 @@ export class TestComponent implements OnInit {
     this.deckSub = this.decksService.deck$.subscribe((d) => {
       this.gameDeck = d;
     });
+  }
+  ngOnDestroy(): void {
+    this.deckSub?.unsubscribe();
   }
 
   constructor(private router: Router, private decksService: DecksService) {}
