@@ -1,27 +1,20 @@
-<!--icon sheet link  using "Fa Fa" from iconscout-->
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
- <div class="box">
-    <div class="Signup-form">
-      <h2>Signup</h2>
-      <div class="inputBox">
-        <input type="email" required="required">
-        <span class="Email">Email</span>
-        <i></i>
-        <div class="inputBox">
-          <span class="Passowrd">Password</span>
-          <input type="passowrd" required="required">
-          <i></i>
-      </div>
-      <div class="links">
-        <a href="#">Forgot Password?</a>
-        <a href="../login/">Log In</a>
-        <!---<div>
-          <input [type]="U" (click)="showSignup()" type="Signup" value="Signup">
-        </div>-->
-
-      </div>
-      <input type="submit" value="Submit">
+<section class="login-container">
+    <div class="container">
+        <h2 class="center">Login</h2>
+        <p class="login-link" (click)="showSignup()">Sign Up</p>
+        <form action="Get" id="main-form">
+            <div class="form-element">
+                <label for="UserName">Email</label>
+                <input type="text" autocomplete="name" name="uname" id="UserName" placeholder="Email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+        </form>
+        <div class="btn-container">
+            <button type="button" id="submit-btn">Submit</button>
+        </div>
     </div>
 
     <!--The link to connect an html and css file--> 
