@@ -14,10 +14,12 @@ import { LoginComponent } from './features/login/login.component';
 import { SignupComponent } from './features/signup/signup.component';
 import { CategorySelectorComponent } from './shared/components/category-selector/category-selector.component';
 import { FlashcardComponent } from './shared/components/flashcard/flashcard.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent, CategorySelectorComponent, FlashcardComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
