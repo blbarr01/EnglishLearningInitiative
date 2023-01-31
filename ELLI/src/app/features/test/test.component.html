@@ -2,19 +2,20 @@
 <div class=category>
   <h2 *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</h2>
 
+  <h2>Total: {{this.i+1}}/{{this.gameDeck.cards.length}} correct: {{this.correctCounter}} Incorrect: {{
+    this.incorrectCounter}}</h2>
+
   <div *ngIf="isanswerSelected" class="answerChoices">
-    <li (click)="answerStatus(gameDeck.cards[i].keyWord)">
-      <img class="img" src="{{ gameDeck.cards[i].image }}" />
+    <li (click)="answerStatus(this.allAnswers[0])">
+      <img class="img" src="{{ this.allAnswers[0] }}" />
     </li>
-    <li (click)="answerStatus(this.options)">
-      <img class="img" src="{{ this.options }}" />
+    <li (click)="answerStatus(this.allAnswers[1])">
+      <img class="img" src="{{ this.allAnswers[1] }}" />
     </li>
-    <li (click)="answerStatus(this.options2)">
-      <img class="img" src="{{ this.options2 }}" />
+    <li (click)="answerStatus(this.allAnswers[2])">
+      <img class="img" src="{{ this.allAnswers[2] }}" />
     </li>
   </div>
-
-
 
   <div class="answerChoices">
     <li>
@@ -22,4 +23,4 @@
       </h2>
       <h2 class="red-color-wrong" *ngIf="isInCorrect"> <br><img src="{{tempanswer}}"></h2>
     </li>
-  </div>
+  </div> 
