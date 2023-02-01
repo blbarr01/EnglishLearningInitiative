@@ -15,11 +15,28 @@ import { SignupComponent } from './features/signup/signup.component';
 import { CategorySelectorComponent } from './shared/components/category-selector/category-selector.component';
 import { FlashcardComponent } from './shared/components/flashcard/flashcard.component';
 import { FormsModule } from '@angular/forms';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  declarations: [AppComponent, GameComponent, HomeComponent, LearnComponent, TalkToTextComponent,TestComponent, LoginComponent, SignupComponent, CategorySelectorComponent, FlashcardComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    GameComponent,
+    HomeComponent,
+    LearnComponent,
+    TalkToTextComponent,
+    TestComponent,
+    LoginComponent,
+    SignupComponent,
+    CategorySelectorComponent,
+    FlashcardComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
