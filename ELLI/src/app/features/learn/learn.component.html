@@ -1,21 +1,57 @@
 <app-category-selector></app-category-selector>
+<h3 class="category">Category: {{ cardDeck.deckTitle }}</h3>
+<!-- <div id="prog-bar" class="progress">
+  <div class="progress-bar"></div>
+</div> -->
+<mat-progress-bar
+  class="prog-bar"
+  mode="determinate"
+  [value]="progress"
+></mat-progress-bar>
 <div class="flashcard">
   <div class="text">
     <div class="flip-card-front">
       <img class="img" src="{{ cardDeck.cards[i].image }}" />
+      <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
     </div>
     <div class="flip-card-back">
       <p class="word">
         <!-- {{ terms[questionCorrect].keyWord }} -->
         {{ cardDeck.cards[i].keyWord }}
       </p>
-      <button class="button-audio">🔊</button>
+      <button (click)="playSound()" class="button-audio">🔊</button>
+      <button
+        (click)="clickStar()"
+        [ngClass]="{ green: toggle, yellow: !toggle }"
+        class="star"
+      >
+        ☆
+      </button>
     </div>
   </div>
 </div>
-<div class="button-container ">
-  <button class="button-back" (click)="clickBack()"><----</button>
-  <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
-  <button class="button-next" (click)="click()"> ----></button>
+<div class="button-container">
+  <button class="button-back" (click)="clickBack()">⇦</button>
+  <!-- <button class="shuffle">🔀</button> -->
+
+  <button class="button-next" (click)="click()">⇨</button>
 </div>
- 
+
+<!-- <audio controls>
+  <source src="/Users/rohan/Desktop/MyMovie1.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio> -->
+
+<!--
+TO DO:
+
+HAVE COUNTER RESET WHEN CATEGORY IS SWITCHED
+
+HAVE WORDS STORED IN DECK WHEN BUTTON IS CLICKED
+
+HAVE USER SELECT CATEGORY BEFORE FLASHCARDS APPEAR
+
+
+
+
+-->
