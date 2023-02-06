@@ -1,18 +1,17 @@
 
 
 #main-site-banner {
-    padding: 0;
     background: var(--matador-red);
     display: flex;
-    border-bottom: 2px solid black;
-    height:  4.375em;
+    border-bottom: 2px solid var(--matador-black);
+    height:  6.5em;
   }
 
 
   #banner-img{
     position: absolute;
-    height: 3.125em;
-    width: 3.125em;
+    height: 4.125em;
+    width: 4.125em;
     top: 1%;
     left: 1%;
     /* border: 2px solid magenta; */
@@ -26,12 +25,14 @@
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: whitesmoke;
     /* border: 2px solid magenta; */
   }
-
+  #signup-link:hover, #login-link:hover{
+    border-bottom: 2px solid var(--matador-white);
+  }
   #banner-login:hover, 
   #banner-title:hover,
   #banner-img:hover{
@@ -40,7 +41,7 @@
 
   #banner-title{
     margin: auto;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-family: 'Poppins';
     color: whitesmoke;
     text-align: center;
@@ -49,6 +50,7 @@
 
   #main-site-footer{
     width:100vw;
+    border-top: 2px solid var(--matador-black);
     background-color: var(--matador-red);
     position: fixed;
     bottom: 0;
@@ -57,7 +59,7 @@
 
   .footer-text{
     font-size: 1.5rem;
-    padding: 1.5em;
+    padding: 1.25em;
   }
   .footer-text:hover{
     cursor:pointer;
