@@ -2,13 +2,17 @@
 
     margin: auto;
     position: relative;
+    position: center;
     border: 1px solid rgb(20, 184, 36); 
     height: 50px; 
     width:50%;
     border-radius: 50px;
+    width:30%;
+    border-radius: 10px;
     padding: 15px 32px;
     text-align:center;
     margin: 4px 2px;
+    margin: 25px 385px;
     box-shadow:0 8px 16px 0 rgba(20, 184, 36);
     
 
@@ -21,9 +25,12 @@
     height: 50px; 
     width: 50%;
     border-radius: 50px;
+    width: 30%;
+    border-radius: 10px;
     padding: 15px 32px;
     text-align: center;
     margin: 4px 2px;
+    margin: 25px 385px;
     box-shadow: 0 8px 16px 0 rgb(184, 47, 20);
 
 }
