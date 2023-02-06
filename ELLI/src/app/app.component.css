@@ -55,11 +55,14 @@
     position: fixed;
     bottom: 0;
     color:var(--matador-white);
+    height: 6.5em;
   }
 
   .footer-text{
     font-size: 1.5rem;
-    padding: 1.25em;
+    padding-bottom:4px;
+    padding-top:1em;
+    display: inline;
   }
   .footer-text:hover{
     cursor:pointer;
