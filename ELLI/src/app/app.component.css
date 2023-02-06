@@ -46,3 +46,19 @@
     text-align: center;
     /* border: 2px solid magenta; */
   }
+
+  #main-site-footer{
+    width:100vw;
+    background-color: var(--matador-red);
+    position: fixed;
+    bottom: 0;
+    color:var(--matador-white);
+  }
+
+  .footer-text{
+    font-size: 1.5rem;
+    padding: 1.5em;
+  }
+  .footer-text:hover{
+    border-bottom: 2px solid var(--matador-white);
+  }
