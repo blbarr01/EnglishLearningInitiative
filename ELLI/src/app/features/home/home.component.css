@@ -5,45 +5,18 @@
 
 #button-container{
     padding: 2em;
-    border: 2px solid black;
-    margin: 3em;
+    /* border: 2px solid black; */
+    margin: 3em auto;
     display: grid;
-    gap: 6em;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     place-items: center;
+    overflow-y: hidden;
 }
 
-
-@media (max-width: 1280px) {
-    #button-container{
-        padding: 2em;
-        border: 2px solid black;
-        margin: 3em;
-        display: grid;
-        gap: 6em;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        place-items: center;
-    }
-}
-
-@media (max-width: 625px) {
-    #button-container{
-        padding: 2em;
-        border: 2px solid black;
-        margin: 3em;
-        display: grid;
-        gap: 6em;
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
-        place-items: center;
-    }
-}
-
-.home-btn{
+.home-page-btn{
     text-align: center;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     border-radius: .33rem;
     padding: 3em;    
     font-size: 1.5rem;
@@ -51,3 +24,27 @@
     background-color: var(--matador-red);
     font-family: 'Poppins';
 }
+
+
+@media (max-width: 1280px) {
+    #button-container{
+        padding: 2em;
+        /* border: 2px solid black; */
+        margin: 3em auto;
+        row-gap: 6em;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 625px) {
+    #button-container{
+        row-gap: 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .home-page-btn{
+        padding: 1em;
+        width: 100%;
+    }
+}
+
