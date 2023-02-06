@@ -16,3 +16,5 @@ export class TalkToTextComponent implements OnInit {
   }
 
 }
+
+  // Start recognition
