@@ -60,5 +60,6 @@
     padding: 1.5em;
   }
   .footer-text:hover{
+    cursor:pointer;
     border-bottom: 2px solid var(--matador-white);
   }
