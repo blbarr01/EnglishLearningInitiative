@@ -2,33 +2,46 @@
 
 #main-site-banner {
     background: var(--matador-red);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border-bottom: 2px solid var(--matador-black);
-    height:  6.5em;
+
   }
 
+  @media(max-width: 625px) {
+    #main-site-banner{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #banner-login{
+      grid-column: span 2;
+      display: block;
+      height: 1.5625em;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: whitesmoke;
+      /* border: 2px solid magenta; */
+    }
+    #banner-img{
+      place-self: center;
+    }
+  }
 
   #banner-img{
-    position: absolute;
+    align-self:center;
     height: 4.125em;
     width: 4.125em;
-    top: 1%;
-    left: 1%;
-    /* border: 2px solid magenta; */
+    margin-left: 1em;
+    /* border: 2px solid blue; */
   }
 
   #banner-login{
-    position: absolute;
-    height: 1.5625em;
-    right: 2%;
-    top: 3%;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
+    margin: 1em;
     font-size: 1.5rem;
     font-weight: bold;
     color: whitesmoke;
-    /* border: 2px solid magenta; */
+    text-align: right;
   }
   #signup-link:hover, #login-link:hover{
     border-bottom: 2px solid var(--matador-white);
@@ -45,7 +58,6 @@
     font-family: 'Poppins';
     color: whitesmoke;
     text-align: center;
-    /* border: 2px solid magenta; */
   }
 
   #main-site-footer{
