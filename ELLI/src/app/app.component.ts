@@ -19,5 +19,9 @@ export class AppComponent {
   showHome(){
     this.router.navigateByUrl("");
   }
+  showAbout(){
+    this.router.navigateByUrl("/about")
+    
+  }
 }
 
