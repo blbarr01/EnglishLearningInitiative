@@ -64,10 +64,9 @@
     width:100vw;
     border-top: 2px solid var(--matador-black);
     background-color: var(--matador-red);
-    position: fixed;
+    position:fixed;
     bottom: 0;
     color:var(--matador-white);
-    height: 6.5em;
   }
 
   .footer-text{
