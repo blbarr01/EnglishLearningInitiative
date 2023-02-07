@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { appendFile } from 'fs/promises';
 import { DecksService } from 'src/app/shared/services/decks.service';
-
+import {Card, Deck} from 'src/app/shared/models/Deck'
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./test.component.css'],
 })
 export class TestComponent implements OnInit, OnDestroy  {
-  gameDeck: any;
+  gameDeck:Deck = {deckTitle:"gameDeck", cards:[]} ;
   deckSub: Subscription = Subscription.EMPTY;
   isanswerSelected:boolean = false;
   isCategorySelector:boolean = true;
@@ -29,7 +29,10 @@ export class TestComponent implements OnInit, OnDestroy  {
   j: number = 0;
   tempanswer: any;
   tempCorrectanswer: any;
-
+  
+  constructor(private router: Router, private decksService: DecksService) {}
+  
+  //on in init we subscribe to the deck service
   ngOnInit(): void {
     this.deckSub = this.decksService.deck$.subscribe((d) => {
       this.gameDeck = d;
@@ -39,16 +42,16 @@ export class TestComponent implements OnInit, OnDestroy  {
     this.deckSub?.unsubscribe();
   }
 
-  constructor(private router: Router, private decksService: DecksService) {}
   pop() {
     this.getOption1();
     this.isanswerSelected = true;
     this.isCategorySelector = false;
     this.isQuestionShowing = true;
   }
+
   getOption1() {
-    this.randomElement = Math.floor(Math.random() * this.gameDeck.cards.length);
-    this.options = this.gameDeck.cards[this.randomElement].image;
+    let random:number = Math.floor(Math.random() * this.gameDeck.cards.length);
+    this.options = this.gameDeck.cards[random].image;
     if (this.gameDeck.cards[this.j].image !== this.options) {
       this.allAnswers.push(this.gameDeck.cards[this.j].image);
       this.allAnswers.push(this.options);
