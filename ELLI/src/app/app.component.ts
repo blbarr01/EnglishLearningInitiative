@@ -23,5 +23,8 @@ export class AppComponent {
     this.router.navigateByUrl("/about")
     
   }
+  showSiteMap(){
+    this.router.navigateByUrl('/site-map')
+  }
 }
 
