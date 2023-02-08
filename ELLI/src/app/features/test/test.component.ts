@@ -10,21 +10,23 @@ import { Subscription } from 'rxjs';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css'],
 })
-export class TestComponent implements OnInit, OnDestroy  {
+export class TestComponent implements OnInit, OnDestroy {
   gameDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
-  isanswerSelected:boolean = false;
-  isCategorySelector:boolean = true;
-  isQuestionShowing:boolean = false;
+  isanswerSelected: boolean = false;
+  isCategorySelector: boolean = true;
+  isQuestionShowing: boolean = false;
   isCorrect: boolean = false;
   isInCorrect: boolean = false;
   randomElement: number = 0;
   randomElement2: number = 0;
+  randomElement3: number = 0;
   allAnswers: string[] = [];
   correctCounter: number = 0;
   incorrectCounter: number = 0;
   options: any = 0;
   options2: any;
+  options3: any = 0;
   i: number = 0;
   j: number = 0;
   tempanswer: any;
@@ -58,7 +60,8 @@ export class TestComponent implements OnInit, OnDestroy  {
 
     this.getOption2();
   }
-
+  progress = 0;
+  eachPercent=0;
   getOption2() {
     this.randomElement2 = Math.floor(
       Math.random() * this.gameDeck.cards.length
@@ -74,7 +77,28 @@ export class TestComponent implements OnInit, OnDestroy  {
       this.getOption2();
     }
 
-    if (this.allAnswers.length != 3) {
+    this.getOption3();
+  }
+
+  getOption3() {
+    this.randomElement3 = Math.floor(
+      Math.random() * this.gameDeck.cards.length
+    );
+    this.options3 = this.gameDeck.cards[this.randomElement3].image;
+    if (
+      this.gameDeck.cards[this.j].image !== this.options &&
+      this.gameDeck.cards[this.j].image !== this.options2 &&
+      this.gameDeck.cards[this.j].image !== this.options3 &&
+      this.options2 != this.options &&
+      this.options2 != this.options3 &&
+      this.options != this.options3
+    ) {
+      this.allAnswers.push(this.options3);
+    } else {
+      this.getOption3();
+    }
+
+    if (this.allAnswers.length != 4) {
       this.allAnswers.length = 0;
       this.getOption1();
     } else this.allAnswers.sort((a, b) => 0.5 - Math.random());
@@ -104,5 +128,7 @@ export class TestComponent implements OnInit, OnDestroy  {
       this.tempanswer = option;
       this.incorrectCounter++;
     }
+    this.eachPercent=100/this.gameDeck.cards.length;
+    this.progress +=this.eachPercent;
   }
 }
