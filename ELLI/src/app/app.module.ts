@@ -16,6 +16,8 @@ import { CategorySelectorComponent } from './shared/components/category-selector
 import { FlashcardComponent } from './shared/components/flashcard/flashcard.component';
 import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AboutUsComponent } from './features/about-us/about-us.component';
+import { SiteMapComponent } from './features/site-map/site-map.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     SignupComponent,
     CategorySelectorComponent,
     FlashcardComponent,
+    AboutUsComponent,
+    SiteMapComponent,
   ],
   imports: [
     BrowserModule,

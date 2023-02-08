@@ -6,14 +6,17 @@
 #button-container{
     padding: 2em;
     /* border: 2px solid black; */
-    margin: 3em;
-    display: flex;
-    justify-content: space-evenly;
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    place-items: center;
+    overflow-y: hidden;
 }
 
-
-.home-btn{
-    /* border: 2px solid magenta; */
+.home-page-btn{
+    text-align: center;
+    /* border: 2px solid green; */
     border-radius: .33rem;
     padding: 3em;    
     font-size: 1.5rem;
@@ -21,3 +24,34 @@
     background-color: var(--matador-red);
     font-family: 'Poppins';
 }
+
+.home-page-btn:hover{
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    /* easy fix, would need to embed p tag w/in button a
+    nd make the border hover to make it like the others */
+    text-decoration:underline;
+}
+
+
+@media (max-width: 1280px) {
+    #button-container{
+        padding: 2em;
+        /* border: 2px solid black; */
+        margin: 3em auto;
+        row-gap: 6em;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 625px) {
+    #button-container{
+        row-gap: 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .home-page-btn{
+        padding: 1em;
+        width: 100%;
+    }
+}
+

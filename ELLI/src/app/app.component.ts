@@ -19,5 +19,12 @@ export class AppComponent {
   showHome(){
     this.router.navigateByUrl("");
   }
+  showAbout(){
+    this.router.navigateByUrl("/about")
+    
+  }
+  showSiteMap(){
+    this.router.navigateByUrl('/site-map')
+  }
 }
 
