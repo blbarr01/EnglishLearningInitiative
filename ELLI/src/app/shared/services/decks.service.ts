@@ -128,6 +128,22 @@ export class DecksService {
         },
       ],
     },
+    {
+      deckTitle: 'Forgot',
+      cards: [
+        {
+          keyWord: '',
+          image: '',
+          audio: '',
+        },
+        {
+          keyWord: '',
+          image: '',
+          audio: '',
+        },
+      ],
+    },
+
     //TODO: Hard CODED test data here
   ];
 
@@ -136,7 +152,7 @@ export class DecksService {
 
   constructor() {}
 
-  filterByCategory(category: string): void{
+  filterByCategory(category: string): void {
     // console.log(category);
     let deck = this.decks.filter((d) => d.deckTitle === category)[0];
     this.deckSubject.next(deck);
