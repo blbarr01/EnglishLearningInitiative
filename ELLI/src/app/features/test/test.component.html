@@ -1,22 +1,37 @@
 <app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
 <div class=category>
-  <h2 *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</h2>
+  <mat-progress-bar
+  class="prog-bar"
+  mode="determinate"
+  [value]="progress"
+ color="red-color-wrong"
+></mat-progress-bar>
+<br>
 
-  <h2>Total: {{this.i+1}}/{{this.gameDeck.cards.length}} correct: {{this.correctCounter}} Incorrect: {{
-    this.incorrectCounter}}</h2>
-
+<div  class = "question" >
+  <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
+</div>
+ 
+<div class =" Counter">
+  <p> &#10004; {{this.correctCounter}} &#10006; {{
+    this.incorrectCounter}}</p>
+    </div>
   <div *ngIf="isanswerSelected" class="answerChoices">
     <li (click)="answerStatus(this.allAnswers[0])">
-      <img class="img" src="{{ this.allAnswers[0] }}" />
+      <img class="img" src="{{ this.allAnswers[0] }}" width="200" 
+      height="200"/>
     </li>
     <li (click)="answerStatus(this.allAnswers[1])">
-      <img class="img" src="{{ this.allAnswers[1] }}" />
+      <img class="img" src="{{ this.allAnswers[1] }}" width="200" 
+      height="200"/>
     </li>
     <li (click)="answerStatus(this.allAnswers[2])">
-      <img class="img" src="{{ this.allAnswers[2] }}" />
+      <img class="img" src="{{ this.allAnswers[2] }}" width="200" 
+      height="200"/>
     </li>
     <li (click)="answerStatus(this.allAnswers[3])">
-      <img class="img" src="{{ this.allAnswers[3] }}" />
+      <img class="img" src="{{ this.allAnswers[3] }}" width="200" 
+      height="200"/>
     </li>
   </div>
 

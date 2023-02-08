@@ -11,54 +11,54 @@ export class DecksService {
       deckTitle: 'Fruits',
       cards: [
         {
-          keyWord: 'bananna',
+          keyWord: 'Banana',
           image: 'assets/images/banana.png',
           audio: '',
         },
         {
-          keyWord: 'apple',
+          keyWord: 'Apple',
           image: 'assets/images/apple.png',
           audio: '',
         },
         {
-          keyWord: 'orange',
+          keyWord: 'Orange',
           image: 'assets/images/orange.png',
           audio: '',
         },
         {
-          keyWord: 'pear',
+          keyWord: 'Pear',
           image: 'assets/images/pear.png',
         },
         {
-          keyWord: 'strawberry',
+          keyWord: 'Strawberry',
           image: 'assets/images/strawberry.png',
         },
         {
-          keyWord: 'watermelon',
+          keyWord: 'Watermelon',
           image: 'assets/images/watermelon.png',
         },
         {
-          keyWord: 'cantelope',
+          keyWord: 'Cantelope',
           image: 'assets/images/cantelope.png',
         },
         {
-          keyWord: 'kiwi',
+          keyWord: 'Kiwi',
           image: 'assets/images/kiwi.png',
         },
         {
-          keyWord: 'cherry',
+          keyWord: 'Cherry',
           image: 'assets/images/cherry.png',
         },
         {
-          keyWord: 'peach',
+          keyWord: 'Peach',
           image: 'assets/images/peach.png',
         },
         {
-          keyWord: 'pineapple',
+          keyWord: 'Pineapple',
           image: 'assets/images/pineapple.png',
         },
         {
-          keyWord: 'blueberry',
+          keyWord: 'Blueberry',
           image: 'assets/images/blueberry.png',
         },
       ],
@@ -67,62 +67,62 @@ export class DecksService {
       deckTitle: 'Medical',
       cards: [
         {
-          keyWord: 'ambulance',
+          keyWord: 'Ambulance',
           image: 'assets/images/ambulance.png',
           audio: '',
         },
         {
-          keyWord: 'doctor',
+          keyWord: 'Doctor',
           image: 'assets/images/doctor.png',
           audio: '',
         },
         {
-          keyWord: 'medicine',
+          keyWord: 'Medicine',
           image: 'assets/images/medicine.png',
           audio: '',
         },
         {
-          keyWord: 'bone',
+          keyWord: 'Bone',
           image: 'assets/images/bone.png',
           audio: '',
         },
         {
-          keyWord: 'arm',
+          keyWord: 'Arm',
           image: 'assets/images/arm.png',
           audio: '',
         },
         {
-          keyWord: 'leg',
+          keyWord: 'Leg',
           image: 'assets/images/leg.png',
           audio: '',
         },
         {
-          keyWord: 'head',
+          keyWord: 'Head',
           image: 'assets/images/head.png',
           audio: '',
         },
         {
-          keyWord: 'hand',
+          keyWord: 'Hand',
           image: 'assets/images/hand.png',
           audio: '',
         },
         {
-          keyWord: 'finger',
+          keyWord: 'Finger',
           image: 'assets/images/finger.png',
           audio: '',
         },
         {
-          keyWord: 'foot',
+          keyWord: 'Foot',
           image: 'assets/images/foot.png',
           audio: '',
         },
         {
-          keyWord: 'hot',
+          keyWord: 'Hot',
           image: 'assets/images/hot.png',
           audio: '',
         },
         {
-          keyWord: 'cold',
+          keyWord: 'Cold',
           image: 'assets/images/cold.png',
           audio: '',
         },

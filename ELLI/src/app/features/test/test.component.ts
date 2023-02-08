@@ -60,7 +60,8 @@ export class TestComponent implements OnInit, OnDestroy {
 
     this.getOption2();
   }
-
+  progress = 0;
+  eachPercent=0;
   getOption2() {
     this.randomElement2 = Math.floor(
       Math.random() * this.gameDeck.cards.length
@@ -127,5 +128,7 @@ export class TestComponent implements OnInit, OnDestroy {
       this.tempanswer = option;
       this.incorrectCounter++;
     }
+    this.eachPercent=100/this.gameDeck.cards.length;
+    this.progress +=this.eachPercent;
   }
 }
