@@ -2,28 +2,47 @@
     padding: 200px;
   }
 
-  h2 {
-    background-color: var(--matador-red);
-    color: white;
-    text-align: center;
-    font-size: 30px;
-  }
-
+  
+  
   li h2 {
     border-radius: 1rem;
     justify-content: space-evenly;
     display: inline-flex;
+   
   }
 
+.question
+{
+  text-align: center;
+  position:relative; 
+  top: -90px; left: 30px;
+  font-size: 50px;
+  color: black;
+}
+.Counter
+{
+  text-align: center;
+  font-size: 40px;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: var(--matador-red);
+}
+::ng-deep .mat-progress-bar-buffer {
+  background: lightblue;
+}
+
+
   .answerChoices {
-    border: 2px solid magenta;
+    border: 2px solid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
     list-style: none;
     margin-right: 10%;
     margin-left: 10%;
   }
+ 
 
   .green-color-correct {
     background: green;
