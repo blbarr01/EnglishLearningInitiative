@@ -7,6 +7,8 @@ import { TestComponent } from './features/test/test.component';
 import { TalkToTextComponent } from './features/talk-to-text/talk-to-text.component';
 import { LoginComponent } from './features/login/login.component';
 import { SignupComponent } from './features/signup/signup.component';
+import {AboutUsComponent} from './features/about-us/about-us.component';
+import {SiteMapComponent} from './features/site-map/site-map.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,16 @@ const routes: Routes = [
   {
     path: "signup",
     component: SignupComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "about",
+    component: AboutUsComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "site-map",
+    component: SiteMapComponent,
     pathMatch: "full",
   },
   {

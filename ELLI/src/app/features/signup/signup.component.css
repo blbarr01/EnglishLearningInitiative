@@ -1,158 +1,135 @@
+.Signup-container {
+  background-color: #fff;
+  /* Set background color of container to white */
+  padding-bottom: 3em;
+  /* Add padding to the bottom of the container */
+  padding-top: 2em;
+  /* Add padding to the top of the container  making on emore change */
 
-.Signup-container{
-  background-color: #fff; /* Set background color of container to white */
-  padding-bottom: 3em; /* Add padding to the bottom of the container */
-  padding-top: 2em; /* Add padding to the top of the container  making on emore change */
-  
-  }
-  
-  .Signup-link{
-    text-align: center; /* Center the text within the link */
-    color: navy;  /*signup link color */
-    text-decoration: underline; /* Add an underline to the text  */
-    }
-    .Signup-link:hover{
-    cursor: pointer; /* Change cursor to a pointer when hovering over the link */
-    }
-    .container {
-      /* Set background color to white */
-      background-color: #fff;
-      /* Center the container and set a margin of 39% on both sides */
-      margin: auto 39%;
-      /* Set height to automatically fit the content */
-      height: fit-content;
-      /* Set width to automatically fit the content */
-      width: fit-content;
-      padding: 4em; /*Add padding of 4em to the container */
-      border: 5px solid rgb(192, 0, 0); /* adding  border to the login container */
-      border-radius: .66rem; /* Set border-radius of the container to 0.66rem */ 
-      margin-bottom: 3em; /* Add margin-bottom of 3em to the container */
-     
-      }
-  
-  
-      #main-form{
-        /* Add a 2px solid black border to the main form */
-        border: 2px solid rgb(0, 0, 0);
-        }
-        label {
-        /*Display the label as a block */
-        display: block;
-        /* Hide the label */
-        display: none;
-        }
-        
-        .form-element {
-        /* Add a margin of 3em to the form element */
-        margin: 3em;
-        }
-  
-        input {
-          /* Set height of the input field to 2.25rem */
-          height: 2.25rem;
-          /* Set font size of the input field to 1.25rem */
-          font-size: 1.25rem;
-          /* Remove the border of the input field */
-          border: none;
-          /* Add a 2px solid #2c3e50 border to the bottom of the input field */
-          border-bottom: 2px solid #2c3e50;
-          /* Set font weight to 100 */
-          font-weight: 100;
-          /* Enable the border box sizing for the input field */
-          box-sizing: border-box;
-          }
-  
-          input:focus {
-            /* Remove the outline when input field is in focus /
-            outline: none;
-            / Change the border-bottom to 4px solid #8eadcd when input field is in focus */
-            border-bottom: 4px solid #8eadcd;
-            }
-            
-            input.alert {
-            /* Change the border-bottom to 2px solid red for input fields with "alert" class */
-            border-bottom: 2px solid red;
-            }
-            
-            input.valid {
-            /* Change the border-bottom to 2px solid rgb(46, 221, 46) for input fields with "valid" class */
-            border-bottom: 2px solid rgb(46, 221, 46);
-            }
-            
-            .center {
-            /* Center the text within the element with "center" class */
-            text-align: center;
-            }
-  
-  
-  
-  
-            h2 {
-              /* Set font size of the h2 element to 3.00rem */
-              font-size: 3.00rem;
-              /*Set color of the h2 element to var(--matador-black) */
-              color: var(--matador-black);
-              /* Set font family of the h2 element to "Poppins" */
-              font-family: "Poppins";
-              }
-  
-              button {
-                /* Center the button horizontally */
-                margin: 0 auto;
-                /* Set the padding of the button to 1.25rem 2.50rem */
-                padding: 1.25rem 2.50rem;
-                /* Set the border-radius of the button to 3.25rem */
-                border-radius: 3.25rem;
-                /* Set the background color of the button to var(--matador-black) */
-                background: var(--matador-black);
-                /* Set the text color of the button to #fff */
-                color: #fff;
-                /* Remove the border of the button */
-                border: none;
-                /* Set the font size of the button text to 1.25rem */
-                font-size: 1.25rem;
-                }
-  
-                button:hover {
-                  /* Add 4px solid #8eadcd border when button is hovered over */
-                  border: 4px solid #8eadcd;
-                  }
-                  
-                  .btn-container {
-                  /* Set the display property to flex for the btn-container class */
-                  display: flex;
-                  /* Center the buttons horizontally within the btn-container class */
-                  justify-content: space-around;
-                  /* Add a margin-top of 20px to the btn-container class */
-                  margin-top: 20px;
-                  }
-                  
-                  .semester-input {
-                  /* Set the display property to inline for the semester-input class */
-                  display: inline;
-                  /* Set the width of the semester-input class to 50% */
-                  width: 50%;
-                  }
-  
-                  .semester-container {
-                    /* Set the display property to flex for the semester-container class */
-                    display: flex;
-                    }
-                    
-                    textarea {
-                    /* Set the font-style property to inherit for the textarea element */
-                    font-style: inherit;
-                    /* Set the width of the textarea element to 100% */
-                    width: 100%;
-                    /* Set the height of the textarea element to 7em */
-                    height: 7em;
-                    /* Set the box-sizing property to border-box for the textarea element */
-                    box-sizing: border-box;
-                    /* Set the font size of the text inside the textarea element to 1.10rem */
-                    font-size: 1.00rem;
-                    }
-                    
-                    textarea:focus {
-                    /* Add 2px solid #8eadcd outline when the textarea element is focused */
-                    outline: 2px solid #8eadcd;
-                    }
+}
+
+.Signup-link {
+  text-align: center;
+  /* Center the text within the link */
+  color: var(--matador-black);
+  /*signup link color */
+  text-decoration: underline;
+  /* Add an underline to the text  */
+}
+
+.Signup-link:hover {
+  cursor: pointer;
+  /* Change cursor to a pointer when hovering over the link */
+}
+
+.container {
+  /* Set background color to white */
+  background-color: var(--matador-white);
+  /* Center the container and set a margin of 39% on both sides */
+  margin:auto;
+  /* Set height to automatically fit the content */
+  height: fit-content;
+  /* Set width to automatically fit the content */
+  width: fit-content;
+  padding: 4em;
+  /*Add padding of 4em to the container */
+  border: 5px solid var(--matador-red);
+  /* adding  border to the login container */
+  border-radius: .66rem;
+  /* Set border-radius of the container to 0.66rem */
+  margin-bottom: 3em;
+  /* Add margin-bottom of 3em to the container */
+}
+
+
+label {
+  /*Display the label as a block */
+  display: block;
+  /* Hide the label */
+  display: none;
+}
+
+.form-element {
+  /* Add a margin of 3em to the form element */
+  margin: 3em;
+}
+
+input {
+  /* Set height of the input field to 2.25rem */
+  height: 2.25rem;
+  /* Set font size of the input field to 1.25rem */
+  font-size: 1.25rem;
+  /* Remove the border of the input field */
+  border: none;
+  /* Add a 2px solid #2c3e50 border to the bottom of the input field */
+  border-bottom: 2px solid #2c3e50;
+  /* Set font weight to 100 */
+  font-weight: 100;
+  /* Enable the border box sizing for the input field */
+  box-sizing: border-box;
+}
+
+input:focus {
+  /* Remove the outline when input field is in focus */
+  outline: none;
+  /* Change the border-bottom to 4px solid #8eadcd when input field is in focus */
+  border-bottom: 4px solid #8eadcd;
+}
+
+input.alert {
+  /* Change the border-bottom to 2px solid red for input fields with "alert" class */
+  border-bottom: 2px solid red;
+}
+
+input.valid {
+  /* Change the border-bottom to 2px solid rgb(46, 221, 46) for input fields with "valid" class */
+  border-bottom: 2px solid rgb(46, 221, 46);
+}
+
+.center {
+  /* Center the text within the element with "center" class */
+  text-align: center;
+}
+
+
+
+
+h2 {
+  /* Set font size of the h2 element to 3.00rem */
+  font-size: 3.00rem;
+  /*Set color of the h2 element to var(--matador-black) */
+  color: var(--matador-black);
+  /* Set font family of the h2 element to "Poppins" */
+  font-family: "Poppins";
+}
+
+button {
+  /* Center the button horizontally */
+  margin: 0 auto;
+  /* Set the padding of the button to 1.25rem 2.50rem */
+  padding: 1.25rem 2.50rem;
+  /* Set the border-radius of the button to 3.25rem */
+  border-radius: 3.25rem;
+  /* Set the background color of the button to var(--matador-black) */
+  background: var(--matador-black);
+  /* Set the text color of the button to #fff */
+  color: var(--matador-white);
+  /* Remove the border of the button */
+  border: none;
+  /* Set the font size of the button text to 1.25rem */
+  font-size: 1.25rem;
+}
+
+button:hover {
+  /* Add 4px solid #8eadcd border when button is hovered over */
+  border: 4px solid #8eadcd;
+}
+
+.btn-container {
+  /* Set the display property to flex for the btn-container class */
+  display: flex;
+  /* Center the buttons horizontally within the btn-container class */
+  justify-content: space-around;
+  /* Add a margin-top of 20px to the btn-container class */
+  margin-top: 20px;
+}
