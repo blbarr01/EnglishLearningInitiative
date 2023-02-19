@@ -5,6 +5,7 @@
   mode="determinate"
   [value]="progress"
  color="red-color-wrong"
+ width=" 100%"
 ></mat-progress-bar>
 <br>
 
@@ -13,10 +14,13 @@
 </div>
  
 <div class =" Counter">
-  <p> &#10004; {{this.correctCounter}} &#10006; {{
+  <p > &#10004; {{this.correctCounter}} &#10006; {{
     this.incorrectCounter}}</p>
     </div>
-  <div *ngIf="isanswerSelected" class="answerChoices">
+  <div  *ngIf="isanswerSelected" class="answerChoices" id="div-cont"  >
+
+
+   
     <li (click)="answerStatus(this.allAnswers[0])">
       <img class="img" src="{{ this.allAnswers[0] }}" width="200" 
       height="200"/>
@@ -26,7 +30,7 @@
       height="200"/>
     </li>
     <li (click)="answerStatus(this.allAnswers[2])">
-      <img class="img" src="{{ this.allAnswers[2] }}" width="200" 
+      <img class="img"src="{{ this.allAnswers[2] }}" width="200" 
       height="200"/>
     </li>
     <li (click)="answerStatus(this.allAnswers[3])">
@@ -35,10 +39,11 @@
     </li>
   </div>
 
-  <div class="answerChoices">
+  <div class="answerChoices2">
     <li>
       <h2 class="green-color-correct" *ngIf="isCorrect"> <br> <img class="img" src="{{ gameDeck.cards[i].image }}" />
       </h2>
       <h2 class="red-color-wrong" *ngIf="isInCorrect"> <br><img src="{{tempanswer}}"></h2>
     </li>
   </div> 
+  </div>
