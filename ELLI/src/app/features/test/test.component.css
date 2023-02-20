@@ -1,28 +1,34 @@
-  .category {
-    padding: 200px;
-
+  #test-wrapper {
+    border: 2px solid magenta;
+    margin-top: 2em;
   }
 
   .Counter {
     min-width: 300px;
   }
 
+  .prog-bar {
+    margin: auto;
+  }
+
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: var(--matador-red);
+  }
+
+  ::ng-deep .mat-progress-bar-buffer {
+    background: lightblue;
+  }
 
   li h2 {
     border-radius: 1rem;
     justify-content: space-evenly;
     display: inline-flex;
-
-
   }
 
   .question {
     text-align: center;
-    position: relative;
-    top: -90px;
-    left: 30px;
-    font-size: 50px;
-    color: black;
+    font-size: 3.5rem;
+    color: blue;
 
   }
 
@@ -32,59 +38,50 @@
     min-width: 150px;
   }
 
-  ::ng-deep .mat-progress-bar-fill::after {
-    background-color: var(--matador-red);
-  }
-
-  ::ng-deep .mat-progress-bar-buffer {
-
-    background: lightblue;
-
-
-  }
-
-  .prog-bar {
-    max-width: 2400px;
-    min-width: 200px;
-  }
-
-
-  .answerChoices {
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    list-style: none;
-    margin-right: 10%;
-    margin-left: 10%;
-
-
-
-  }
 
   .answerChoices2 {
     display: flex;
     align-items: center;
     list-style: none;
   }
-
+  
   .green-color-correct {
     background: green;
   }
-
+  
   .red-color-wrong {
     background: red;
   }
 
+  
+  .answer-selection{
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    border-radius: 33%;
+    padding:0;
+    border: 2px solid red;
+  }
 
+  .answer-img{
+    margin: auto;
+  } 
 
+  @media (min-width: 1280px){
+
+    #answer-choices-cont {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      margin: auto;
+      column-gap: 2em;
+    }
+  }
 
   @media (max-width: 1280px) {
-    #div-cont {
+    #answer-choices-cont {
       padding: 2em;
       /* border: 2px solid black; */
       margin: 3em auto;
-      row-gap: 6em;
+      column-gap: 2em;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
 
@@ -92,14 +89,13 @@
   }
 
   @media (max-width: 625px) {
-    #div-cont {
-      row-gap: 2em;
+    #answer-choices-cont {
+      row-gap: 1em;
       grid-template-columns: repeat(1, 1fr);
-
+      
     }
 
-    .img {
-      padding: 1em;
+    .answer-img {
       width: 100%;
       min-width: 100px;
     }
