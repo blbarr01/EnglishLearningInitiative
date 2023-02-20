@@ -5,19 +5,18 @@
   mode="determinate"
   [value]="progress"
  color="red-color-wrong"
- width=" 100%"
 ></mat-progress-bar>
 <br>
 
-<div  class = "question" >
+<div  style= " width: 98%" class = "question" >
   <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
 </div>
  
-<div class =" Counter">
+<div style= " width: 100%"  class =" Counter">
   <p > &#10004; {{this.correctCounter}} &#10006; {{
     this.incorrectCounter}}</p>
     </div>
-  <div  *ngIf="isanswerSelected" class="answerChoices" id="div-cont"  >
+  <div style= " width: 100%" *ngIf="isanswerSelected" class="answerChoices" id="div-cont"  >
 
 
    
@@ -36,7 +35,7 @@
     <li (click)="answerStatus(this.allAnswers[3])">
       <img class="img" src="{{ this.allAnswers[3] }}" width="200" 
       height="200"/>
-    </li>
+
   </div>
 
   <div class="answerChoices2">
