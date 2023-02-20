@@ -1,41 +1,32 @@
 <app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
 <div class=category>
-  <mat-progress-bar
-  class="prog-bar"
-  mode="determinate"
-  [value]="progress"
- color="red-color-wrong"
-></mat-progress-bar>
-<br>
-
-<div  style= " width: 98%" class = "question" >
-  <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
-</div>
- 
-<div style= " width: 100%"  class =" Counter">
-  <p > &#10004; {{this.correctCounter}} &#10006; {{
-    this.incorrectCounter}}</p>
-    </div>
-  <div style= " width: 100%" *ngIf="isanswerSelected" class="answerChoices" id="div-cont"  >
+  <mat-progress-bar class="prog-bar" mode="determinate" [value]="progress" color="red-color-wrong"></mat-progress-bar>
 
 
-   
+  <div style=" width: 98%" class="question">
+    <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
+  </div>
+
+  <div style=" width: 100%" class=" Counter">
+    <p> &#10004; {{this.correctCounter}} &#10006; {{this.incorrectCounter}}</p>
+  </div>
+
+  <!-- we should make this a single id of answer choices the id of div-cont isn't very helpful-->
+  <div style=" width: 100%" *ngIf="isanswerSelected" class="answerChoices" id="div-cont">
+    <ul>
     <li (click)="answerStatus(this.allAnswers[0])">
-      <img class="img" src="{{ this.allAnswers[0] }}" width="200" 
-      height="200"/>
+      <img class="img" src="{{ this.allAnswers[0] }}" width="200" height="200" />
     </li>
     <li (click)="answerStatus(this.allAnswers[1])">
-      <img class="img" src="{{ this.allAnswers[1] }}" width="200" 
-      height="200"/>
+      <img class="img" src="{{ this.allAnswers[1] }}" width="200" height="200" />
     </li>
     <li (click)="answerStatus(this.allAnswers[2])">
-      <img class="img"src="{{ this.allAnswers[2] }}" width="200" 
-      height="200"/>
+      <img class="img" src="{{ this.allAnswers[2] }}" width="200" height="200" />
     </li>
     <li (click)="answerStatus(this.allAnswers[3])">
-      <img class="img" src="{{ this.allAnswers[3] }}" width="200" 
-      height="200"/>
-
+      <img class="img" src="{{ this.allAnswers[3] }}" width="200" height="200" />
+    </li>
+  </ul>
   </div>
 
   <div class="answerChoices2">
@@ -44,5 +35,5 @@
       </h2>
       <h2 class="red-color-wrong" *ngIf="isInCorrect"> <br><img src="{{tempanswer}}"></h2>
     </li>
-  </div> 
   </div>
+</div>
