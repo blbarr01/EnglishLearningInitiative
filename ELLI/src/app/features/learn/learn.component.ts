@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { Deck } from 'src/app/shared/models';
 import { DecksService } from 'src/app/shared/services/decks.service';
 import { Subscription } from 'rxjs';
+
+let fruits: string[] = [];
+
 interface Words {
   qnum: number;
   keyWord: string;
@@ -12,6 +15,7 @@ interface Words {
 interface Buttons {
   ButtonNumber: any;
 }
+
 @Component({
   selector: 'app-learn',
   templateUrl: './learn.component.html',
@@ -19,7 +23,7 @@ interface Buttons {
 })
 export class LearnComponent implements OnInit {
   constructor(private router: Router, private decksService: DecksService) {}
-  //currCard is for the diplay 
+  //currCard is for the diplay
   currCard = 1;
   cardDeck: any;
   deckSub: Subscription = Subscription.EMPTY;
@@ -29,15 +33,28 @@ export class LearnComponent implements OnInit {
 
   terms: Words[] = [];
 
+  //change star color
+  toggle = true;
+  status = 'Enable';
+  // for changing back button to gray
+  backToggle = true;
+  backOpaque = 'Enable';
+  //hard coded number will need to change to dynamic
+  progress = 12;
+  audio = new Audio();
+
   click() {
-    // need to ask rohan about this condition 
+    // need to ask rohan about this condition
     if (this.i > this.cardDeck.cards.length - 2) {
     } else {
-      console.log(this.cardDeck.cards.length);
+      // console.log(this.cardDeck.cards.length);
       this.bottomNum++;
       // console.log(this.terms[this.i].keyWord);
       this.currCard++;
       this.i++;
+      this.progress += 100 / this.cardDeck.cards.length;
+      // this.toggle = !this.toggle;
+      // this.status = this.toggle ? 'Enable' : 'Disable';
     }
   }
   clickBack() {
@@ -46,10 +63,36 @@ export class LearnComponent implements OnInit {
       this.bottomNum--;
       this.currCard--;
       this.i--;
+      this.progress -= 100 / this.cardDeck.cards.length;
     }
   }
-  playAudio(url: string) {
-    new Audio(url).play();
+
+  saveWord() {
+    // console.log(this.cardDeck.cards[this.i].keyWord);
+    fruits.push(this.cardDeck.cards[this.i]);
+
+    console.log(fruits);
+
+    // // this.cardDeck.getCategories['Forgot'].push(
+    // //   this.cardDeck.cards[this.i].keyWord
+    // // );
+
+    // console.log();
+  }
+
+  clickStar() {
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? 'Enable' : 'Disable';
+    // console.log(this.cardDeck.cards[this.i].keyWord);]
+    this.saveWord();
+  }
+
+  // plays sound
+  playSound() {
+    let audio = new Audio();
+    audio.src = '../assets/alien_danger.wav';
+    audio.load();
+    audio.play();
   }
   currDeck: number = 0;
 

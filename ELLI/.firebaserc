@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "elli-d071a": {
+      "hosting": {
+        "ELLI": [
+          "elli-d071a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "elli-d071a"
+  }
+}

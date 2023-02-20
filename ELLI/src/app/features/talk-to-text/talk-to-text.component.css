@@ -1,6 +1,6 @@
 .START{ 
 
-    margin: auto;
+   margin: auto;
     position: relative;
     position: center;
     border: 1px solid rgb(20, 184, 36); 
@@ -15,7 +15,6 @@
     margin: 25px 385px;
     box-shadow:0 8px 16px 0 rgba(20, 184, 36);
     
-
 }
 
 .STOP{
@@ -48,4 +47,5 @@
     margin: 4px 2px;
     margin: 25px 385px;
     Box-Shadow: 0 0 5px 5px Rgba(0, 0, 0, 0.1);
-  }
+
+}
