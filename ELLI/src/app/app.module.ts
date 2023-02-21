@@ -25,6 +25,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LessonsComponent } from './features/lessons/lessons.component';
+import { PersonsComponent } from './features/lessons/persons/persons.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { LessonsComponent } from './features/lessons/lessons.component';
     AboutUsComponent,
     SiteMapComponent,
     LessonsComponent,
+    PersonsComponent,
   ],
   imports: [
     BrowserModule,
