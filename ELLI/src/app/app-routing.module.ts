@@ -9,7 +9,7 @@ import { LoginComponent } from './features/login/login.component';
 import { SignupComponent } from './features/signup/signup.component';
 import {AboutUsComponent} from './features/about-us/about-us.component';
 import {SiteMapComponent} from './features/site-map/site-map.component';
-
+import {LessonsComponent} from './features/lessons/lessons.component'
 const routes: Routes = [
   {
     path: "",
@@ -54,6 +54,11 @@ const routes: Routes = [
   {
     path: "site-map",
     component: SiteMapComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "lessons",
+    component: LessonsComponent,
     pathMatch: "full",
   },
   {

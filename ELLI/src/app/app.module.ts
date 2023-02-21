@@ -24,6 +24,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { LessonsComponent } from './features/lessons/lessons.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     FlashcardComponent,
     AboutUsComponent,
     SiteMapComponent,
+    LessonsComponent,
   ],
   imports: [
     BrowserModule,
