@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-persons',
   templateUrl: './persons.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  showDashboard(){
+    this.router.navigateByUrl("/lessons")
+  }
 
   ngOnInit(): void {
   }

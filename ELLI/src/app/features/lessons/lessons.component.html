@@ -1,5 +1,13 @@
-<p>lessons works!</p>
-
-<a routerLink="persons">persons</a>
-
-<router-outlet></router-outlet>
+<main class="container mx-auto">
+    <div class="text-center mt-4">
+        <h2>Currated Lessons</h2>
+        <h3>select a topic to learn about</h3>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a (click)="showPersons()">persons</a>
+            </li>
+        </ul>
+    </nav>
+</main>
