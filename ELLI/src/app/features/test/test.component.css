@@ -1,69 +1,112 @@
-  .category {
-    padding: 200px;
+  #test-wrapper {
+    /* border: 2px solid magenta; */
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 
-  
-  
+  .Counter {
+    min-width: 300px;
+  }
+
+  .prog-bar {
+    margin: auto;
+  }
+
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: var(--matador-red);
+  }
+
+  ::ng-deep .mat-progress-bar-buffer {
+    background: lightblue;
+  }
+
   li h2 {
     border-radius: 1rem;
     justify-content: space-evenly;
     display: inline-flex;
-   
   }
 
-.question
-{
-  text-align: center;
-  position:relative; 
-  top: -90px; left: 30px;
-  font-size: 50px;
-  color: black;
-}
-.Counter
-{
-  text-align: center;
-  font-size: 40px;
-}
-
-::ng-deep .mat-progress-bar-fill::after {
-  background-color: var(--matador-red);
-}
-::ng-deep .mat-progress-bar-buffer {
-  background: lightblue;
-}
-
-
-  .answerChoices {
-    border: 2px solid;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  .question {
     text-align: center;
-    list-style: none;
-    margin-right: 10%;
-    margin-left: 10%;
-  }
- 
+    font-size: 3.5rem;
+    color: blue;
 
+  }
+
+  .Counter {
+    text-align: center;
+    font-size: 40px;
+    min-width: 150px;
+  }
+
+
+  .answerChoices2 {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
   .green-color-correct {
     background: green;
   }
-
+  
   .red-color-wrong {
     background: red;
   }
 
+  /*
+  * not an appropriate name this more accurately represents the grid cell area
+  * all the styles to diferentiate quiz answers are better applied to the image
+  * see selector below (answer-img)
+  */
 
-  @media(max-width:1280px){
-    img{
-      max-width: 250px;
-      max-height: 250px;
-    }
+  .answer-selection{
+    /* border: 2px solid green; */
   }
-  @media(max-width:625px){
-    img{
-      max-width: 200px;
-      max-height: 200px;
-    }
-  }
-
   
+  .answer-img{
+    border-radius:33px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    margin: auto;
+    padding:2em;
+    max-width: 200px;
+    max-height: 200px;
+    /* border: 2px solid red */
+  } 
+
+
+
+    #answer-choices-cont {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      margin: auto;
+      column-gap: 2em;
+      max-width: 900px;
+    }
+
+
+  @media (max-width: 1280px) {
+    #answer-choices-cont {
+      padding: 2em;
+      /* border: 2px solid black; */
+      margin: 3em auto;
+      gap: 2em;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+
+    }
+  }
+
+  @media (max-width: 625px) {
+    #answer-choices-cont {
+      row-gap: 1em;
+      grid-template-columns: repeat(1, 1fr);
+      
+    }
+
+    .answer-img {
+      width: 100%;
+      min-width: 100px;
+    }
+  }
