@@ -1,7 +1,7 @@
 <app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
 <mat-progress-bar class="prog-bar mt-4" mode="determinate" [value]="progress" color="red-color-wrong"></mat-progress-bar>
 
-<div class="question mt-6">
+<div class="question mt-12">
   <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
 </div>
 

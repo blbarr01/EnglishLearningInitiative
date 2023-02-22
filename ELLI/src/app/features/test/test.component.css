@@ -1,6 +1,7 @@
   #test-wrapper {
     /* border: 2px solid magenta; */
     margin-top: 10%;
+    margin-bottom: 10%;
   }
 
   .Counter {
@@ -53,7 +54,12 @@
     background: red;
   }
 
-  
+  /*
+  * not an appropriate name this more accurately represents the grid cell area
+  * all the styles to diferentiate quiz answers are better applied to the image
+  * see selector below (answer-img)
+  */
+
   .answer-selection{
     /* border: 2px solid green; */
   }
@@ -63,6 +69,8 @@
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     margin: auto;
     padding:2em;
+    max-width: 200px;
+    max-height: 200px;
     /* border: 2px solid red */
   } 
 
@@ -74,6 +82,7 @@
       align-items: center;
       margin: auto;
       column-gap: 2em;
+      max-width: 900px;
     }
 
 
@@ -82,7 +91,7 @@
       padding: 2em;
       /* border: 2px solid black; */
       margin: 3em auto;
-      column-gap: 2em;
+      gap: 2em;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
 
