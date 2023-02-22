@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Component, NgModule } from '@angular/core';
+import { PRIMARY_OUTLET, RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './features/game/game.component';
 import { HomeComponent } from './features/home/home.component';
 import { LearnComponent } from './features/learn/learn.component';
@@ -9,7 +9,8 @@ import { LoginComponent } from './features/login/login.component';
 import { SignupComponent } from './features/signup/signup.component';
 import {AboutUsComponent} from './features/about-us/about-us.component';
 import {SiteMapComponent} from './features/site-map/site-map.component';
-
+import {LessonsComponent} from './features/lessons/lessons.component'
+import { PersonsComponent } from './features/lessons/persons/persons.component';
 const routes: Routes = [
   {
     path: "",
@@ -55,6 +56,18 @@ const routes: Routes = [
     path: "site-map",
     component: SiteMapComponent,
     pathMatch: "full",
+  },
+  {
+    path: "lessons",
+    component: LessonsComponent,
+    pathMatch: "full",
+
+  },
+  {
+    path:"lessons/persons",
+    component:PersonsComponent,
+    pathMatch: "full",
+
   },
   {
     path: "**",
