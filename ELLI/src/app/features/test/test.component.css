@@ -1,6 +1,6 @@
   #test-wrapper {
-    border: 2px solid magenta;
-    margin-top: 2em;
+    /* border: 2px solid magenta; */
+    margin-top: 10%;
   }
 
   .Counter {
@@ -55,26 +55,27 @@
 
   
   .answer-selection{
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    border-radius: 33%;
-    padding:0;
-    border: 2px solid red;
+    /* border: 2px solid green; */
   }
-
+  
   .answer-img{
+    border-radius:33px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     margin: auto;
+    padding:2em;
+    /* border: 2px solid red */
   } 
 
-  @media (min-width: 1280px){
+
 
     #answer-choices-cont {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      text-align: center;
+      align-items: center;
       margin: auto;
       column-gap: 2em;
     }
-  }
+
 
   @media (max-width: 1280px) {
     #answer-choices-cont {
