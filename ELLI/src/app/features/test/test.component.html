@@ -1,11 +1,11 @@
 <app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
 <mat-progress-bar class="prog-bar mt-4" mode="determinate" [value]="progress" color="red-color-wrong"></mat-progress-bar>
 
-<div class="question mt-12">
+<div class="question">
   <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
 </div>
 
-<div  class=" Counter mt-6">
+<div  class="Counter">
   <p> &#10004; {{this.correctCounter}} &#10006; {{this.incorrectCounter}}</p>
 </div>
 <main id=test-wrapper>

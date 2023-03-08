@@ -1,7 +1,7 @@
   #test-wrapper {
     /* border: 2px solid magenta; */
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .Counter {
@@ -29,11 +29,11 @@
   .question {
     text-align: center;
     font-size: 3.5rem;
-    color: blue;
-
+    margin-top: 2%;
   }
 
   .Counter {
+    margin-top: 2%;
     text-align: center;
     font-size: 40px;
     min-width: 150px;
@@ -71,6 +71,7 @@
     padding:2em;
     max-width: 200px;
     max-height: 200px;
+    cursor: pointer;
     /* border: 2px solid red */
   } 
 
