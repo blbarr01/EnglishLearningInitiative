@@ -1,7 +1,7 @@
   #test-wrapper {
     /* border: 2px solid magenta; */
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .Counter {
@@ -29,29 +29,29 @@
   .question {
     text-align: center;
     font-size: 3.5rem;
-    color: blue;
-
+    margin-top: 2%;
   }
 
   .Counter {
+    margin-top: 2%;
     text-align: center;
     font-size: 40px;
     min-width: 150px;
   }
 
 
-  .answerChoices2 {
-    display: flex;
-    align-items: center;
-    list-style: none;
-  }
+
   
   .green-color-correct {
     background: green;
+    border-radius:33px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
   
   .red-color-wrong {
     background: red;
+    border-radius:33px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
 
   /*
@@ -60,9 +60,7 @@
   * see selector below (answer-img)
   */
 
-  .answer-selection{
-    /* border: 2px solid green; */
-  }
+
   
   .answer-img{
     border-radius:33px;
@@ -71,25 +69,32 @@
     padding:2em;
     max-width: 200px;
     max-height: 200px;
+    cursor: pointer;
     /* border: 2px solid red */
   } 
 
 
 
-    #answer-choices-cont {
+    #answer-choices-cont{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: center;
       margin: auto;
       column-gap: 2em;
       max-width: 900px;
+      justify-content: center;
     }
 
+    #results-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
 
   @media (max-width: 1280px) {
-    #answer-choices-cont {
+    #answer-choices-cont, #results-container{
       padding: 2em;
-      /* border: 2px solid black; */
       margin: 3em auto;
       gap: 2em;
       grid-template-columns: repeat(2, 1fr);
@@ -98,8 +103,9 @@
     }
   }
 
+  /* phone */
   @media (max-width: 625px) {
-    #answer-choices-cont {
+    #answer-choices-cont, #results-container{
       row-gap: 1em;
       grid-template-columns: repeat(1, 1fr);
       
