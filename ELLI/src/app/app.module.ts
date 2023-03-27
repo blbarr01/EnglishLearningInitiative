@@ -28,6 +28,8 @@ import { AboutUsComponent } from './features/about-us/about-us.component';
 import { SiteMapComponent } from './features/site-map/site-map.component';
 import { LessonsComponent } from './features/lessons/lessons.component';
 import { PersonsComponent } from './features/lessons/persons/persons.component';
+import { VerbConjugationComponent } from './features/lessons/verb-conjugation/verb-conjugation.component';
+import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { PersonsComponent } from './features/lessons/persons/persons.component';
     SiteMapComponent,
     LessonsComponent,
     PersonsComponent,
+    VerbConjugationComponent,
+    IdiomsComponent,
   ],
   imports: [
     BrowserModule,
