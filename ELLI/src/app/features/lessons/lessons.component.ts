@@ -14,4 +14,7 @@ export class LessonsComponent implements OnInit {
   showPersons(){
     this.router.navigateByUrl("/lessons/persons");
   }
+  showVerbs(){
+    this.router.navigateByUrl("/lessons/verb-conjugation");
+  }
 }
