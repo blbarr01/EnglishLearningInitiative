@@ -30,13 +30,35 @@ export class UsersService {
       password:"t3$t" 
   }
 ]
-  constructor(private fireauth : AngularFireAuth) {}//private router : Router) { }
+  constructor(private fireauth : AngularFireAuth, private router : Router) {}//private router : Router) { }
   
   login(email : string, password : string){
     this.fireauth.signInWithEmailAndPassword(email,password).then( () => {
         localStorage.setItem('token', 'true');
+        this.router.navigate(['/home']);
   }, err => {
-        alert('Somthing went wrong');
+        alert(err.message);
+        this.router.navigate(['/login']);
+  })
+  }
+
+  signup(email : string, password : string){
+    this.fireauth.createUserWithEmailAndPassword(email,password).then( () => {
+        alert('Sign-up Successful');
+        localStorage.setItem('token', 'true');
+        this.router.navigate(['/login']);
+  }, err => {
+        alert(err.message);
+        this.router.navigate(['/signup']);
+  })
+  }
+
+  logout(){
+    this.fireauth.signOut().then( () => {
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+  }, err => {
+        alert(err.message);
   })
   }
   getUsers(): User[]{
