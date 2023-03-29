@@ -1,0 +1,32 @@
+p,
+li{
+    font-size: 1.25rem;
+}
+
+ul{
+ list-style: disc;
+}
+
+li{
+    margin-left: 1em;
+}
+
+.lesson-banner{
+    background-image: url("https://i0.wp.com/englishlessonsbrighton.co.uk/wp-content/uploads/2013/05/english-tenses-infographic.jpg?ssl=1");
+    padding: 5em 0; 
+    object-fit:fill;
+    color: var(--matador-white);
+}   
+
+h2 {
+    font-size: 3rem;
+    background-image: url("https://i0.wp.com/englishlessonsbrighton.co.uk/wp-content/uploads/2013/05/english-tenses-infographic.jpg?ssl=1");
+}
+
+.example-image{
+    max-width: 300px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
