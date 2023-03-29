@@ -26,6 +26,8 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LessonsComponent } from './features/lessons/lessons.component';
 import { PersonsComponent } from './features/lessons/persons/persons.component';
+import { UserdashboardComponent } from './features/userdashboard/userdashboard.component';
+import { ProgressComponentComponent } from './shared/components/progress-component/progress-component.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { PersonsComponent } from './features/lessons/persons/persons.component';
     SiteMapComponent,
     LessonsComponent,
     PersonsComponent,
+    UserdashboardComponent,
+    ProgressComponentComponent,
   ],
   imports: [
     BrowserModule,
