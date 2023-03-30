@@ -87,6 +87,7 @@ p {
   padding: 0.5em 3em;
   /* border: 2px solid black; */
   font-size: 4rem;
+  color: black;
 }
 
 .button-next:hover,
@@ -130,6 +131,7 @@ p {
   /* border: 2px solid blue; */
   display: flex;
   justify-content: space-around;
+  margin-bottom: 5em;
 }
 .curr-card {
   margin-top: 1em;

@@ -1,3 +1,4 @@
+
 /* Set the font style to black */
 body {
   color: black;
@@ -114,3 +115,124 @@ input[type="password"] {
     max-width: 700px;
   }
 }
+=======
+.login-container {
+  background-color: #fff;
+  padding-bottom: 3em;
+  padding-top: 2em;
+}
+
+.login-link {
+  text-align: center;
+  color: var(--matador-black);
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  cursor: pointer;
+}
+
+.container {
+  background-color: #fff;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  padding: 4em;
+  border: 5px solid var(--matador-red);
+  border-radius: .66rem;
+}
+
+
+
+label {
+  /*Display the label as a block */
+  display: block;
+  /* Hide the label */
+  display: none;
+}
+
+.form-element {
+  /* Add a margin of 3em to the form element */
+  margin: 3em;
+}
+
+input {
+  /* Set height of the input field to 2.25rem */
+  height: 2.25rem;
+  /* Set font size of the input field to 1.25rem */
+  font-size: 1.25rem;
+  /* Remove the border of the input field */
+  border: none;
+  /* Add a 2px solid #2c3e50 border to the bottom of the input field */
+  border-bottom: 2px solid #2c3e50;
+  /* Set font weight to 100 */
+  font-weight: 100;
+  /* Enable the border box sizing for the input field */
+  box-sizing: border-box;
+}
+
+input:focus {
+  /* Remove the outline when input field is in focus */
+  outline: none;
+  /* Change the border-bottom to 4pxs solid #8eadcd when input field is in focus */
+  border-bottom: 4px solid #8eadcd;
+}
+
+input.alert {
+  /* Change the border-bottom to 2px solid red for input fields with "alert" class */
+  border-bottom: 2px solid red;
+}
+
+input.valid {
+  /* Change the border-bottom to 2px solid rgb(46, 221, 46) for input fields with "valid" class */
+  border-bottom: 2px solid rgb(46, 221, 46);
+}
+
+.center {
+  /* Center the text within the element with "center" class */
+  text-align: center;
+}
+
+
+
+
+h2 {
+  /* Set font size of the h2 element to 3.00rem */
+  font-size: 3.00rem;
+  /*Set color of the h2 element to var(--matador-black) */
+  color: var(--matador-black);
+  /* Set font family of the h2 element to "Poppins" */
+  font-family: "Poppins";
+}
+
+button {
+  /* Center the button horizontally */
+  margin: 0 auto;
+  /* Set the padding of the button to 1.25rem 2.50rem */
+  padding: 1.25rem 2.50rem;
+  /* Set the border-radius of the button to 3.25rem */
+  border-radius: 3.25rem;
+  /* Set the background color of the button to var(--matador-black) */
+  background: var(--matador-black);
+  /* Set the text color of the button to #fff */
+  color: var(--matador-white);
+  /* Remove the border of the button */
+  border: none;
+  /* Set the font size of the button text to 1.25rem */
+  font-size: 1.25rem;
+}
+
+button:hover {
+  /* Add 4px solid #8eadcd border when button is hovered over */
+  border: 4px solid #8eadcd;
+}
+
+.btn-container {
+  /* Set the display property to flex for the btn-container class */
+  display: flex;
+  /* Center the buttons horizontally within the btn-container class */
+  justify-content: space-around;
+  /* Add a margin-top of 20px to the btn-container class */
+  margin-top: 20px;
+}
+
