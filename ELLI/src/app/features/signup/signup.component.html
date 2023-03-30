@@ -1,22 +1,33 @@
-<section class="Signup-container">
+<section class="signup-container">
     <div class="container">
-        <h2 class="center">SignUp</h2>
-        <p class="Signup-link" (click)="showLogin()">Login</p>
-        <form action="Get" id="main-form">
-            <div class="form-element">
-                <label for="UserName">Email</label>
-                <input type="text" autocomplete="name" name="uname" id="UserName" placeholder="Email">
-            </div>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
-            </div>
-        </form>
-        <div class="btn-container">
-            <button type="button" id="submit-btn">Submit</button>
+      <h2 class="center">Sign Up</h2>
+      <p class="signup-link" (click)="showLogin()">Log In</p>
+      <form action="Get" id="main-form">
+        <div class="form-element">
+          <label for="UserName">Email</label>
+          <input
+            type="text"
+            autocomplete="name"
+            name="uname"
+            id="UserName"
+            placeholder="Email"
+          />
         </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+      </form>
+      <div class="btn-container">
+        <button type="button" id="submit-btn">Submit</button>
+      </div>
     </div>
-</section>
+  </section>
     <!--The link to connect an html and css file--> 
     <link rel="stylesheet" href="signup.component.css">
 
