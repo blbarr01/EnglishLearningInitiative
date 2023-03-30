@@ -1,8 +1,14 @@
 <header id="main-site-banner">
     <img id ='banner-img'src="/assets/home-128.png" alt="" (click)="showHome()">
-    <h1 (click)="showHome()" id="banner-title">ELLI</h1>
+    <h1 (click)="showHome()" id="banner-title" class="py-4">ELLI</h1>
     <div id="banner-login">
-        <span (click)="showLogin()">Login </span> <span>/</span><span (click)="showSignup()">Sign Up</span>
+        <span id="login-link" (click)="showLogin()">Login </span> <span>/</span><span id="signup-link" (click)="showSignup()">Sign Up</span>
     </div>
 </header>
 <router-outlet></router-outlet>
+<footer id="main-site-footer">
+    <div class="container mx-auto mt-4 flex justify-center gap-6">
+        <p (click)="showAbout()" class="footer-text">About Us</p>
+        <p (click)="showSiteMap()"class="footer-text">Site Map</p>
+    </div>
+</footer>

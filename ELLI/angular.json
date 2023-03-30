@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ELLI:build:production",
+            "firebaseProject": "elli-d071a",
+            "firebaseHostingSite": "elli-d071a"
+          }
         }
       }
     }
