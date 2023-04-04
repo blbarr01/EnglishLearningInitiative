@@ -219,7 +219,7 @@ button {
   /* Remove the border of the button */
   border: none;
   /* Set the font size of the button text to 1.25rem */
-  font-size: 1.25rem;
+  font-size: 1.30rem;
 }
 
 button:hover {
