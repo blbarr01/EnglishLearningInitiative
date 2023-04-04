@@ -114,48 +114,34 @@ input[type="password"] {
   .container {
     max-width: 700px;
   }
-.Signup-container {
+}
+
+.signup-container {
   background-color: #fff;
-  /* Set background color of container to white */
   padding-bottom: 3em;
-  /* Add padding to the bottom of the container */
   padding-top: 2em;
-  /* Add padding to the top of the container  making on emore change */
-
 }
 
-.Signup-link {
+.signup-link {
   text-align: center;
-  /* Center the text within the link */
   color: var(--matador-black);
-  /*signup link color */
   text-decoration: underline;
-  /* Add an underline to the text  */
 }
 
-.Signup-link:hover {
+.signup-link:hover {
   cursor: pointer;
-  /* Change cursor to a pointer when hovering over the link */
 }
 
 .container {
-  /* Set background color to white */
-  background-color: var(--matador-white);
-  /* Center the container and set a margin of 39% on both sides */
-  margin:auto;
-  /* Set height to automatically fit the content */
+  background-color: #fff;
+  margin: auto;
   height: fit-content;
-  /* Set width to automatically fit the content */
   width: fit-content;
   padding: 4em;
-  /*Add padding of 4em to the container */
   border: 5px solid var(--matador-red);
-  /* adding  border to the login container */
   border-radius: .66rem;
-  /* Set border-radius of the container to 0.66rem */
-  margin-bottom: 3em;
-  /* Add margin-bottom of 3em to the container */
 }
+
 
 
 label {
@@ -188,7 +174,7 @@ input {
 input:focus {
   /* Remove the outline when input field is in focus */
   outline: none;
-  /* Change the border-bottom to 4px solid #8eadcd when input field is in focus */
+  /* Change the border-bottom to 4pxs solid #8eadcd when input field is in focus */
   border-bottom: 4px solid #8eadcd;
 }
 
@@ -248,5 +234,5 @@ button:hover {
   justify-content: space-around;
   /* Add a margin-top of 20px to the btn-container class */
   margin-top: 20px;
-
 }
+
