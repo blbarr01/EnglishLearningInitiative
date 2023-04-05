@@ -1,21 +1,12 @@
-<section class="border-500 mx-10 mt-20" style="max-width:1280px; margin: auto;">
-
-  <h2 class="text-lg mt-8">Transcript</h2>
-  <div class="transcript-container">
-    <span id="final" class="text-light"></span>
-    <span id="interim" class="text-secondary"></span>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Speech to Text</h2>
+      <button (click)="startRecognition()">Speak the words</button>
+      <div id="typed-text"></div>
+      <button (click)="stopRecognition()">
+        Stop
+      </button>
+    </div>
   </div>
-
-  <div class="button-container">
-    <button class="START" disabled>START </button>
-    <button class="STOP" disabled>STOP</button>
-  </div>
-
-
-  <h2 class="text-lg mt-8">Enter Text</h2>
-  <form action="#" class="text-input-form">
-    <input tyoe="text" id="textInput" class="text-Input" placeholder="Tyoe here...">
-  </form>
-
-  <p id="status" class="listening-status" style="display: none">Listening...</p>
-</section>
+</div>
