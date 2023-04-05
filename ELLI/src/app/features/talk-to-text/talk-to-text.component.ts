@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { useDeviceLanguage } from 'firebase/auth';
-import { SpeechRecognition } from 'web-speech-api';
 
 @Component({
   selector: 'app-talk-to-text',
