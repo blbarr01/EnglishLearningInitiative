@@ -26,6 +26,8 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { LessonsComponent } from './features/lessons/lessons.component';
 import { PersonsComponent } from './features/lessons/persons/persons.component';
+import { VerbConjugationComponent } from './features/lessons/verb-conjugation/verb-conjugation.component';
+import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
 import { UserdashboardComponent } from './features/userdashboard/userdashboard.component';
 import { ProgressComponentComponent } from './shared/components/progress-component/progress-component.component';
 
@@ -45,6 +47,8 @@ import { ProgressComponentComponent } from './shared/components/progress-compone
     SiteMapComponent,
     LessonsComponent,
     PersonsComponent,
+    VerbConjugationComponent,
+    IdiomsComponent,
     UserdashboardComponent,
     ProgressComponentComponent,
   ],
