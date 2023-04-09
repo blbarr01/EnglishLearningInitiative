@@ -28,6 +28,7 @@ import { LessonsComponent } from './features/lessons/lessons.component';
 import { PersonsComponent } from './features/lessons/persons/persons.component';
 import { VerbConjugationComponent } from './features/lessons/verb-conjugation/verb-conjugation.component';
 import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
     PersonsComponent,
     VerbConjugationComponent,
     IdiomsComponent,
+    UserdashboardComponent,
   ],
   imports: [
     BrowserModule,
