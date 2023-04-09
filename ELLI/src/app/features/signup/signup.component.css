@@ -10,7 +10,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
+  background-color: #fff;
 }
 
 .container {
@@ -18,27 +19,26 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px 0 rgb(215, 10, 10), 0 6px 20px 0 rgb(215, 10, 10);
-  width: 80%;
-  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px 0 rgb(215, 10, 10), 0 6px 20px 0 rgb(215, 10, 10);
+  width: 80%; /* width of the form */
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    max-width: none;
+  }
 }
 
 /* Center the form heading and make it bigger */
 .center {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 35px;
-}
-
-/* Set the sign up link style to blue */
-.signup-link {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 5px;
-  cursor: pointer;
-  color: blue;
 }
 
 /* Style the form elements */
@@ -46,7 +46,7 @@ body {
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -112,5 +112,128 @@ input[type="password"] {
 @media (min-width: 1200px) {
   .container {
     max-width: 700px;
+  }
+}
+
+.signup-container {
+  background-color: #fff;
+  padding: 0;
+}
+
+.signup-link {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+  color: blue;
+}
+
+/* Style the login form elements */
+.signup-form-element {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.signup-form-element label {
+  margin-bottom: 10px;
+}
+
+.signup-form-element input[type="text"],
+.signup-form-element input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: black;
+}
+
+#signup-btn {
+  background-color: rgb(180, 33, 33);
+  color: rgb(248, 243, 243);
+  padding: 15px 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Add hover effect to login button */
+#signup-btn:hover {
+  background-color: rgb(215, 10, 10);
+}
+
+/* Add custom style for login form heading */
+.signup-center {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: rgb(180, 33, 33);
+}
+
+/* Add custom style for error message */
+.signup-error {
+  color: rgb(8, 6, 6);
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: -15px;
+}
+
+/* Media Queries */
+
+/* Small devices (portrait phones, 300px and up) */
+@media (min-width: 300px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding: 30px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    max-width: 500px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+/* Adjust login container for small devices */
+@media (max-width: 576px) {
+  .signup-container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+}
+
+/* Adjust login form elements for small devices */
+@media (max-width: 576px) {
+  .signup-form-element {
+    margin: 1.5em;
+  }
+}
+
+/* Adjust login button for small devices */
+@media (max-width: 576px) {
+  #signup-btn {
+    font-size: 18px;
   }
 }
