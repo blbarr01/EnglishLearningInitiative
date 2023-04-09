@@ -1,12 +1,22 @@
+<section class="border-500 mx-10 mt-20">
+  <h2 class="text-center text-5xl text-red-500">practice your speaking!</h2>
+  <h2 class="">Transcript</h2>
+  <div class="" style="border: 1px solid rgb(182, 8, 8); height: 300px; border-radius: 20px;">
+    <span id="final" class="text-light"></span>
+    <span id="interim" class="text-secondary"></span>
+  </div>
+
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+
       <h2>Speech to Text</h2>
-      <button (click)="startRecognition()">Speak the words</button>
-      <input type="text" id="typed-text">
-      <button (click)="stopRecognition()">
-        Stop
-      </button>
+      <button (click)="startRecognition()" class="START" >Start</button>
+      <button (click)="stopRecognition()" class="STOP" >Stop </button>
+      <input type="text" id= "typed-text">
     </div>
   </div>
 </div>
