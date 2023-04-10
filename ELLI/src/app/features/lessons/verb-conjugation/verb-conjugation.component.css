@@ -30,3 +30,30 @@ h2 {
     object-fit: cover;
 }
 
+
+.slide{
+    display: none;
+}
+
+#past:checked ~ .past,
+#present:checked ~ .present,
+#future:checked ~ .future{
+    display: block;
+}
+
+input{display: none;}
+label{ cursor: pointer;}
+.slide{display: none; margin-top: 2em;}
+.slide>p{
+    text-align: center;
+}
+
+.slide-label{
+    border: 2px solid black;
+    padding: 1.5em 2em;
+}
+
+
+.slide-selector-container{
+    border: 2px solid red;
+}
