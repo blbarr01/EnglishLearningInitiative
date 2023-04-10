@@ -1,5 +1,5 @@
 <main class="container mx-auto pb-24">
-
+    <p>back to Lessons <a class="text-blue-700" (click)="showDashboard()">dashboard</a></p>
     <h2 class="text-center  lesson-banner">verb conjugation</h2>
     <section id="concept-lesson">
         <h3> infinitives: a verbs standard form -- to be or not to be? </h3>
@@ -36,25 +36,13 @@
             <li>present and</li>
             <li>future</li>
         </ul>
-        <section class="slide-selector-container mt-6">
-
-            <input type="radio" name="verb-tense" id="past" checked>
-            <input type="radio" name="verb-tense" id="present">
-            <input type="radio" name="verb-tense" id="future">
-
-            <label for="past" class="slide-label">past</label>
-            <label for="present" class="slide-label">present</label>
-            <label for="future" class="slide-label">future</label>
-
-                <div class="slide past">
-                    <p>I studied</p>
-                </div>
-                <div class="slide present">
-                    <p> I study</p>
-                </div>
-                <div class="slide future">
-                   <p>I will study</p> 
-                </div>
+        <section class="verb-tense-interactive my-12">
+            <div class="button-container">
+                <button (click)="changeDisplayText(slideText.past)">past</button>
+                <button (click)="changeDisplayText(slideText.present)">present</button>
+                <button (click)="changeDisplayText(slideText.future)">future</button>
+            </div>
+            <p >{{displaytext}}</p>
         </section>
 
         <p>let's look at some common patterns for verb tenses</p>

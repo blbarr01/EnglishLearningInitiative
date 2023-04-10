@@ -31,29 +31,22 @@ h2 {
 }
 
 
-.slide{
-    display: none;
+.button-container{
+    display: flex;
+    gap: 1em;
 }
 
-#past:checked ~ .past,
-#present:checked ~ .present,
-#future:checked ~ .future{
-    display: block;
+button{
+    border-radius: .33rem;
+    padding: 2em;
+    background-color: var(--matador-red);
+    color: var(--matador-white);
+    font-size: 1.25rem;
 }
 
-input{display: none;}
-label{ cursor: pointer;}
-.slide{display: none; margin-top: 2em;}
-.slide>p{
-    text-align: center;
-}
-
-.slide-label{
-    border: 2px solid black;
-    padding: 1.5em 2em;
+button:hover{
+    background-color: rgb(243, 59, 59);
 }
 
 
-.slide-selector-container{
-    border: 2px solid red;
-}
+
