@@ -12,6 +12,10 @@ import {cloneDeep} from 'lodash-es';
 })
 
 export class GameComponent implements OnInit, OnDestroy {
+  public interimTranscript: string = '';
+  public finalTranscript: string = '';
+  public recognition: any;
+  inputElement = document.getElementById('inputValue') as HTMLInputElement;
   index: number = 0;
   gameMode: number = 1;
   gameDeck: any;
@@ -34,6 +38,7 @@ export class GameComponent implements OnInit, OnDestroy {
       this.tempGameDeck = cloneDeep(this.gameDeck);
     }); 
     this.displayOutput = this.counter.toString(); 
+    this.initializeRecognition();
 
   }
 
@@ -87,16 +92,18 @@ export class GameComponent implements OnInit, OnDestroy {
   submitAnswer(){
     this.answer = this.answer.trim().toLowerCase();
     this.index++;
-
-    if(this.answer === this.tempGameDeck[this.index].keyWord){
+    console.log(this.inputElement.value);
+    if((this.answer === this.tempGameDeck[this.index].keyWord) ||( this.inputElement.value===this.tempGameDeck[this.index].keyWord)){
       this.counter += 2;
       this.displayOutput = this.counter.toString();
       this.tempGameDeck.splice(this.index - 1,1);
       this.index--;
+      console.log("correct");
       
     } else if(this.tempGameDeck.length() === this.index){
       this.index = 0;
     }
+    
   }
   
 
@@ -117,4 +124,39 @@ export class GameComponent implements OnInit, OnDestroy {
     this.displayOutput = this.counter.toString();
     this.gameMode = 1;
   } 
+
+ 
+
+  initializeRecognition(): void {
+    this.recognition = new (window as any).webkitSpeechRecognition();
+    this.recognition.continuous = true;
+    this.recognition.interimResults = true;
+    this.recognition.lang = 'en-US';
+
+    this.recognition.onresult = (event: any) => {
+      let interimTranscript = '';
+      let finalTranscript = '';
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const result: any = event.results[i];
+        const transcript: string = result[0].transcript;
+        if (result.isFinal) {
+          finalTranscript += transcript;
+        } else {
+          interimTranscript += transcript;
+        }
+      }
+      this.interimTranscript = interimTranscript;
+      this.finalTranscript = finalTranscript;
+      this.inputElement = document.getElementById('inputValue') as HTMLInputElement;
+      this.inputElement.value = finalTranscript;
+    };
+  }
+
+  startRecognition() {
+    this.recognition.start();
+  }
+
+  stopRecognition() {
+    this.recognition.stop();
+  }
 }
