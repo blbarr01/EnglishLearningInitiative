@@ -1,44 +1,36 @@
 <app-category-selector *ngIf="isCategorySelector" (click)="pop()"></app-category-selector>
-<div class=category>
-  <mat-progress-bar
-  class="prog-bar"
-  mode="determinate"
-  [value]="progress"
- color="red-color-wrong"
-></mat-progress-bar>
-<br>
+<mat-progress-bar class="prog-bar mt-4" mode="determinate" [value]="progress" color="red-color-wrong"></mat-progress-bar>
 
-<div  class = "question" >
+<div class="question">
   <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
 </div>
- 
-<div class =" Counter">
-  <p> &#10004; {{this.correctCounter}} &#10006; {{
-    this.incorrectCounter}}</p>
-    </div>
-  <div *ngIf="isanswerSelected" class="answerChoices">
-    <li (click)="answerStatus(this.allAnswers[0])">
-      <img class="img" src="{{ this.allAnswers[0] }}" width="200" 
-      height="200"/>
-    </li>
-    <li (click)="answerStatus(this.allAnswers[1])">
-      <img class="img" src="{{ this.allAnswers[1] }}" width="200" 
-      height="200"/>
-    </li>
-    <li (click)="answerStatus(this.allAnswers[2])">
-      <img class="img" src="{{ this.allAnswers[2] }}" width="200" 
-      height="200"/>
-    </li>
-    <li (click)="answerStatus(this.allAnswers[3])">
-      <img class="img" src="{{ this.allAnswers[3] }}" width="200" 
-      height="200"/>
-    </li>
+
+<div  class="Counter">
+  <p> &#10004; {{this.correctCounter}} &#10006; {{this.incorrectCounter}}</p>
+</div>
+<main id=test-wrapper>
+  <!-- we should make this a single id of answer choices the id of div-cont isn't very helpful-->
+  <div  *ngIf="isanswerSelected"  id="answer-choices-cont">
+    <div  (click)="answerStatus(this.allAnswers[0])">
+      <img class="answer-img" src="{{ this.allAnswers[0] }}"  />
+    </div >
+    <div  (click)="answerStatus(this.allAnswers[1])">
+      <img class="answer-img" src="{{ this.allAnswers[1] }}" />
+    </div >
+    <div  (click)="answerStatus(this.allAnswers[2])">
+      <img class="answer-img" src="{{ this.allAnswers[2] }}" />
+    </div >
+    <div  (click)="answerStatus(this.allAnswers[3])">
+      <img class="answer-img" src="{{ this.allAnswers[3] }}" />
+    </div >
   </div>
 
-  <div class="answerChoices">
-    <li>
-      <h2 class="green-color-correct" *ngIf="isCorrect"> <br> <img class="img" src="{{ gameDeck.cards[i].image }}" />
-      </h2>
-      <h2 class="red-color-wrong" *ngIf="isInCorrect"> <br><img src="{{tempanswer}}"></h2>
-    </li>
-  </div> 
+  <div id="results-container">
+      <div class="green-color-correct " *ngIf="isCorrect">
+        <img class="answer-img" src="{{ gameDeck.cards[i].image }}" /> 
+      </div>
+      <div class="red-color-wrong " *ngIf="isInCorrect">
+        <img class="answer-img" src="{{tempanswer}}">
+      </div>
+  </div>
+</main>

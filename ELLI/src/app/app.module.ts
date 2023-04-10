@@ -24,6 +24,10 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { LessonsComponent } from './features/lessons/lessons.component';
+import { PersonsComponent } from './features/lessons/persons/persons.component';
+import { VerbConjugationComponent } from './features/lessons/verb-conjugation/verb-conjugation.component';
+import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,10 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     FlashcardComponent,
     AboutUsComponent,
     SiteMapComponent,
+    LessonsComponent,
+    PersonsComponent,
+    VerbConjugationComponent,
+    IdiomsComponent,
   ],
   imports: [
     BrowserModule,
