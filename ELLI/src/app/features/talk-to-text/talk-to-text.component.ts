@@ -51,5 +51,10 @@ export class TalkToTextComponent implements OnInit {
   stopRecognition() {
     this.recognition.stop();
   }
+
+
+
+
+  
 }
 
