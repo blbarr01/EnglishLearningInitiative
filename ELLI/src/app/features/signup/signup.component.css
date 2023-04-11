@@ -57,7 +57,7 @@ input[type="text"],
 input[type="password"] {
   padding: 10px;
   border-radius: 5px;
-  border: black;
+  border: 2px solid grey; 
   font-size: 16px;
 }
 
@@ -144,8 +144,9 @@ input[type="password"] {
 .signup-form-element input[type="password"] {
   padding: 10px;
   border-radius: 5px;
-  border: black;
+  border: 2px solid grey; /* add this line */
 }
+
 
 #signup-btn {
   background-color: rgb(180, 33, 33);

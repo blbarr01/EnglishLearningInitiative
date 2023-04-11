@@ -57,7 +57,7 @@ input[type="text"],
 input[type="password"] {
   padding: 10px;
   border-radius: 5px;
-  border: black;
+  border: 2px solid grey; 
   font-size: 16px;
 }
 
@@ -144,7 +144,7 @@ input[type="password"] {
 .login-form-element input[type="password"] {
   padding: 10px;
   border-radius: 5px;
-  border: black;
+  border:2px solid grey;
 }
 
 #login-btn {
