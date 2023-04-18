@@ -14,14 +14,6 @@ export class SignupComponent implements OnInit {
   constructor(private router: Router ,private usersService: UsersService) { 
   }
 
-  showLogin(){
-    this.router.navigateByUrl("/login");
-  }
-
-  showHome(){
-    this.router.navigateByUrl("");
-  }
-  
   signup(){
     if(this.email == ''){
       alert('Please enter email');
@@ -34,10 +26,19 @@ export class SignupComponent implements OnInit {
     }
 
     this.usersService.signup(this.email, this.password);
-  
+
     this.email = '';
     this.password = '';
   }
+
+  showLogin(){
+    this.router.navigateByUrl("/login");
+  }
+
+  showHome(){
+    this.router.navigateByUrl("");
+  }
+
 
   ngOnInit(): void {
   }

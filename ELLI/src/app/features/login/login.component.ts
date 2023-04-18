@@ -15,14 +15,6 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,private usersService: UsersService) { 
   }
   
-  showHome(){
-    this.router.navigateByUrl("");
-  }
-
-  showSignup(){
-    this.router.navigateByUrl("/signup");
-  }
-
   login(){
     if(this.email == ''){
       alert('Please enter email');
@@ -38,12 +30,15 @@ export class LoginComponent implements OnInit {
     this.email = '';
     this.password = '';
   }
-
   
+  showHome(){
+    this.router.navigateByUrl("");
+  }
+
+  showSignup(){
+    this.router.navigateByUrl("/signup");
+  } 
   
   ngOnInit(): void {
   }
-
-
-
 }

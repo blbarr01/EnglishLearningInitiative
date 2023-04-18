@@ -39,8 +39,7 @@ export class TalkToTextComponent implements OnInit {
       }
       this.interimTranscript = interimTranscript;
       this.finalTranscript = finalTranscript;
-      const inputElement = document.getElementById('typed-text') as HTMLInputElement;
-      inputElement.value = finalTranscript;
+      document.getElementById('returned-text')!.innerHTML = finalTranscript;
     };
   }
 

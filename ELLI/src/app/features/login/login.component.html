@@ -1,27 +1,35 @@
-
 <section class="login-container">
-    <div class="container">
-        <h2 class="center">Login</h2>
-        <p class="login-link" (click)="showSignup()">Sign Up</p>
-        <form action="Get" id="main-form">
-            <div class="form-element">
-                <label for="UserName">Email</label>
-                <input type="text" autocomplete="name" name="uname" id="UserName" placeholder="Email" [(ngModel)]="email">
-            </div>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" [(ngModel)]="password">
-            </div>
-        </form>
-        <div class="btn-container">
-            <button type="button" id="submit-btn" (click)="login()">Submit</button>
-        </div>
+  <div class="container">
+    <h2 class="center">Login</h2>
+    <p class="login-link" (click)="showSignup()"><u>Sign Up</u></p>
+    <form action="Get" id="main-form">
+      <div class="form-element">
+        <label for="UserName">Email</label>
+        <input
+          type="text"
+          autocomplete="name"
+          name="uname"
+          id="UserName"
+          placeholder="Email"
+          [(ngModel)]="email"
+        />
+      </div>
+      <div class="form-element">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+        />
+      </div>
+    </form>
+    <div class="btn-container">
+      <button type="button" id="submit-btn" (click)="login()">Submit</button>
     </div>
+  </div>
 </section>
 
-
-    
-
-
-
-
+<!-- The link to connect the HTML and CSS file -->
+<!--<link rel="stylesheet" href="login.component.css" />-->
