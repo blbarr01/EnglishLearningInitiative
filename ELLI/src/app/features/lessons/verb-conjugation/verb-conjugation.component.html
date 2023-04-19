@@ -36,6 +36,7 @@
             <li>present and</li>
             <li>future</li>
         </ul>
+ 
         <section class="verb-tense-interactive my-12">
             <div class="button-container">
                 <button (click)="changeDisplayText(slideText.past)">past</button>
@@ -43,6 +44,8 @@
                 <button (click)="changeDisplayText(slideText.future)">future</button>
             </div>
             <p >{{displaytext}}</p>
+
+
         </section>
 
         <p>let's look at some common patterns for verb tenses</p>
@@ -51,13 +54,28 @@
             However, English has many irregular verbs which do not follow a standard pattern. for example the verb to be
             conjugates to: </p>
         <ul>
-            <li>i was </li>
-            <li>you were</li>
-            <li>he she it was </li>
-            <li>we were</li>
-            <li>you were</li>
-            <li>they were</li>
+            <li>i am </li>
+            <li>you are</li>
+            <li>he, she, it  is </li>
+            <li>we are</li>
+            <li>you are</li>
+            <li>they are</li>
         </ul>
+        <p>let's try some practice:  </p>
+        <p>conjugate the verb, to be, with the appropriate tense</p>
+        <div class="practice-section">
+            <p>I <span><input type="text" (blur)="logAnswers()" [(ngModel)]="userAnswers[1]"></span> going to the market later today.</p>
+            <p>You <span><input type="text" [(ngModel)]="userAnswers[2]"></span> a very diligant student for doing these exercises.</p>
+            <p> While your son did excellent during the interview, he 
+            <span><input type="text" [(ngModel)]="userAnswers[3]"></span> not the best candidate for the job.</p>
+            <p>
+                After school, we <span><input type="text" [(ngModel)]="userAnswers[4]"></span> going to the movies.
+            </p>
+            <p>
+                my students <span><input type="text" [(ngModel)]="userAnswers[5]"></span> wonderful people.
+            </p>
+            <button class="submit-btn">check answers</button>
+        </div>
 
     </section>
 </main>

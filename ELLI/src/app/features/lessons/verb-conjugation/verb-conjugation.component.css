@@ -50,3 +50,11 @@ button:hover{
 
 
 
+input{
+    border-bottom: 2px solid var(--matador-black) ;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 3px solid #3579e6;
+}
