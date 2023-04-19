@@ -75,3 +75,18 @@
     cursor: pointer;
 
 }
+
+.page-wrapper{
+  max-width: 1280px;
+  margin: 2em auto;
+}
+
+.display-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+#returned-text{
+  font-size: 2.5rem;
+}

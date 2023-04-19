@@ -1,120 +1,240 @@
+
+/* Set the font style to black */
+body {
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Center the form and set it to a square layout using flex */
 .login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
   background-color: #fff;
-  padding-bottom: 3em;
-  padding-top: 2em;
-}
-
-.login-link {
-  text-align: center;
-  color: var(--matador-black);
-  text-decoration: underline;
-}
-
-.login-link:hover {
-  cursor: pointer;
 }
 
 .container {
-  background-color: #fff;
-  margin: auto;
-  height: fit-content;
-  width: fit-content;
-  padding: 4em;
-  border: 5px solid var(--matador-red);
-  border-radius: .66rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgb(215, 10, 10), 0 6px 20px 0 rgb(215, 10, 10);
+  width: 80%; /* width of the form */
+  max-width: 350px;
+  margin: 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+    max-width: none;
+  }
+}
 
+/* Center the form heading and make it bigger */
+.center {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+/* Style the form elements */
+.form-element {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 
 label {
-  /*Display the label as a block */
-  display: block;
-  /* Hide the label */
-  display: none;
+  margin-bottom: 10px;
 }
 
-.form-element {
-  /* Add a margin of 3em to the form element */
-  margin: 3em;
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid grey; 
+  font-size: 16px;
 }
 
-input {
-  /* Set height of the input field to 2.25rem */
-  height: 2.25rem;
-  /* Set font size of the input field to 1.25rem */
-  font-size: 1.25rem;
-  /* Remove the border of the input field */
+/* Style the submit button */
+#submit-btn {
+  background-color: rgb(180, 33, 33);
+  color: rgb(248, 243, 243);
+  padding: 15px 50px;
+  border-radius: 20px;
   border: none;
-  /* Add a 2px solid #2c3e50 border to the bottom of the input field */
-  border-bottom: 2px solid #2c3e50;
-  /* Set font weight to 100 */
-  font-weight: 100;
-  /* Enable the border box sizing for the input field */
-  box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-input:focus {
-  /* Remove the outline when input field is in focus */
-  outline: none;
-  /* Change the border-bottom to 4pxs solid #8eadcd when input field is in focus */
-  border-bottom: 4px solid #8eadcd;
+/* Add hover effect to submit button */
+#submit-btn:hover {
+  background-color: rgb(215, 10, 10);
 }
 
-input.alert {
-  /* Change the border-bottom to 2px solid red for input fields with "alert" class */
-  border-bottom: 2px solid red;
+/* Media Queries */
+
+/* Small devices (portrait phones, 300px and up) */
+@media (min-width: 300px) {
+  .container {
+    padding: 20px;
+  }
 }
 
-input.valid {
-  /* Change the border-bottom to 2px solid rgb(46, 221, 46) for input fields with "valid" class */
-  border-bottom: 2px solid rgb(46, 221, 46);
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding: 30px;
+  }
 }
 
-.center {
-  /* Center the text within the element with "center" class */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    max-width: 500px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 0;
+}
+
+.login-link {
+  font-size: 18px;
   text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+  color: blue;
 }
 
-
-
-
-h2 {
-  /* Set font size of the h2 element to 3.00rem */
-  font-size: 3.00rem;
-  /*Set color of the h2 element to var(--matador-black) */
-  color: var(--matador-black);
-  /* Set font family of the h2 element to "Poppins" */
-  font-family: "Poppins";
-}
-
-button {
-  /* Center the button horizontally */
-  margin: 0 auto;
-  /* Set the padding of the button to 1.25rem 2.50rem */
-  padding: 1.25rem 2.50rem;
-  /* Set the border-radius of the button to 3.25rem */
-  border-radius: 3.25rem;
-  /* Set the background color of the button to var(--matador-black) */
-  background: var(--matador-black);
-  /* Set the text color of the button to #fff */
-  color: var(--matador-white);
-  /* Remove the border of the button */
-  border: none;
-  /* Set the font size of the button text to 1.25rem */
-  font-size: 1.25rem;
-}
-
-button:hover {
-  /* Add 4px solid #8eadcd border when button is hovered over */
-  border: 4px solid #8eadcd;
-}
-
-.btn-container {
-  /* Set the display property to flex for the btn-container class */
+/* Style the login form elements */
+.login-form-element {
+  font-size: 18px;
   display: flex;
-  /* Center the buttons horizontally within the btn-container class */
-  justify-content: space-around;
-  /* Add a margin-top of 20px to the btn-container class */
-  margin-top: 20px;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
+.login-form-element label {
+  margin-bottom: 10px;
+}
+
+.login-form-element input[type="text"],
+.login-form-element input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border:2px solid grey;
+}
+
+#login-btn {
+  background-color: rgb(180, 33, 33);
+  color: rgb(248, 243, 243);
+  padding: 15px 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Add hover effect to login button */
+#login-btn:hover {
+  background-color: rgb(215, 10, 10);
+}
+
+/* Add custom style for login form heading */
+.login-center {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: rgb(180, 33, 33);
+}
+
+/* Add custom style for error message */
+.login-error {
+  color: rgb(8, 6, 6);
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: -15px;
+}
+
+/* Media Queries */
+
+/* Small devices (portrait phones, 300px and up) */
+@media (min-width: 300px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding: 30px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    max-width: 500px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+/* Adjust login container for small devices */
+@media (max-width: 576px) {
+  .login-container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+}
+
+/* Adjust login form elements for small devices */
+@media (max-width: 576px) {
+  .login-form-element {
+    margin: 1.5em;
+  }
+}
+
+/* Adjust login button for small devices */
+@media (max-width: 576px) {
+  #login-btn {
+    font-size: 18px;
+  }
+}

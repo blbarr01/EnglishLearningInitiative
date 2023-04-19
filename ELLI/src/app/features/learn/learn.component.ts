@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Deck } from 'src/app/shared/models';
 import { DecksService } from 'src/app/shared/services/decks.service';
 import { Subscription } from 'rxjs';
+declare let speechSynthesis: any;
 
 let fruits: string[] = [];
 
@@ -93,6 +94,11 @@ export class LearnComponent implements OnInit {
     audio.src = '../assets/alien_danger.wav';
     audio.load();
     audio.play();
+  }
+  speak() {
+    const text = this.cardDeck.cards[this.i].keyWord; // get the current card's key word
+    const utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
   }
   currDeck: number = 0;
 
