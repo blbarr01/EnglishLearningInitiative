@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router"
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { toInteger, isEqual } from 'lodash-es';
 
 
 
@@ -50,4 +51,10 @@ export class VerbConjugationComponent implements OnInit {
     console.log(this.userAnswers);
     
    }
+
+   checkAnswers(){
+      const result = isEqual(this.answerKey, this.userAnswers)
+      console.log(result);
+      
+    }
 }
