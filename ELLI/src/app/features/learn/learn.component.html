@@ -12,13 +12,13 @@
   <div class="flashcard">
     <div class="text">
       <div class="flip-card-front">
-        <img class="img" src="{{ cardDeck.cards[i].image }}" />
+        <img class="img" src="{{ cardDeck.cards[i].imageUrl  }}" />
         <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
       </div>
       <div class="flip-card-back">
         <p class="word">
           <!-- {{ terms[questionCorrect].keyWord }} -->
-          {{ cardDeck.cards[i].keyWord }}
+          {{ cardDeck.cards[i].term }}
         </p>
         <button (click)="speak()" class="button-audio">🔊</button>
         <button
