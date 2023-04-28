@@ -2,21 +2,27 @@
   <h2 class="text-center">Speech to Text</h2>
   <h3 class="text-center text-5xl text-red-500">practice your speaking!</h3>
 
-  <h2 class="">Transcript</h2> 
-  <div class="display-box" style="border: 1px solid rgb(182, 8, 8); height: 300px; border-radius: 20px;">
+  <h2 class="">Transcript</h2>
+  <div
+    class="display-box"
+    style="border: 1px solid rgb(182, 8, 8); height: 300px; border-radius: 20px"
+  >
     <div id="returned-text"></div>
     <span id="final" class="text-light"></span>
     <span id="interim" class="text-secondary"></span>
   </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <button class="START" (click)="startRecognition()">START</button>
+          <button class="STOP" (click)="stopRecognition()">STOP</button>
+        </div>
+      </div>
 
-      <div>
-        <button  class="START" (click)="startRecognition()">START</button>
-        <button class= "STOP" (click)="stopRecognition()">STOP</button>
+      <span id="final" class="text-light"></span>
+      <span id="interim" class="text-secondary"></span>
     </div>
-  
   </div>
-</div>
+</section>

@@ -6,11 +6,12 @@
       <div class="form-element">
         <label for="UserName">Email</label>
         <input
-          type="text" 
+          type="text"
           autocomplete="name"
           name="uname"
           id="UserName"
           placeholder="Enter Email"
+          [(ngModel)]="email"
         />
       </div>
       <div class="form-element">
@@ -20,6 +21,7 @@
           name="password"
           id="password"
           placeholder="Enter Password"
+          [(ngModel)]="password"
         />
       </div>
       <div class="form-element">
@@ -33,11 +35,10 @@
       </div>
     </form>
     <div class="btn-container">
-      <button type="button" id="submit-btn" onclick="signup()">Submit</button>
+      <button type="button" id="submit-btn" (click)="signup()">Submit</button>
     </div>
   </div>
 </section>
 
 <!-- The link to connect the HTML and CSS file -->
 <!--<link rel="stylesheet" href="signup.component.css" />-->
-

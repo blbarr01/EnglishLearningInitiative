@@ -30,6 +30,8 @@
       padding:2em;"
       src="{{ gameDeck.cards[index].image }}"
     /><br />
+    <button class="bg-[#B42121] text-white w-1/4 ml-10 rounded-lg" (click)="startRecognition()">Speak the words</button>
+   
     <input
       [(ngModel)]="answer"  
       id="inputValue"
