@@ -20,7 +20,7 @@
           <!-- {{ terms[questionCorrect].keyWord }} -->
           {{ cardDeck.cards[i].keyWord }}
         </p>
-        <button (click)="playSound()" class="button-audio">🔊</button>
+        <button (click)="speak()" class="button-audio">🔊</button>
         <button
           (click)="clickStar()"
           [ngClass]="{ green: toggle, yellow: !toggle }"
