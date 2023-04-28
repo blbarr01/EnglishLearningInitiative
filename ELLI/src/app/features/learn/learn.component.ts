@@ -96,7 +96,7 @@ export class LearnComponent implements OnInit {
     audio.play();
   }
   speak() {
-    const text = this.cardDeck.cards[this.i].keyWord; // get the current card's key word
+    const text = this.cardDeck.cards[this.i].term; // get the current card's key word
     const utterance = new SpeechSynthesisUtterance(text);
     speechSynthesis.speak(utterance);
   }
