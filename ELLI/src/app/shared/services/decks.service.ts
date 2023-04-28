@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { Card, Deck } from '../models';
 
@@ -11,64 +11,64 @@ export class DecksService {
       deckTitle: 'Fruits',
       cards: [
         {
-          category:'',
+          category:'fruits',
           term: 'Banana',
-          image: 'assets/images/banana.png',
+          imageUrl: 'assets/images/banana.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Apple',
-          image: 'assets/images/apple.png',
+          imageUrl: 'assets/images/apple.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Orange',
-          image: 'assets/images/orange.png',
+          imageUrl: 'assets/images/orange.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Pear',
-          image: 'assets/images/pear.png',
+          imageUrl: 'assets/images/pear.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Strawberry',
-          image: 'assets/images/strawberry.png',
+          imageUrl: 'assets/images/strawberry.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Watermelon',
-          image: 'assets/images/watermelon.png',
+          imageUrl: 'assets/images/watermelon.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Cantelope',
-          image: 'assets/images/cantelope.png',
+          imageUrl: 'assets/images/cantelope.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Kiwi',
-          image: 'assets/images/kiwi.png',
+          imageUrl: 'assets/images/kiwi.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Cherry',
-          image: 'assets/images/cherry.png',
+          imageUrl: 'assets/images/cherry.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Peach',
-          image: 'assets/images/peach.png',
+          imageUrl: 'assets/images/peach.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Pineapple',
-          image: 'assets/images/pineapple.png',
+          imageUrl: 'assets/images/pineapple.png',
         },
         {
-          category:'',
+          category:'fruits',
           term: 'Blueberry',
-          image: 'assets/images/blueberry.png',
+          imageUrl: 'assets/images/blueberry.png',
         },
       ],
     },
@@ -76,76 +76,194 @@ export class DecksService {
       deckTitle: 'Medical',
       cards: [
         {
-          category:'',
+          category:'medical',
           term: 'Ambulance',
-          image: 'assets/images/ambulance.png',
+          imageUrl: 'assets/images/ambulance.png',
         },
         {
-          category:'',
+          category:'medical',
           term: 'Doctor',
-          image: 'assets/images/doctor.png',
+          imageUrl: 'assets/images/doctor.png',
         },
         {
-          category:'',
+          category:'medical',
           term: 'Medicine',
-          image: 'assets/images/medicine.png',
+          imageUrl: 'assets/images/medicine.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Bone',
-          image: 'assets/images/bone.png',
+          imageUrl: 'assets/images/bone.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Arm',
-          image: 'assets/images/arm.png',
+          imageUrl: 'assets/images/arm.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Leg',
-          image: 'assets/images/leg.png',
+          imageUrl: 'assets/images/leg.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Head',
-          image: 'assets/images/head.png',
+          imageUrl: 'assets/images/head.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Hand',
-          image: 'assets/images/hand.png',
+          imageUrl: 'assets/images/hand.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Finger',
-          image: 'assets/images/finger.png',
+          imageUrl: 'assets/images/finger.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Foot',
-          image: 'assets/images/foot.png',
+          imageUrl: 'assets/images/foot.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Hot',
-          image: 'assets/images/hot.png',
+          imageUrl: 'assets/images/hot.png',
           
         },
         {
-          category:'',
+          category:'medical',
           term: 'Cold',
-          image: 'assets/images/cold.png',
-          
+          imageUrl: 'assets/images/cold.png',
+
         },
       ],
+    },
+    {
+      deckTitle:"tools",
+      cards:[
+        {
+          category:'tools',
+          term: 'saw',
+          imageUrl: 'https://cdn.pixabay.com/photo/2020/03/12/13/36/handsaw-4925112_1280.png',
+          
+        },
+        {
+          category:'tools',
+          term: 'table saw',
+          imageUrl: 'https://p1.pxfuel.com/preview/447/556/888/workshop-job-saw-circular-saw-wood-woodworking.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'wrench',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/1933_Plomb_Combination_Wrench.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'pipe wrench',
+          imageUrl: 'https://freesvg.org/img/1517144677.png',
+          
+        },
+        {
+          category:'tools',
+          term: 'crescent wrench',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Western_Forge_Proto_adjustable_wrench.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'circular saw',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntMrtTk6cr8k98FSwmSvdDCaxb5mHRbiyNQ&usqp=CAU',
+          
+        },
+        {
+          category:'tools',
+          term: 'level',
+          imageUrl: 'https://c1.wallpaperflare.com/preview/564/44/56/level-tool-equipment-repair.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'vicegrips',
+          imageUrl: 'https://www.wannapik.com/media/W1siZiIsIjIwMTYvMDgvMjIvMW45cGp4dm53aF83YWk3a2VrMno1X2luZHUwNDc1LnBuZyJdXQ/646704954efc26e4/7ai7kek2z5_indu0475.png',
+          
+        },
+        {
+          category:'tools',
+          term: 'leaf blower',
+          imageUrl: 'https://c1.peakpx.com/wallpaper/728/891/713/gardener-worker-gardening-machinery-wallpaper-preview.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'lawn mower',
+          imageUrl: 'https://freesvg.org/img/lawnmower.png',
+          
+        },
+        {
+          category:'tools',
+          term: 'cordless drill',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Cordless_electric_%28screw%29_drill.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'drill bit',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/57/Concrete_drill_bit.JPG',
+          
+        },
+        {
+          category:'tools',
+          term: 'phillips screwdriver',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/PHILLIPS_screwdriver_and_screw.JPG',
+          
+        },
+        {
+          category:'tools',
+          term: 'flat-head screwdriver',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Screw_Driver_display.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'Framing hammer',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/en/e/e0/Vaughan_California_Framer.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'ball-pean hammer',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/MarteauPanneRonde-3.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'mallet',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Rubber_mallets.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'sockets',
+          imageUrl: 'https://www.publicdomainpictures.net/pictures/100000/nahled/dozens-of-sockets.jpg',
+          
+        },
+        {
+          category:'tools',
+          term: 'ratchet',
+          imageUrl: 'https://www.wannapik.com/media/W1siZiIsIjIwMTYvMDgvMjIvNXBzNHllcmw1el81OTRtdGxteXF4X2luZHUwMzMwLnBuZyJdXQ/410a6450dd4e7ac2/594mtlmyqx_indu0330.png',
+        },
+      ]
     },
     {
       deckTitle: 'Forgot',
@@ -153,13 +271,13 @@ export class DecksService {
         {
           category:'',
           term: '',
-          image: '',
+          imageUrl: '',
           
         },
         {
           category:'',
           term: '',
-          image: '',
+          imageUrl: '',
           
         },
       ],
@@ -178,4 +296,6 @@ export class DecksService {
     let deck = this.decks.filter((d) => d.deckTitle === category)[0];
     this.deckSubject.next(deck);
   }
+
+  
 }
