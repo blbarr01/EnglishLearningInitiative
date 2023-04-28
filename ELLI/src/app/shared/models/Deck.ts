@@ -1,8 +1,8 @@
 
 export interface Card{
-    keyWord: string;
+    category: string
+    term: string;
     image: string;
-    audio?: string;
 }
 
 export interface Deck{

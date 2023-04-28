@@ -11,54 +11,63 @@ export class DecksService {
       deckTitle: 'Fruits',
       cards: [
         {
-          keyWord: 'Banana',
+          category:'',
+          term: 'Banana',
           image: 'assets/images/banana.png',
-          audio: '',
         },
         {
-          keyWord: 'Apple',
+          category:'',
+          term: 'Apple',
           image: 'assets/images/apple.png',
-          audio: '',
         },
         {
-          keyWord: 'Orange',
+          category:'',
+          term: 'Orange',
           image: 'assets/images/orange.png',
-          audio: '',
         },
         {
-          keyWord: 'Pear',
+          category:'',
+          term: 'Pear',
           image: 'assets/images/pear.png',
         },
         {
-          keyWord: 'Strawberry',
+          category:'',
+          term: 'Strawberry',
           image: 'assets/images/strawberry.png',
         },
         {
-          keyWord: 'Watermelon',
+          category:'',
+          term: 'Watermelon',
           image: 'assets/images/watermelon.png',
         },
         {
-          keyWord: 'Cantelope',
+          category:'',
+          term: 'Cantelope',
           image: 'assets/images/cantelope.png',
         },
         {
-          keyWord: 'Kiwi',
+          category:'',
+          term: 'Kiwi',
           image: 'assets/images/kiwi.png',
         },
         {
-          keyWord: 'Cherry',
+          category:'',
+          term: 'Cherry',
           image: 'assets/images/cherry.png',
         },
         {
-          keyWord: 'Peach',
+          category:'',
+          term: 'Peach',
           image: 'assets/images/peach.png',
         },
         {
-          keyWord: 'Pineapple',
+          category:'',
+          term: 'Pineapple',
           image: 'assets/images/pineapple.png',
         },
         {
-          keyWord: 'Blueberry',
+          category:'',
+          term: 'Blueberry',
           image: 'assets/images/blueberry.png',
         },
       ],
@@ -67,64 +76,74 @@ export class DecksService {
       deckTitle: 'Medical',
       cards: [
         {
-          keyWord: 'Ambulance',
+          category:'',
+          term: 'Ambulance',
           image: 'assets/images/ambulance.png',
-          audio: '',
         },
         {
-          keyWord: 'Doctor',
+          category:'',
+          term: 'Doctor',
           image: 'assets/images/doctor.png',
-          audio: '',
         },
         {
-          keyWord: 'Medicine',
+          category:'',
+          term: 'Medicine',
           image: 'assets/images/medicine.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Bone',
+          category:'',
+          term: 'Bone',
           image: 'assets/images/bone.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Arm',
+          category:'',
+          term: 'Arm',
           image: 'assets/images/arm.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Leg',
+          category:'',
+          term: 'Leg',
           image: 'assets/images/leg.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Head',
+          category:'',
+          term: 'Head',
           image: 'assets/images/head.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Hand',
+          category:'',
+          term: 'Hand',
           image: 'assets/images/hand.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Finger',
+          category:'',
+          term: 'Finger',
           image: 'assets/images/finger.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Foot',
+          category:'',
+          term: 'Foot',
           image: 'assets/images/foot.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Hot',
+          category:'',
+          term: 'Hot',
           image: 'assets/images/hot.png',
-          audio: '',
+          
         },
         {
-          keyWord: 'Cold',
+          category:'',
+          term: 'Cold',
           image: 'assets/images/cold.png',
-          audio: '',
+          
         },
       ],
     },
@@ -132,14 +151,16 @@ export class DecksService {
       deckTitle: 'Forgot',
       cards: [
         {
-          keyWord: '',
+          category:'',
+          term: '',
           image: '',
-          audio: '',
+          
         },
         {
-          keyWord: '',
+          category:'',
+          term: '',
           image: '',
-          audio: '',
+          
         },
       ],
     },

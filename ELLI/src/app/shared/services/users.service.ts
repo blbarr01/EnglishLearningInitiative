@@ -12,24 +12,7 @@ export class UsersService {
  * this is the list of mock users for the login component 
  */
 
-  users: User[] = [
-  {
-      email: "greg@gregisgreat.com",
-      password: "aba"
-  },
-  {
-      email: "foo@bar.com",
-      password:"P@$$w0rd" 
-  },
-  {
-      email: "adaca@aol.com",
-      password:"test" 
-  },
-  {
-      email: "test@test.com",
-      password:"t3$t" 
-  }
-]
+
   constructor(private fireAuth : AngularFireAuth, private router: Router) {}
 
   login(email : string, password : string){
@@ -63,7 +46,5 @@ export class UsersService {
         alert(err.message);
   })
   }
-  getUsers(): User[]{
-    return this.users;
-  }
+
 }
