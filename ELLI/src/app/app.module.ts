@@ -30,6 +30,8 @@ import { LessonsComponent } from './features/lessons/lessons.component';
 import { PersonsComponent } from './features/lessons/persons/persons.component';
 import { VerbConjugationComponent } from './features/lessons/verb-conjugation/verb-conjugation.component';
 import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import { IdiomsComponent } from './features/lessons/idioms/idioms.component';
     FormsModule,
     BrowserAnimationsModule,
     MatProgressBarModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireModule.initializeApp(environment.firebase),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),

@@ -1,42 +1,43 @@
-<app-category-selector></app-category-selector>
-<h3 class="category">Category: {{ cardDeck.deckTitle }}</h3>
-<!-- <div id="prog-bar" class="progress">
+<main>
+  <app-category-selector></app-category-selector>
+  <h3 class="category">Category: {{ cardDeck.deckTitle }}</h3>
+  <!-- <div id="prog-bar" class="progress">
   <div class="progress-bar"></div>
 </div> -->
-<mat-progress-bar
-  class="prog-bar"
-  mode="determinate"
-  [value]="progress"
-></mat-progress-bar>
-<div class="flashcard">
-  <div class="text">
-    <div class="flip-card-front">
-      <img class="img" src="{{ cardDeck.cards[i].image }}" />
-      <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
-    </div>
-    <div class="flip-card-back">
-      <p class="word">
-        <!-- {{ terms[questionCorrect].keyWord }} -->
-        {{ cardDeck.cards[i].keyWord }}
-      </p>
-      <button (click)="playSound()" class="button-audio">🔊</button>
-      <button
-        (click)="clickStar()"
-        [ngClass]="{ green: toggle, yellow: !toggle }"
-        class="star"
-      >
-        ☆
-      </button>
+  <mat-progress-bar
+    class="prog-bar"
+    mode="determinate"
+    [value]="progress"
+  ></mat-progress-bar>
+  <div class="flashcard">
+    <div class="text">
+      <div class="flip-card-front">
+        <img class="img" src="{{ cardDeck.cards[i].imageUrl  }}" />
+        <p class="curr-card">{{ currCard }} / {{ cardDeck.cards.length }}</p>
+      </div>
+      <div class="flip-card-back">
+        <p class="word">
+          <!-- {{ terms[questionCorrect].keyWord }} -->
+          {{ cardDeck.cards[i].term }}
+        </p>
+        <button (click)="speak()" class="button-audio">🔊</button>
+        <button
+          (click)="clickStar()"
+          [ngClass]="{ green: toggle, yellow: !toggle }"
+          class="star"
+        >
+          ☆
+        </button>
+      </div>
     </div>
   </div>
-</div>
-<div class="button-container">
-  <button class="button-back" (click)="clickBack()">⇦</button>
-  <!-- <button class="shuffle">🔀</button> -->
+  <div class="button-container">
+    <button class="button-back" (click)="clickBack()">⇦</button>
+    <!-- <button class="shuffle">🔀</button> -->
 
-  <button class="button-next" (click)="click()">⇨</button>
-</div>
-
+    <button class="button-next" (click)="click()">⇨</button>
+  </div>
+</main>
 <!-- <audio controls>
   <source src="/Users/rohan/Desktop/MyMovie1.mp3" type="audio/mp3" />
   Your browser does not support the audio element.

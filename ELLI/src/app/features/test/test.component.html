@@ -2,7 +2,7 @@
 <mat-progress-bar class="prog-bar mt-4" mode="determinate" [value]="progress" color="red-color-wrong"></mat-progress-bar>
 
 <div class="question">
-  <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].keyWord}}</p>
+  <p *ngIf="isQuestionShowing"> {{gameDeck.cards[i].term}}</p>
 </div>
 
 <div  class="Counter">
@@ -27,7 +27,7 @@
 
   <div id="results-container">
       <div class="green-color-correct " *ngIf="isCorrect">
-        <img class="answer-img" src="{{ gameDeck.cards[i].image }}" /> 
+        <img class="answer-img" src="{{ gameDeck.cards[i].imageUrl }}" /> 
       </div>
       <div class="red-color-wrong " *ngIf="isInCorrect">
         <img class="answer-img" src="{{tempanswer}}">

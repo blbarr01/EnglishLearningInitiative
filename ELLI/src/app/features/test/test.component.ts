@@ -55,9 +55,9 @@ export class TestComponent implements OnInit, OnDestroy  {
 
   getOption1() {
     let random:number = Math.floor(Math.random() * this.gameDeck.cards.length);
-    this.options = this.gameDeck.cards[random].image;
-    if (this.gameDeck.cards[this.j].image !== this.options) {
-      this.allAnswers.push(this.gameDeck.cards[this.j].image);
+    this.options = this.gameDeck.cards[random].imageUrl;
+    if (this.gameDeck.cards[this.j].imageUrl !== this.options) {
+      this.allAnswers.push(this.gameDeck.cards[this.j].imageUrl);
       this.allAnswers.push(this.options);
     } else {
       this.getOption1();
@@ -71,10 +71,10 @@ export class TestComponent implements OnInit, OnDestroy  {
     this.randomElement2 = Math.floor(
       Math.random() * this.gameDeck.cards.length
     );
-    this.options2 = this.gameDeck.cards[this.randomElement2].image;
+    this.options2 = this.gameDeck.cards[this.randomElement2].imageUrl;
     if (
-      this.gameDeck.cards[this.j].image !== this.options &&
-      this.gameDeck.cards[this.j].image !== this.options2 &&
+      this.gameDeck.cards[this.j].imageUrl !== this.options &&
+      this.gameDeck.cards[this.j].imageUrl !== this.options2 &&
       this.options2 != this.options
     ) {
       this.allAnswers.push(this.options2);
@@ -89,11 +89,11 @@ export class TestComponent implements OnInit, OnDestroy  {
     this.randomElement3 = Math.floor(
       Math.random() * this.gameDeck.cards.length
     );
-    this.options3 = this.gameDeck.cards[this.randomElement3].image;
+    this.options3 = this.gameDeck.cards[this.randomElement3].imageUrl;
     if (
-      this.gameDeck.cards[this.j].image !== this.options &&
-      this.gameDeck.cards[this.j].image !== this.options2 &&
-      this.gameDeck.cards[this.j].image !== this.options3 &&
+      this.gameDeck.cards[this.j].imageUrl !== this.options &&
+      this.gameDeck.cards[this.j].imageUrl !== this.options2 &&
+      this.gameDeck.cards[this.j].imageUrl !== this.options3 &&
       this.options2 != this.options &&
       this.options2 != this.options3 &&
       this.options != this.options3
@@ -123,9 +123,9 @@ export class TestComponent implements OnInit, OnDestroy  {
 
     this.isanswerSelected = false;
 
-    if (option === this.gameDeck.cards[this.i].image) {
+    if (option === this.gameDeck.cards[this.i].imageUrl) {
       this.isCorrect = true;
-      this.tempCorrectanswer = this.gameDeck.cards[this.i].image;
+      this.tempCorrectanswer = this.gameDeck.cards[this.i].imageUrl;
       this.correctCounter++;
     } else {
       this.isCorrect = true;
