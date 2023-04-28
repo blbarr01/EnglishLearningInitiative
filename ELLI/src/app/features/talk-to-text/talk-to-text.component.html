@@ -1,22 +1,28 @@
-<section class="border-500 mx-10 mt-20">
-  <h2 class="text-center text-5xl text-red-500">practice your speaking!</h2>
-    
-<h2 class="text-lg mt-8">Transcript</h2>
-  <div class="transcript-container">
+<section class="page-wrapper">
+  <h2 class="text-center">Speech to Text</h2>
+  <h3 class="text-center text-5xl text-red-500">practice your speaking!</h3>
+
+  <h2 class="">Transcript</h2>
+  <div
+    class="display-box"
+    style="border: 1px solid rgb(182, 8, 8); height: 300px; border-radius: 20px"
+  >
+    <div id="returned-text"></div>
     <span id="final" class="text-light"></span>
     <span id="interim" class="text-secondary"></span>
   </div>
 
-  <div class="button-container">
-    <button class="START" disabled>START </button>
-    <button class= "STOP" disabled>STOP</button> </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <button class="START" (click)="startRecognition()">START</button>
+          <button class="STOP" (click)="stopRecognition()">STOP</button>
+        </div>
+      </div>
 
-
-    <h2 class="text-lg mt-8">Enter Text</h2>
-    <form action="#" class ="text-input-form">
-    <input tyoe="text" id="textInput" class="text-Input" placeholder="Tyoe here...">
-    </form>
-   
-    <p id="status" class="listening-status" style="display: none">Listening...</p>
-    <div>
-    <section>
+      <span id="final" class="text-light"></span>
+      <span id="interim" class="text-secondary"></span>
+    </div>
+  </div>
+</section>

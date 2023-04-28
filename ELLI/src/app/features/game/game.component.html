@@ -1,6 +1,6 @@
-<div class="grid grid-cols-[23%_52%_25%] gap-3">
+<div class="grid grid-cols-[23%_52%_25%] gap-3" style="max-width: 1280px; margin: auto; margin-top:5%;">
   <div class="">
-    <div class="w-1/2">
+    <div class="w-1/2 mb-10" >
       <app-category-selector></app-category-selector>
     </div>
     <div class="text-center w-5/12">
@@ -19,13 +19,19 @@
     </div>
   </div>
   <div class="text-center">
-    <p class="text-9xl text-[#42f860] font-bold font-sans">
+    <p id="dispalyoutput" class="text-[#42f860] font-bold font-sans" style="font-size: 5rem; margin-bottom: 2rem;">
       {{ displayOutput }}
     </p>
     <img
       class="img m-auto block w-3/4 h-1/2"
+      style="border-radius:33px;
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      margin: auto;
+      padding:2em;"
       src="{{ gameDeck.cards[index].image }}"
     /><br />
+    <button class="bg-[#B42121] text-white w-1/4 ml-10 rounded-lg" (click)="startRecognition()">Speak the words</button>
+   
     <input
       [(ngModel)]="answer"  
       id="inputValue"
@@ -67,11 +73,11 @@
       </p>
       <br />
       <p class="text-center">
-        Every card you skip you lose 5 seconds from the clock.
+        you will lose 5 seconds for every question you skip.
       </p>
       <br />
       <p class="text-center">
-        Every card you skip you gain 2 seconds from the clock.
+        you will gain 2 seconds for every question you answer correctly.
       </p>
       <br />
     </div>

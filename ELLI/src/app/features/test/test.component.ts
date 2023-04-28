@@ -32,13 +32,15 @@ export class TestComponent implements OnInit, OnDestroy  {
   tempanswer: any;
   tempCorrectanswer: any;
   
-  constructor(private router: Router, private decksService: DecksService) {}
+  constructor(private decksService: DecksService) {}
   
   //on in init we subscribe to the deck service
   ngOnInit(): void {
     this.deckSub = this.decksService.deck$.subscribe((d) => {
       this.gameDeck = d;
     });
+    console.log("hello im loaded ?");
+    
   }
   ngOnDestroy(): void {
     this.deckSub?.unsubscribe();

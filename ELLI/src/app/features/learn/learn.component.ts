@@ -95,13 +95,11 @@ export class LearnComponent implements OnInit {
     audio.load();
     audio.play();
   }
-
   speak() {
     const text = this.cardDeck.cards[this.i].keyWord; // get the current card's key word
     const utterance = new SpeechSynthesisUtterance(text);
     speechSynthesis.speak(utterance);
   }
-
   currDeck: number = 0;
 
   ngOnInit(): void {

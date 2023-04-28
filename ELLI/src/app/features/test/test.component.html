@@ -11,24 +11,26 @@
 <main id=test-wrapper>
   <!-- we should make this a single id of answer choices the id of div-cont isn't very helpful-->
   <div  *ngIf="isanswerSelected"  id="answer-choices-cont">
-    <div  class="answer-selection"(click)="answerStatus(this.allAnswers[0])">
+    <div  (click)="answerStatus(this.allAnswers[0])">
       <img class="answer-img" src="{{ this.allAnswers[0] }}"  />
     </div >
-    <div  class="answer-selection"(click)="answerStatus(this.allAnswers[1])">
+    <div  (click)="answerStatus(this.allAnswers[1])">
       <img class="answer-img" src="{{ this.allAnswers[1] }}" />
     </div >
-    <div  class="answer-selection"(click)="answerStatus(this.allAnswers[2])">
+    <div  (click)="answerStatus(this.allAnswers[2])">
       <img class="answer-img" src="{{ this.allAnswers[2] }}" />
     </div >
-    <div  class="answer-selection"(click)="answerStatus(this.allAnswers[3])">
+    <div  (click)="answerStatus(this.allAnswers[3])">
       <img class="answer-img" src="{{ this.allAnswers[3] }}" />
     </div >
   </div>
 
-  <div class="answerChoices2">
-    <li>
-      <h2 class="green-color-correct" *ngIf="isCorrect">  <img class="answer-img" src="{{ gameDeck.cards[i].image }}" /> </h2>
-      <h2 class="red-color-wrong" *ngIf="isInCorrect">  <img class="answer-img" src="{{tempanswer}}"></h2>
-    </li>
+  <div id="results-container">
+      <div class="green-color-correct " *ngIf="isCorrect">
+        <img class="answer-img" src="{{ gameDeck.cards[i].image }}" /> 
+      </div>
+      <div class="red-color-wrong " *ngIf="isInCorrect">
+        <img class="answer-img" src="{{tempanswer}}">
+      </div>
   </div>
 </main>
