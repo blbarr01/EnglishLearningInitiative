@@ -2,7 +2,7 @@
 export interface Card{
     category: string
     term: string;
-    image: string;
+    imageUrl: string;
 }
 
 export interface Deck{
