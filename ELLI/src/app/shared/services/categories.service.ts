@@ -8,6 +8,6 @@ export class CategoriesService {
   constructor() {}
 
   getCategories(): string[] {
-    return ['Fruits', 'Medical', 'Forgot'];
+    return ['Fruits', 'Medical', 'Tools', 'Forgot'];
   }
 }

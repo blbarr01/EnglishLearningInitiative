@@ -148,7 +148,7 @@ export class DecksService {
       ],
     },
     {
-      deckTitle:"tools",
+      deckTitle:"Tools",
       cards:[
         {
           category:'tools',
@@ -195,7 +195,7 @@ export class DecksService {
         {
           category:'tools',
           term: 'vicegrips',
-          imageUrl: 'https://www.wannapik.com/media/W1siZiIsIjIwMTYvMDgvMjIvMW45cGp4dm53aF83YWk3a2VrMno1X2luZHUwNDc1LnBuZyJdXQ/646704954efc26e4/7ai7kek2z5_indu0475.png',
+          imageUrl: 'https://www.irwin.com/uploads/products/large/the-original%E2%84%A2-curved-jaw-locking-pliers-with-wire-cutter-276.jpg',
           
         },
         {
